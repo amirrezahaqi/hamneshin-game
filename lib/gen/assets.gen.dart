@@ -9,8 +9,33 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsFontsGen {
+  const $AssetsFontsGen();
+
+  /// File path: assets/fonts/Pelak-Black.ttf
+  String get pelakBlack => 'assets/fonts/Pelak-Black.ttf';
+
+  /// File path: assets/fonts/Pelak-Bold.ttf
+  String get pelakBold => 'assets/fonts/Pelak-Bold.ttf';
+
+  /// File path: assets/fonts/Pelak-Medium.ttf
+  String get pelakMedium => 'assets/fonts/Pelak-Medium.ttf';
+
+  /// File path: assets/fonts/Pelak-Regular.ttf
+  String get pelakRegular => 'assets/fonts/Pelak-Regular.ttf';
+
+  /// File path: assets/fonts/Pelak-light.ttf
+  String get pelakLight => 'assets/fonts/Pelak-light.ttf';
+
+  /// List of all assets
+  List<String> get values =>
+      [pelakBlack, pelakBold, pelakMedium, pelakRegular, pelakLight];
+}
+
 class Assets {
   Assets._();
+
+  static const $AssetsFontsGen fonts = $AssetsFontsGen();
 }
 
 class AssetGenImage {
