@@ -28,6 +28,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  hive_flutter: ^1.1.0
   flutter_spinkit: ^5.2.1
   flutter_svg: ^2.0.10+1
   just_audio: ^0.9.41
