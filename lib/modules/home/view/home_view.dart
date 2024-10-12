@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../global/widgets/main_btn.dart';
+import '../../../global/widgets/info_games_items.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -10,9 +10,10 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       body: Container(
         child: Center(
-            child: MainButton(
-          btnText: 'گوشیو بده بغلیت!',
+            child: InfoGamesItems(
+          btnText: 'بازی گروهی دور',
           onPress: () {},
+          imageAsset: 'assets/images/png/dor.png',
         )),
       ),
     );
