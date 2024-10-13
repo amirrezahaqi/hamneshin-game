@@ -44,9 +44,13 @@ class InfoGamesItems extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        SizedBox(
-                          height: 80,
-                          child: Image.asset(imageAsset),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              bottom: 5, left: 15, top: 5),
+                          child: SizedBox(
+                            height: 80,
+                            child: Image.asset(imageAsset),
+                          ),
                         ),
                         Text(
                           btnText,
