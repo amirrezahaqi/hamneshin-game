@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../global/widgets/info_games_items.dart';
+import '../../../global/widgets/home_games_cards.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -10,10 +10,10 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       body: Container(
         child: Center(
-            child: InfoGamesItems(
+            child: HomeGamesCards(
           btnText: 'بازی گروهی دور',
           onPress: () {},
-          imageAsset: 'assets/images/png/dor.png',
+          imageAsset: 'assets/images/png/shah-dozd-jallad.png',
         )),
       ),
     );
