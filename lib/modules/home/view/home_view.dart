@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_new/global/widgets/app-bar.dart';
 
-import '../../../global/widgets/bottom-navigation.dart';
 import '../../../global/widgets/jorat-haghighat-card.dart';
 
 class HomeView extends StatelessWidget {
@@ -8,10 +8,13 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: const BottomNavigation(),
-      body: Container(
-        child: Center(
+    Size size = MediaQuery.of(context).size;
+    return SafeArea(
+      child: Scaffold(
+        appBar: PreferredSize(
+            preferredSize: Size.fromHeight(size.height / 12),
+            child: const AppBarWidget()),
+        body: Center(
             child: JoratHaghighatCard(
           btnText: 'بازی گروهی دور',
           onPress: () {},

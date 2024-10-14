@@ -57,6 +57,9 @@ class $AssetsImagesPngGen {
   AssetGenImage get joratHaghighat =>
       const AssetGenImage('assets/images/png/jorat-haghighat.png');
 
+  /// File path: assets/images/png/logo.png
+  AssetGenImage get logo => const AssetGenImage('assets/images/png/logo.png');
+
   /// File path: assets/images/png/mafia.png
   AssetGenImage get mafia => const AssetGenImage('assets/images/png/mafia.png');
 
@@ -74,6 +77,7 @@ class $AssetsImagesPngGen {
         dor,
         jasoos,
         joratHaghighat,
+        logo,
         mafia,
         pantomim,
         shahDozdJallad
