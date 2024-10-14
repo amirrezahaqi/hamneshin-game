@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../global/widgets/bottom-navigation.dart';
 import '../../../global/widgets/jorat-haghighat-card.dart';
 
 class HomeView extends StatelessWidget {
@@ -8,6 +9,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: const BottomNavigation(),
       body: Container(
         child: Center(
             child: JoratHaghighatCard(
