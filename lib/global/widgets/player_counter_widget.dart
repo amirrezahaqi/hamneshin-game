@@ -27,21 +27,22 @@ class PlayerCounterWidget extends StatelessWidget {
         ),
       ),
     );
-    final Widget countItem = Wrap(
+    final Widget countItemList = Wrap(
       children: List.generate(
         playerCounts.length,
         (index) {
           final bool selectCondition = selectedItem == playerCounts.indexOf(playerCounts[index]);
           return GestureDetector(
           onTap: () => onItemTap(playerCounts[index]),
-          child: Container(
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 350),
             margin: EdgeInsets.all(2.w),
             width: 12.w,
             height: 12.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(2.w),
-              border: Border.all(color: UiColors.greyColor),
-              color: UiColors.lightGreyColor2
+              border: Border.all(color: selectCondition ? UiColors.darkBlueColor3 : UiColors.greyColor),
+              color: selectCondition? UiColors.lightBlueColor4 :  UiColors.lightGreyColor2
             ),
             child: Center(
               child: Text(
@@ -59,7 +60,7 @@ class PlayerCounterWidget extends StatelessWidget {
       children: [
         textField,
         SizedBox(height: 2.w),
-        countItem
+        countItemList
       ],
     );
   }
