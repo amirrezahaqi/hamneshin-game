@@ -10,16 +10,18 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return SafeArea(
-      child: Scaffold(
-        appBar: PreferredSize(
-            preferredSize: Size.fromHeight(size.height / 12),
-            child: const AppBarWidget()),
-        body: Center(
-            child: JoratHaghighatCard(
-          btnText: 'بازی گروهی دور',
-          onPress: () {},
-          imageAsset: 'assets/images/png/jorat-haghighat.png',
-        )),
+      child: Container(
+        child: Scaffold(
+          appBar: PreferredSize(
+              preferredSize: Size.fromHeight(size.height / 12),
+              child: const AppBarWidget()),
+          body: Center(
+              child: JoratHaghighatCard(
+            btnText: 'بازی گروهی دور',
+            onPress: () {},
+            imageAsset: 'assets/images/png/jorat-haghighat.png',
+          )),
+        ),
       ),
     );
   }

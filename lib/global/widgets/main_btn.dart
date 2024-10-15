@@ -36,7 +36,7 @@ class MainButton extends StatelessWidget {
                 backgroundColor: Colors.transparent),
             onPressed: () => onPress(),
             child: Padding(
-              padding: const EdgeInsets.all(AppDistances.medium12),
+              padding: const EdgeInsets.all(AppDistances.small2 / 4),
               child: Text(
                 btnText,
                 style: const TextStyle(
