@@ -17,6 +17,7 @@ class UiColors {
   static const whiteColor = Color(0xFFFFFFFF);
   static const whiteColor2 = Color(0xFFF2F2F2);
   static const lightGreyColor = Color(0xFF515151);
+  static const lightGreyColor2 = Color(0xFFCCCCCC);
   static const orangeColor = Color(0xFFF1592D);
   static const darkOrangeColor = Color(0xFFBB3F1C);
   static const shadowColor = Color(0xFFB2C7ED);
