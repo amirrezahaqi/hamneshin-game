@@ -16,11 +16,11 @@ class DialogBodyWidget extends StatelessWidget {
           padding: EdgeInsets.all(2.w),
           width: double.infinity,
           decoration: BoxDecoration(
-            color: UiColors.whiteColor,
+            color: UiColors.darkBlueColor3,
             borderRadius: BorderRadius.circular(AppDistances.small4.w),
-            border: Border.all(color: UiColors.darkBlueColor3,width: 2),
+            border: Border.all(color: UiColors.lightBlueColor4,width: 2),
             boxShadow: [
-              BoxShadow(color: UiColors.darkBlueColor3.withOpacity(0.25),offset: const Offset(0, 3),blurRadius: 30)
+              BoxShadow(color: UiColors.darkBlueColor3.withOpacity(0.50),offset: const Offset(0, 3),blurRadius: 30)
             ]
           ),
           child: Column(
