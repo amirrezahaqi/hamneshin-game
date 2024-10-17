@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/global/widgets/app-bar.dart';
+import 'package:flutter_application_new/global/widgets/dialog_body_widget.dart';
+import 'package:flutter_application_new/global/widgets/main_btn.dart';
 import 'package:flutter_application_new/global/widgets/player_counter_widget.dart';
 
 import '../../../global/widgets/jorat-haghighat-card.dart';
@@ -20,7 +22,14 @@ class HomeView extends StatelessWidget {
             height: double.infinity,
             child: Center(child: Padding(
               padding: const EdgeInsets.all(20),
-              child:  PlayerCounterWidget(playerCounts: const [6,7,8,9,10,11,12,13,14,15], onItemTap: (int number) {  },),
+              child: MainButton(btnText: "open",onPress: (){
+                showDialog(
+                    context: context,
+                    barrierDismissible: true,
+                    builder: (context) => DialogBodyWidget(dialogBody: [
+                      PlayerCounterWidget(playerCounts: [2,8,4,5,6,3], onItemTap: (number) {},)
+                    ],));
+              }),
             )))
       ),
     );
