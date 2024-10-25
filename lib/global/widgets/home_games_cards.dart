@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_new/gen/fonts.gen.dart';
 
 import '../utils/constants/app_distances.dart';
 import '../utils/constants/ui_colors.dart';
@@ -19,7 +20,6 @@ class HomeGamesCards extends StatelessWidget {
     return SizedBox(
       width: size.width / 3.5,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
             height: size.width / 3,
@@ -36,6 +36,7 @@ class HomeGamesCards extends StatelessWidget {
                 ),
                 child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
+                      padding: const EdgeInsets.all(0),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(AppDistances.large),
                       ),
@@ -44,9 +45,9 @@ class HomeGamesCards extends StatelessWidget {
                     onPressed: () => onPress(),
                     child: Image.asset(
                       imageAsset,
-                      width: size.width / 3,
-                      height: size.width / 5,
-                      fit: BoxFit.fill,
+                      width: size.width / 4,
+                      height: size.width / 4,
+                      fit: BoxFit.cover,
                     )),
               ),
             ),
@@ -54,7 +55,9 @@ class HomeGamesCards extends StatelessWidget {
           Text(
             btnText,
             style: const TextStyle(
-                color: UiColors.whiteColor, fontWeight: FontWeight.bold),
+                fontFamily: FontFamily.pelak,
+                color: UiColors.whiteColor,
+                fontWeight: FontWeight.bold),
           ),
         ],
       ),

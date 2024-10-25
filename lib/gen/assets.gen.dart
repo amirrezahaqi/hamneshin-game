@@ -46,8 +46,15 @@ class $AssetsImagesPngGen {
   AssetGenImage get cheshmakMarg =>
       const AssetGenImage('assets/images/png/cheshmak-marg.png');
 
+  /// File path: assets/images/png/darbare.png
+  AssetGenImage get darbare =>
+      const AssetGenImage('assets/images/png/darbare.png');
+
   /// File path: assets/images/png/dor.png
   AssetGenImage get dor => const AssetGenImage('assets/images/png/dor.png');
+
+  /// File path: assets/images/png/home.png
+  AssetGenImage get home => const AssetGenImage('assets/images/png/home.png');
 
   /// File path: assets/images/png/jasoos.png
   AssetGenImage get jasoos =>
@@ -63,32 +70,44 @@ class $AssetsImagesPngGen {
   /// File path: assets/images/png/mafia.png
   AssetGenImage get mafia => const AssetGenImage('assets/images/png/mafia.png');
 
+  /// File path: assets/images/png/music.png
+  AssetGenImage get music => const AssetGenImage('assets/images/png/music.png');
+
   /// File path: assets/images/png/pantomim.png
   AssetGenImage get pantomim =>
       const AssetGenImage('assets/images/png/pantomim.png');
+
+  /// File path: assets/images/png/rahnama.png
+  AssetGenImage get rahnama =>
+      const AssetGenImage('assets/images/png/rahnama.png');
 
   /// File path: assets/images/png/shah-dozd-jallad.png
   AssetGenImage get shahDozdJallad =>
       const AssetGenImage('assets/images/png/shah-dozd-jallad.png');
 
+  /// File path: assets/images/png/star.png
+  AssetGenImage get star => const AssetGenImage('assets/images/png/star.png');
+
   /// List of all assets
   List<AssetGenImage> get values => [
         cheshmakMarg,
+        darbare,
         dor,
+        home,
         jasoos,
         joratHaghighat,
         logo,
         mafia,
+        music,
         pantomim,
-        shahDozdJallad
+        rahnama,
+        shahDozdJallad,
+        star
       ];
 }
 
 class $AssetsImagesSvgGen {
   const $AssetsImagesSvgGen();
-
-  /// File path: assets/images/svg/about.svg
-  String get about => 'assets/images/svg/about.svg';
 
   /// File path: assets/images/svg/connection.svg
   String get connection => 'assets/images/svg/connection.svg';
@@ -107,12 +126,6 @@ class $AssetsImagesSvgGen {
 
   /// File path: assets/images/svg/ghatel-cheshmak.svg
   String get ghatelCheshmak => 'assets/images/svg/ghatel-cheshmak.svg';
-
-  /// File path: assets/images/svg/home.svg
-  String get home => 'assets/images/svg/home.svg';
-
-  /// File path: assets/images/svg/info.svg
-  String get info => 'assets/images/svg/info.svg';
 
   /// File path: assets/images/svg/jallad.svg
   String get jallad => 'assets/images/svg/jallad.svg';
@@ -179,15 +192,12 @@ class $AssetsImagesSvgGen {
 
   /// List of all assets
   List<String> get values => [
-        about,
         connection,
         doctor,
         done,
         dorMiz,
         dozd,
         ghatelCheshmak,
-        home,
-        info,
         jallad,
         jansakht,
         jasoosJasoos,

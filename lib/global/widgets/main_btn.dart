@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_new/gen/fonts.gen.dart';
 
 import '../utils/constants/app_distances.dart';
 import '../utils/constants/ui_colors.dart';
@@ -40,7 +41,9 @@ class MainButton extends StatelessWidget {
               child: Text(
                 btnText,
                 style: const TextStyle(
-                    color: UiColors.whiteColor, fontWeight: FontWeight.bold),
+                    fontFamily: FontFamily.pelak,
+                    color: UiColors.whiteColor,
+                    fontWeight: FontWeight.bold),
               ),
             )),
       ),

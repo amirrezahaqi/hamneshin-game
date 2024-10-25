@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_new/gen/fonts.gen.dart';
 import 'package:flutter_application_new/global/widgets/main_btn.dart';
 
 import '../utils/constants/app_distances.dart';
@@ -40,41 +41,39 @@ class JoratHaghighatCard extends StatelessWidget {
             ),
             onPressed: () => onPress(),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "بازی هیجان انگیز",
+                      style: TextStyle(
+                          fontFamily: FontFamily.pelak,
+                          color: UiColors.whiteColor,
+                          fontWeight: FontWeight.normal),
+                    ),
+                    const Text(
+                      "جرعت یا حقیقت",
+                      style: TextStyle(
+                          fontFamily: FontFamily.pelak,
+                          color: UiColors.whiteColor,
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    MainButton(btnText: "شروع بازی", onPress: onPress),
+                  ],
+                ),
                 SizedBox(
                   child: Image.asset(
                     imageAsset,
                     height: size.height / 5,
                     width: size.height / 5,
                     fit: BoxFit.cover,
-                  ),
-                ),
-                const SizedBox(width: 10),
-                Expanded(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        "بازی هیجان انگیز",
-                        style: TextStyle(
-                            color: UiColors.whiteColor,
-                            fontWeight: FontWeight.normal),
-                      ),
-                      const Text(
-                        "جرعت یا حقیقت",
-                        style: TextStyle(
-                            color: UiColors.whiteColor,
-                            fontSize: 17,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      MainButton(btnText: "شروع بازی", onPress: onPress),
-                    ],
                   ),
                 ),
               ],

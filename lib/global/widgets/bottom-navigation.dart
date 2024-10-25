@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_application_new/gen/fonts.gen.dart';
 
 import '../utils/constants/app_distances.dart';
 import '../utils/constants/ui_colors.dart';
@@ -17,7 +17,7 @@ class BottomNavigation extends StatelessWidget {
           left: AppDistances.large,
           bottom: AppDistances.small8),
       child: Container(
-        height: size.height / 8,
+        height: size.height / 8.2,
         decoration: BoxDecoration(
           gradient: const LinearGradient(
             begin: Alignment.topCenter,
@@ -33,20 +33,20 @@ class BottomNavigation extends StatelessWidget {
         child: Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SvgPicture.asset(
-                      'assets/images/svg/about.svg',
-                      height: 80,
-                      width: 80,
-                      fit: BoxFit.fill,
+                    Image.asset(
+                      "assets/images/png/darbare.png",
+                      scale: 4.5,
                     ),
                     const Text(
                       "درباره ما",
                       style: TextStyle(
+                          fontFamily: FontFamily.pelak,
                           color: UiColors.whiteColor,
                           fontWeight: FontWeight.normal),
                     ),
@@ -57,14 +57,14 @@ class BottomNavigation extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SvgPicture.asset(
-                      'assets/images/svg/home.svg',
-                      height: 80,
-                      width: 80,
+                    Image.asset(
+                      "assets/images/png/home.png",
+                      scale: 4.5,
                     ),
                     const Text(
                       "خانه",
                       style: TextStyle(
+                          fontFamily: FontFamily.pelak,
                           color: UiColors.whiteColor,
                           fontWeight: FontWeight.normal),
                     ),
@@ -75,15 +75,14 @@ class BottomNavigation extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SvgPicture.asset(
-                      'assets/images/svg/info.svg',
-                      height: 80,
-                      width: 80,
-                      fit: BoxFit.fill,
+                    Image.asset(
+                      "assets/images/png/rahnama.png",
+                      scale: 4,
                     ),
                     const Text(
                       "راهنما",
                       style: TextStyle(
+                          fontFamily: FontFamily.pelak,
                           color: UiColors.whiteColor,
                           fontWeight: FontWeight.normal),
                     ),
