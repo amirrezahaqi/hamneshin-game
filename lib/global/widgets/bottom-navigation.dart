@@ -15,10 +15,18 @@ class BottomNavigation extends StatelessWidget {
       padding: const EdgeInsets.only(
           right: AppDistances.large,
           left: AppDistances.large,
-          bottom: AppDistances.small8),
+          bottom: AppDistances.large),
       child: Container(
         height: size.height / 8.2,
         decoration: BoxDecoration(
+          boxShadow: const [
+            BoxShadow(
+              color: UiColors.lightBlueColor,
+              spreadRadius: 5,
+              blurRadius: 10,
+              offset: Offset(0, 3),
+            )
+          ],
           gradient: const LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -35,59 +43,53 @@ class BottomNavigation extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      "assets/images/png/darbare.png",
-                      scale: 4.5,
-                    ),
-                    const Text(
-                      "درباره ما",
-                      style: TextStyle(
-                          fontFamily: FontFamily.pelak,
-                          color: UiColors.whiteColor,
-                          fontWeight: FontWeight.normal),
-                    ),
-                  ],
-                ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset(
+                    "assets/images/png/darbare.png",
+                    scale: 4,
+                  ),
+                  const Text(
+                    "درباره ما",
+                    style: TextStyle(
+                        fontFamily: FontFamily.pelak,
+                        color: UiColors.whiteColor,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ],
               ),
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      "assets/images/png/home.png",
-                      scale: 4.5,
-                    ),
-                    const Text(
-                      "خانه",
-                      style: TextStyle(
-                          fontFamily: FontFamily.pelak,
-                          color: UiColors.whiteColor,
-                          fontWeight: FontWeight.normal),
-                    ),
-                  ],
-                ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset(
+                    "assets/images/png/home.png",
+                    scale: 4,
+                  ),
+                  const Text(
+                    "خانه",
+                    style: TextStyle(
+                        fontFamily: FontFamily.pelak,
+                        color: UiColors.whiteColor,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ],
               ),
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      "assets/images/png/rahnama.png",
-                      scale: 4,
-                    ),
-                    const Text(
-                      "راهنما",
-                      style: TextStyle(
-                          fontFamily: FontFamily.pelak,
-                          color: UiColors.whiteColor,
-                          fontWeight: FontWeight.normal),
-                    ),
-                  ],
-                ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset(
+                    "assets/images/png/rahnama.png",
+                    scale: 4,
+                  ),
+                  const Text(
+                    "راهنما",
+                    style: TextStyle(
+                        fontFamily: FontFamily.pelak,
+                        color: UiColors.whiteColor,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ],
               ),
             ],
           ),

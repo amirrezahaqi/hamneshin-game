@@ -46,7 +46,7 @@ class HomeView extends StatelessWidget {
                         imageAsset: 'assets/images/png/jorat-haghighat.png',
                       ),
                       SizedBox(
-                        height: size.height / 20,
+                        height: size.height / 30,
                       ),
                       SizedBox(
                           width: size.width / 1.10,

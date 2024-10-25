@@ -157,9 +157,6 @@ class $AssetsImagesSvgGen {
   /// File path: assets/images/svg/mafia-sade.svg
   String get mafiaSade => 'assets/images/svg/mafia-sade.svg';
 
-  /// File path: assets/images/svg/music.svg
-  String get music => 'assets/images/svg/music.svg';
-
   /// File path: assets/images/svg/pantomim-mask.svg
   String get pantomimMask => 'assets/images/svg/pantomim-mask.svg';
 
@@ -180,9 +177,6 @@ class $AssetsImagesSvgGen {
 
   /// File path: assets/images/svg/sniper.svg
   String get sniper => 'assets/images/svg/sniper.svg';
-
-  /// File path: assets/images/svg/star.svg
-  String get star => 'assets/images/svg/star.svg';
 
   /// File path: assets/images/svg/vazir.svg
   String get vazir => 'assets/images/svg/vazir.svg';
@@ -208,7 +202,6 @@ class $AssetsImagesSvgGen {
         karagahCheshmak,
         karagahMafia,
         mafiaSade,
-        music,
         pantomimMask,
         pooch,
         ravanshenas,
@@ -216,7 +209,6 @@ class $AssetsImagesSvgGen {
         shahrvandJasoos,
         shahrvandSade,
         sniper,
-        star,
         vazir,
         winner
       ];

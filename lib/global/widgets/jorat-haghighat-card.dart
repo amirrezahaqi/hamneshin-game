@@ -73,7 +73,7 @@ class JoratHaghighatCard extends StatelessWidget {
                     imageAsset,
                     height: size.height / 5,
                     width: size.height / 5,
-                    fit: BoxFit.cover,
+                    fit: BoxFit.contain,
                   ),
                 ),
               ],
