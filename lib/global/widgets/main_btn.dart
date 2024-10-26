@@ -7,10 +7,14 @@ import '../utils/constants/ui_colors.dart';
 class MainButton extends StatelessWidget {
   final String btnText;
   final Function onPress;
-  const MainButton({
+  double padding;
+  double fontsize;
+  MainButton({
     super.key,
     required this.btnText,
     required this.onPress,
+    this.padding = AppDistances.medium12,
+    this.fontsize = 14,
   });
   @override
   Widget build(BuildContext context) {
@@ -37,12 +41,13 @@ class MainButton extends StatelessWidget {
                 backgroundColor: Colors.transparent),
             onPressed: () => onPress(),
             child: Padding(
-              padding: const EdgeInsets.all(AppDistances.small2 / 4),
+              padding: EdgeInsets.all(padding),
               child: Text(
                 btnText,
-                style: const TextStyle(
+                style: TextStyle(
                     fontFamily: FontFamily.pelak,
                     color: UiColors.whiteColor,
+                    fontSize: fontsize,
                     fontWeight: FontWeight.bold),
               ),
             )),
