@@ -73,6 +73,10 @@ class $AssetsImagesPngGen {
   /// File path: assets/images/png/music.png
   AssetGenImage get music => const AssetGenImage('assets/images/png/music.png');
 
+  /// File path: assets/images/png/pantomim-mask.png
+  AssetGenImage get pantomimMask =>
+      const AssetGenImage('assets/images/png/pantomim-mask.png');
+
   /// File path: assets/images/png/pantomim.png
   AssetGenImage get pantomim =>
       const AssetGenImage('assets/images/png/pantomim.png');
@@ -99,6 +103,7 @@ class $AssetsImagesPngGen {
         logo,
         mafia,
         music,
+        pantomimMask,
         pantomim,
         rahnama,
         shahDozdJallad,
@@ -157,9 +162,6 @@ class $AssetsImagesSvgGen {
   /// File path: assets/images/svg/mafia-sade.svg
   String get mafiaSade => 'assets/images/svg/mafia-sade.svg';
 
-  /// File path: assets/images/svg/pantomim-mask.svg
-  String get pantomimMask => 'assets/images/svg/pantomim-mask.svg';
-
   /// File path: assets/images/svg/pooch.svg
   String get pooch => 'assets/images/svg/pooch.svg';
 
@@ -202,7 +204,6 @@ class $AssetsImagesSvgGen {
         karagahCheshmak,
         karagahMafia,
         mafiaSade,
-        pantomimMask,
         pooch,
         ravanshenas,
         shah,
