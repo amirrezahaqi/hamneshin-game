@@ -168,6 +168,9 @@ class $AssetsImagesSvgGen {
   /// File path: assets/images/svg/ravanshenas.svg
   String get ravanshenas => 'assets/images/svg/ravanshenas.svg';
 
+  /// File path: assets/images/svg/shah-notselect.svg
+  String get shahNotselect => 'assets/images/svg/shah-notselect.svg';
+
   /// File path: assets/images/svg/shah.svg
   String get shah => 'assets/images/svg/shah.svg';
 
@@ -206,6 +209,7 @@ class $AssetsImagesSvgGen {
         mafiaSade,
         pooch,
         ravanshenas,
+        shahNotselect,
         shah,
         shahrvandJasoos,
         shahrvandSade,
