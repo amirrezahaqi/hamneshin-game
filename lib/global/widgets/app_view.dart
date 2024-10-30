@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/global/theme/app_theme.dart';
-import 'package:flutter_application_new/modules/shah-dozd/shah_dozd_screen.dart';
+import 'package:flutter_application_new/modules/jorat-haghighat/view/jorathaghighat_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -22,6 +22,6 @@ class AppView extends StatelessWidget {
             ],
             locale: const Locale("fa"),
             theme: AppTheme.appTheme,
-            home: const ShahDozdScreen()));
+            home: const JoratHaghighatScreen()));
   }
 }

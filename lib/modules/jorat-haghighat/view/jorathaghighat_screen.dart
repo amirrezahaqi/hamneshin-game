@@ -4,21 +4,21 @@ import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
 import 'package:flutter_application_new/global/widgets/app-bar.dart';
 import 'package:flutter_application_new/global/widgets/bottom-navigation.dart';
 import 'package:flutter_application_new/global/widgets/main_btn.dart';
-import 'package:flutter_application_new/modules/pantomim/cubit/pantomim_cubit.dart';
+import 'package:flutter_application_new/modules/jorat-haghighat/cubit/jorathaghighat_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class PantomimScreen extends StatefulWidget {
-  const PantomimScreen({super.key});
+class JoratHaghighatScreen extends StatefulWidget {
+  const JoratHaghighatScreen({super.key});
 
   @override
-  State<PantomimScreen> createState() => _PantomimScreenState();
+  State<JoratHaghighatScreen> createState() => _JoratHaghighatScreenState();
 }
 
-class _PantomimScreenState extends State<PantomimScreen> {
+class _JoratHaghighatScreenState extends State<JoratHaghighatScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    final cubit = context.read<PantomimCubit>();
+    final cubit = context.read<JorathaghighatCubit>();
 
     return SafeArea(
       child: Container(
@@ -52,52 +52,30 @@ class _PantomimScreenState extends State<PantomimScreen> {
                     width: size.width / 1.25,
                     child: const Text(
                       textAlign: TextAlign.center,
-                      "به صورت رندوم از میون کلی کلمات، کلمه مناسب رو برای اجرا پانتومیم خود پیدا کنید",
+                      "با چرخوندن بطری مشخص میشه کی از کی بپرسه جرعت یا حقیقت؟",
                       style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 20,
                           fontFamily: FontFamily.pelak,
                           color: UiColors.whiteColor,
                           fontWeight: FontWeight.bold),
                     ),
                   ),
-                  Image.asset("assets/images/png/pantomim-mask.png"),
-                  Column(
-                    children: [
-                      SizedBox(
-                        width: size.width / 1.25,
-                        child: const Text(
-                          textAlign: TextAlign.center,
-                          "کلمه شما:",
-                          style: TextStyle(
-                              fontSize: 12,
-                              fontFamily: FontFamily.pelak,
-                              color: UiColors.whiteColor,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      SizedBox(
-                        width: size.width / 1.25,
-                        child: BlocBuilder<PantomimCubit, String>(
-                          builder: (context, word) {
-                            return Text(
-                              textAlign: TextAlign.center,
-                              word.isEmpty ? 'کلمه‌ای انتخاب نشده' : word,
-                              style: const TextStyle(
-                                  fontSize: 25,
-                                  fontFamily: FontFamily.pelak,
-                                  color: UiColors.whiteColor,
-                                  fontWeight: FontWeight.bold),
-                            );
-                          },
-                        ),
-                      ),
-                    ],
+                  BlocBuilder<JorathaghighatCubit, double>(
+                    builder: (context, deg) {
+                      return AnimatedRotation(
+                        curve: Curves.easeInOut,
+                        turns: deg * 10,
+                        duration: const Duration(seconds: 2),
+                        child: Image.asset(
+                            "assets/images/png/jorat-haghighat-miz.png"),
+                      );
+                    },
                   ),
                   SizedBox(height: size.height / 50),
                   MainButton(
-                    btnText: "پانتومیم من رو بگو!",
+                    btnText: "بطریو بچرخون!",
                     onPress: () {
-                      cubit.generateRandomWord();
+                      cubit.generateRandomDeg();
                     },
                     fontsize: 20,
                   ),

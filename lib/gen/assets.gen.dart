@@ -60,6 +60,10 @@ class $AssetsImagesPngGen {
   AssetGenImage get jasoos =>
       const AssetGenImage('assets/images/png/jasoos.png');
 
+  /// File path: assets/images/png/jorat-haghighat-miz.png
+  AssetGenImage get joratHaghighatMiz =>
+      const AssetGenImage('assets/images/png/jorat-haghighat-miz.png');
+
   /// File path: assets/images/png/jorat-haghighat.png
   AssetGenImage get joratHaghighat =>
       const AssetGenImage('assets/images/png/jorat-haghighat.png');
@@ -99,6 +103,7 @@ class $AssetsImagesPngGen {
         dor,
         home,
         jasoos,
+        joratHaghighatMiz,
         joratHaghighat,
         logo,
         mafia,
@@ -146,9 +151,6 @@ class $AssetsImagesSvgGen {
 
   /// File path: assets/images/svg/joker-jasoos.svg
   String get jokerJasoos => 'assets/images/svg/joker-jasoos.svg';
-
-  /// File path: assets/images/svg/jorat-haghighat-miz.svg
-  String get joratHaghighatMiz => 'assets/images/svg/jorat-haghighat-miz.svg';
 
   /// File path: assets/images/svg/kalantar-jasoos.svg
   String get kalantarJasoos => 'assets/images/svg/kalantar-jasoos.svg';
@@ -202,7 +204,6 @@ class $AssetsImagesSvgGen {
         jasoosJasoos,
         jasoosvijehJasoos,
         jokerJasoos,
-        joratHaghighatMiz,
         kalantarJasoos,
         karagahCheshmak,
         karagahMafia,
