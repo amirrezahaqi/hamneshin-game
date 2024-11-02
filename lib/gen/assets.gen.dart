@@ -119,6 +119,9 @@ class $AssetsImagesPngGen {
 class $AssetsImagesSvgGen {
   const $AssetsImagesSvgGen();
 
+  /// File path: assets/images/svg/cheshmak-naghsh.svg
+  String get cheshmakNaghsh => 'assets/images/svg/cheshmak-naghsh.svg';
+
   /// File path: assets/images/svg/connection.svg
   String get connection => 'assets/images/svg/connection.svg';
 
@@ -193,6 +196,7 @@ class $AssetsImagesSvgGen {
 
   /// List of all assets
   List<String> get values => [
+        cheshmakNaghsh,
         connection,
         doctor,
         done,
