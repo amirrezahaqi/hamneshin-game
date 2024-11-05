@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_new/gen/assets.gen.dart';
 import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
 import 'package:flutter_application_new/modules/mafia/models/mafia_role_model.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class MafiaShowRoleWidget extends StatelessWidget {
@@ -11,7 +11,7 @@ class MafiaShowRoleWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset(Assets.images.png.mafia.path),
+        SvgPicture.asset(role.imagePath),
         Text(
           role.roleName,
           style: TextStyle(fontSize: 16.sp,
