@@ -5,7 +5,6 @@ import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
 import 'package:flutter_application_new/global/widgets/main_btn.dart';
 import 'package:flutter_application_new/global/widgets/main_btn2.dart';
 import 'package:flutter_application_new/modules/mafia/cubit/mafia_cubit.dart';
-import 'package:flutter_application_new/modules/mafia/models/mafia_role_model.dart';
 import 'package:flutter_application_new/modules/mafia/widgets/mafia_show_role_widget.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -42,6 +41,8 @@ class MafiaView extends StatelessWidget {
                             child: SingleChildScrollView(
                               child: Column(
                                 children: [
+                                  // نمایش وضعیت پایانی(انتخاب شدن تمام نقش ها)
+                                  if(state is! MafiaDisplayedAllRoleState)
                                   Text(
                                     "افراد به صورت نوبتی با کلیک بروی دکمه پایین نقششون رو  به شکل رندوم مشخص می کنند",
                                     textAlign: TextAlign.center,
@@ -49,11 +50,31 @@ class MafiaView extends StatelessWidget {
                                         fontWeight: FontWeight.bold,
                                         color: UiColors.whiteColor),
                                   ),
+                                  // حالت پیش فرض قبل از شروع نمایش نقش ها
+                                  if(state is MafiaDisplayedAllRoleState)...[
+                                    Image.asset(Assets.images.png.mafia.path),
+                                    Text(
+                                      "تمام نقش ها انتخاب شدن، بازی رو شروع کنید :)",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(fontSize: 16.sp,
+                                          fontWeight: FontWeight.bold,
+                                          color: UiColors.whiteColor),
+                                    ),
+                                    SizedBox(height: AppDistances.medium12.w),
+                                    MainButton(
+                                      btnText: "رفتن به صفحه اصلی",
+                                      onPress: () { },
+                                      fontsize: 15.sp,
+                                    ),
+                                  ],
+
+                                  // نمایش و مخفی کردن نقش ها
                                   if(state is MafiaInitial)...[
                                     Image.asset(Assets.images.png.mafia.path)
                                   ] else if(state is MafiaChangeRoleState)...[
                                     MafiaShowRoleWidget(role: state.role)
                                   ] else if(state is MafiaHideRoleState)...[
+                                    SizedBox(height: AppDistances.medium12.w),
                                     Text(
                                       "برای دیدن نقشت ضربه بزن!",
                                       textAlign: TextAlign.center,
@@ -66,6 +87,8 @@ class MafiaView extends StatelessWidget {
                                   SizedBox(
                                     height: AppDistances.small4.w,
                                   ),
+                                  // دکمه های نمایش و مخفی کردن نقش
+                                  if(state is! MafiaDisplayedAllRoleState)
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
@@ -83,7 +106,8 @@ class MafiaView extends StatelessWidget {
                                         fontsize: 15.sp,
                                       ),
                                     ],
-                                  )
+                                  ),
+
                                 ],
                               ),
                             ),

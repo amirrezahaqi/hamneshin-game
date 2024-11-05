@@ -12,3 +12,5 @@ final class MafiaChangeRoleState extends MafiaState {
 
 final class MafiaHideRoleState extends MafiaState {}
 
+final class MafiaDisplayedAllRoleState extends MafiaState {}
+
