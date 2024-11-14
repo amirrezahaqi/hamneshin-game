@@ -41,7 +41,7 @@ class MafiaView extends StatelessWidget {
                             child: SingleChildScrollView(
                               child: Column(
                                 children: [
-                                  // نمایش وضعیت پایانی(انتخاب شدن تمام نقش ها)
+                                  // حالت پیش فرض قبل از شروع نمایش نقش ها
                                   if(state is! MafiaDisplayedAllRoleState)
                                   Text(
                                     "افراد به صورت نوبتی با کلیک بروی دکمه پایین نقششون رو  به شکل رندوم مشخص می کنند",
@@ -50,7 +50,7 @@ class MafiaView extends StatelessWidget {
                                         fontWeight: FontWeight.bold,
                                         color: UiColors.whiteColor),
                                   ),
-                                  // حالت پیش فرض قبل از شروع نمایش نقش ها
+                                  // نمایش وضعیت پایانی(انتخاب شدن تمام نقش ها)
                                   if(state is MafiaDisplayedAllRoleState)...[
                                     Image.asset(Assets.images.png.mafia.path),
                                     Text(
