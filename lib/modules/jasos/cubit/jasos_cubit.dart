@@ -26,7 +26,7 @@ class JasosCubit extends Cubit<JasosState> {
   void changeRole() {
     // اگر همه نقش‌ها نمایش داده شده باشند
     if ( jasosRoleList.isEmpty) {
-      emit(MafiaDisplayedAllRoleState());
+      emit(JasosDisplayedAllRoleState());
       return; // از تابع خارج می‌شود تا از انتخاب نقش جدید جلوگیری شود
     }
 
@@ -41,5 +41,5 @@ class JasosCubit extends Cubit<JasosState> {
     emit(JasosChangeRoleState(role: randomRole));
   }
 
-  void hideRole() => emit(MafiaHideRoleState());
+  void hideRole() => emit(JasosHideRoleState());
 }

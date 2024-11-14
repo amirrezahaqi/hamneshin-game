@@ -10,6 +10,6 @@ final class JasosChangeRoleState extends JasosState {
   final JasosRoleModel role;
 }
 
-final class MafiaHideRoleState extends JasosState {}
+final class JasosHideRoleState extends JasosState {}
 
-final class MafiaDisplayedAllRoleState extends JasosState {}
+final class JasosDisplayedAllRoleState extends JasosState {}
