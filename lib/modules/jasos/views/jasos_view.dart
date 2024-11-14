@@ -4,6 +4,8 @@ import 'package:flutter_application_new/global/utils/constants/app_distances.dar
 import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
 import 'package:flutter_application_new/global/widgets/main_btn.dart';
 import 'package:flutter_application_new/global/widgets/main_btn2.dart';
+import 'package:flutter_application_new/modules/jasos/cubit/jasos_cubit.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -25,39 +27,52 @@ class JasosView extends StatelessWidget {
             ],
           ),
         ),
-        child: Center(
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
+        child: BlocProvider<JasosCubit>(
+          create: (context) => JasosCubit(),
+          child: Center(
+            child: SingleChildScrollView(
+              child: BlocBuilder<JasosCubit, JasosState>(
+                builder: (context, state) {
+                  final jasosCubit = BlocProvider.of<JasosCubit>(context);
+                  return Column(
+                    children: [
 
-                Text(
-                  "افراد به صورت نوبتی با کلیک بروی دکمه پایین نقششون رو  به شکل رندوم مشخص می کنند",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16.sp,
-                      fontWeight: FontWeight.bold,
-                      color: UiColors.whiteColor),
-                ),
-                  SvgPicture.asset(Assets.images.svg.jasoosJasoos),
-                // دکمه های نمایش و مخفی کردن نقش
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    MainButton(
-                      btnText: "نقش من رو بگو!",
-                      onPress: () {},
-                      fontsize: 15.sp,
-                    ),
-                    SizedBox(
-                      width: AppDistances.small4.w,
-                    ),
-                    MainButton2(
-                      btnText: "نقش  رو بپوشون!",
-                      onPress: () {},
-                      fontsize: 15.sp,
-                    ),
-                  ],
-                ),
-              ],
+                      Text(
+                        "افراد به صورت نوبتی با کلیک بروی دکمه پایین نقششون رو  به شکل رندوم مشخص می کنند",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 16.sp,
+                            fontWeight: FontWeight.bold,
+                            color: UiColors.whiteColor),
+                      ),
+                      if(state is JasosInitial)
+                      SvgPicture.asset(Assets.images.svg.jasoosJasoos),
+
+                      // نمایش نقش
+                      if(state is JasosChangeRoleState)
+                        SizedBox(),
+                      // دکمه های نمایش و مخفی کردن نقش
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          MainButton(
+                            btnText: "نقش من رو بگو!",
+                            onPress: () => jasosCubit.changeRole(),
+                            fontsize: 15.sp,
+                          ),
+                          SizedBox(
+                            width: AppDistances.small4.w,
+                          ),
+                          MainButton2(
+                            btnText: "نقش  رو بپوشون!",
+                            onPress: () => jasosCubit.hideRole(),
+                            fontsize: 15.sp,
+                          ),
+                        ],
+                      ),
+                    ],
+                  );
+                },
+              ),
             ),
           ),
         ),
