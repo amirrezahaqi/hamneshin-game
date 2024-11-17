@@ -7,7 +7,6 @@ import 'package:flutter_application_new/global/widgets/main_btn.dart';
 import 'package:flutter_application_new/global/widgets/main_btn2.dart';
 import 'package:flutter_application_new/modules/shah-dozd/cubit/shah_dozd_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class ShahDozdScreen extends StatefulWidget {
   const ShahDozdScreen({super.key});
@@ -64,10 +63,10 @@ class _ShahDozdScreenState extends State<ShahDozdScreen> {
                   ),
                   BlocBuilder<ShahDozdCubit, RoleModel?>(
                     builder: (context, roleModel) {
-                      return SvgPicture.asset(
+                      return Image.asset(
                         height: size.height / 2.25,
                         roleModel?.assetPath ??
-                            "assets/images/svg/shah-notselect.svg",
+                            "assets/images/png/shahnotselect.png",
                       );
                     },
                   ),

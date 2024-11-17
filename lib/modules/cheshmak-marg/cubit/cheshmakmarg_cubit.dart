@@ -10,12 +10,12 @@ class CheshmakmargCubit extends Cubit<RoleModel?> {
 
   final List<String> naghs = ["کارآگاه", "قاتل", "پوچ", "پوچ", "پوچ", "پوچ"];
   final List<String> naghsAssets = [
-    "assets/images/svg/karagah-cheshmak.svg",
-    "assets/images/svg/ghatel-cheshmak.svg",
-    "assets/images/svg/pooch.svg",
-    "assets/images/svg/pooch.svg",
-    "assets/images/svg/pooch.svg",
-    "assets/images/svg/pooch.svg",
+    "assets/images/png/cheshmakkaragah.png",
+    "assets/images/png/cheshmakghatel.png",
+    "assets/images/png/cheshmakpooch.png",
+    "assets/images/png/cheshmakpooch.png",
+    "assets/images/png/cheshmakpooch.png",
+    "assets/images/png/cheshmakpooch.png",
   ];
 
   generateNaghshRandom() {

@@ -7,7 +7,6 @@ import 'package:flutter_application_new/global/widgets/main_btn.dart';
 import 'package:flutter_application_new/global/widgets/main_btn2.dart';
 import 'package:flutter_application_new/modules/cheshmak-marg/cubit/cheshmakmarg_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class CheshmakMargScreen extends StatefulWidget {
   const CheshmakMargScreen({super.key});
@@ -64,10 +63,10 @@ class _CheshmakMargScreenState extends State<CheshmakMargScreen> {
                   ),
                   BlocBuilder<CheshmakmargCubit, RoleModel?>(
                     builder: (context, roleModel) {
-                      return SvgPicture.asset(
+                      return Image.asset(
                         height: size.height / 2.25,
                         roleModel?.assetPath ??
-                            "assets/images/svg/cheshmak-naghsh.svg",
+                            "assets/images/png/cheshmaknotselect.png",
                       );
                     },
                   ),

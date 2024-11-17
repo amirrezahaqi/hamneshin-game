@@ -10,22 +10,23 @@ part 'jasos_state.dart';
 class JasosCubit extends Cubit<JasosState> {
   JasosCubit() : super(JasosInitial());
 
-
   final List<JasosRoleModel> jasosRoleList = [
     JasosRoleModel(
-        imagePath: Assets.images.svg.jasoosJasoos, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
     JasosRoleModel(
-        imagePath: Assets.images.svg.shahrvandJasoos, roleName: "شهروند"),
-    JasosRoleModel(imagePath: Assets.images.svg.kalantarJasoos, roleName: "کلانتر"),
+        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
     JasosRoleModel(
-        imagePath: Assets.images.svg.jokerJasoos, roleName: "جوکر"),
-    JasosRoleModel(imagePath: Assets.images.svg.jasoosvijehJasoos, roleName: "جاسوس ویژه"),
+        imagePath: Assets.images.png.jasooskalantar.path, roleName: "کلانتر"),
+    JasosRoleModel(
+        imagePath: Assets.images.png.jasoosjoker.path, roleName: "جوکر"),
+    JasosRoleModel(
+        imagePath: Assets.images.png.jasoosjasoosvijeh.path,
+        roleName: "جاسوس ویژه"),
   ];
-
 
   void changeRole() {
     // اگر همه نقش‌ها نمایش داده شده باشند
-    if ( jasosRoleList.isEmpty) {
+    if (jasosRoleList.isEmpty) {
       emit(JasosDisplayedAllRoleState());
       return; // از تابع خارج می‌شود تا از انتخاب نقش جدید جلوگیری شود
     }

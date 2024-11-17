@@ -12,22 +12,27 @@ class MafiaCubit extends Cubit<MafiaState> {
 
   final List<MafiaRoleModel> mafia6PayerRoleList = [
     MafiaRoleModel(
-        imagePath: Assets.images.svg.mafiaSade, roleName: "مافیا ساده"),
+        imagePath: Assets.images.png.mafiamafiasade.path,
+        roleName: "مافیا ساده"),
     MafiaRoleModel(
-        imagePath: Assets.images.svg.shahrvandSade, roleName: "شهروند ساده"),
-    MafiaRoleModel(imagePath: Assets.images.svg.doctor, roleName: "دکتر"),
+        imagePath: Assets.images.png.mafiashahrvand.path,
+        roleName: "شهروند ساده"),
     MafiaRoleModel(
-        imagePath: Assets.images.svg.karagahMafia, roleName: "کارآگاه"),
-    MafiaRoleModel(imagePath: Assets.images.svg.sniper, roleName: "اسنایپر"),
-    MafiaRoleModel(imagePath: Assets.images.svg.jansakht, roleName: "جان سخت"),
+        imagePath: Assets.images.png.mafiadoctor.path, roleName: "دکتر"),
     MafiaRoleModel(
-        imagePath: Assets.images.svg.ravanshenas, roleName: "روانشناس"),
+        imagePath: Assets.images.png.mafiakaragah.path, roleName: "کارآگاه"),
+    MafiaRoleModel(
+        imagePath: Assets.images.png.mafiasniper.path, roleName: "اسنایپر"),
+    MafiaRoleModel(
+        imagePath: Assets.images.png.mafiajansakht.path, roleName: "جان سخت"),
+    MafiaRoleModel(
+        imagePath: Assets.images.png.mafiaravanshenas.path,
+        roleName: "روانشناس"),
   ];
-
 
   void changeRole() {
     // اگر همه نقش‌ها نمایش داده شده باشند
-    if ( mafia6PayerRoleList.isEmpty) {
+    if (mafia6PayerRoleList.isEmpty) {
       emit(MafiaDisplayedAllRoleState());
       return; // از تابع خارج می‌شود تا از انتخاب نقش جدید جلوگیری شود
     }

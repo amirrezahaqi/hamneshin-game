@@ -36,7 +36,6 @@ class $AssetsImagesGen {
   const $AssetsImagesGen();
 
   $AssetsImagesPngGen get png => const $AssetsImagesPngGen();
-  $AssetsImagesSvgGen get svg => const $AssetsImagesSvgGen();
 }
 
 class $AssetsImagesPngGen {
@@ -45,6 +44,26 @@ class $AssetsImagesPngGen {
   /// File path: assets/images/png/cheshmak-marg.png
   AssetGenImage get cheshmakMarg =>
       const AssetGenImage('assets/images/png/cheshmak-marg.png');
+
+  /// File path: assets/images/png/cheshmakghatel.png
+  AssetGenImage get cheshmakghatel =>
+      const AssetGenImage('assets/images/png/cheshmakghatel.png');
+
+  /// File path: assets/images/png/cheshmakkaragah.png
+  AssetGenImage get cheshmakkaragah =>
+      const AssetGenImage('assets/images/png/cheshmakkaragah.png');
+
+  /// File path: assets/images/png/cheshmaknotselect.png
+  AssetGenImage get cheshmaknotselect =>
+      const AssetGenImage('assets/images/png/cheshmaknotselect.png');
+
+  /// File path: assets/images/png/cheshmakpooch.png
+  AssetGenImage get cheshmakpooch =>
+      const AssetGenImage('assets/images/png/cheshmakpooch.png');
+
+  /// File path: assets/images/png/connection.png
+  AssetGenImage get connection =>
+      const AssetGenImage('assets/images/png/connection.png');
 
   /// File path: assets/images/png/darbare.png
   AssetGenImage get darbare =>
@@ -60,6 +79,26 @@ class $AssetsImagesPngGen {
   AssetGenImage get jasoos =>
       const AssetGenImage('assets/images/png/jasoos.png');
 
+  /// File path: assets/images/png/jasoosjasoossade.png
+  AssetGenImage get jasoosjasoossade =>
+      const AssetGenImage('assets/images/png/jasoosjasoossade.png');
+
+  /// File path: assets/images/png/jasoosjasoosvijeh.png
+  AssetGenImage get jasoosjasoosvijeh =>
+      const AssetGenImage('assets/images/png/jasoosjasoosvijeh.png');
+
+  /// File path: assets/images/png/jasoosjoker.png
+  AssetGenImage get jasoosjoker =>
+      const AssetGenImage('assets/images/png/jasoosjoker.png');
+
+  /// File path: assets/images/png/jasooskalantar.png
+  AssetGenImage get jasooskalantar =>
+      const AssetGenImage('assets/images/png/jasooskalantar.png');
+
+  /// File path: assets/images/png/jasoosshahrvand.png
+  AssetGenImage get jasoosshahrvand =>
+      const AssetGenImage('assets/images/png/jasoosshahrvand.png');
+
   /// File path: assets/images/png/jorat-haghighat-miz.png
   AssetGenImage get joratHaghighatMiz =>
       const AssetGenImage('assets/images/png/jorat-haghighat-miz.png');
@@ -73,6 +112,34 @@ class $AssetsImagesPngGen {
 
   /// File path: assets/images/png/mafia.png
   AssetGenImage get mafia => const AssetGenImage('assets/images/png/mafia.png');
+
+  /// File path: assets/images/png/mafiadoctor.png
+  AssetGenImage get mafiadoctor =>
+      const AssetGenImage('assets/images/png/mafiadoctor.png');
+
+  /// File path: assets/images/png/mafiajansakht.png
+  AssetGenImage get mafiajansakht =>
+      const AssetGenImage('assets/images/png/mafiajansakht.png');
+
+  /// File path: assets/images/png/mafiakaragah.png
+  AssetGenImage get mafiakaragah =>
+      const AssetGenImage('assets/images/png/mafiakaragah.png');
+
+  /// File path: assets/images/png/mafiamafiasade.png
+  AssetGenImage get mafiamafiasade =>
+      const AssetGenImage('assets/images/png/mafiamafiasade.png');
+
+  /// File path: assets/images/png/mafiaravanshenas.png
+  AssetGenImage get mafiaravanshenas =>
+      const AssetGenImage('assets/images/png/mafiaravanshenas.png');
+
+  /// File path: assets/images/png/mafiashahrvand.png
+  AssetGenImage get mafiashahrvand =>
+      const AssetGenImage('assets/images/png/mafiashahrvand.png');
+
+  /// File path: assets/images/png/mafiasniper.png
+  AssetGenImage get mafiasniper =>
+      const AssetGenImage('assets/images/png/mafiasniper.png');
 
   /// File path: assets/images/png/music.png
   AssetGenImage get music => const AssetGenImage('assets/images/png/music.png');
@@ -89,137 +156,81 @@ class $AssetsImagesPngGen {
   AssetGenImage get rahnama =>
       const AssetGenImage('assets/images/png/rahnama.png');
 
+  /// File path: assets/images/png/sdjvdozd.png
+  AssetGenImage get sdjvdozd =>
+      const AssetGenImage('assets/images/png/sdjvdozd.png');
+
+  /// File path: assets/images/png/sdjvjalad.png
+  AssetGenImage get sdjvjalad =>
+      const AssetGenImage('assets/images/png/sdjvjalad.png');
+
+  /// File path: assets/images/png/sdjvshah.png
+  AssetGenImage get sdjvshah =>
+      const AssetGenImage('assets/images/png/sdjvshah.png');
+
+  /// File path: assets/images/png/sdjvvazir.png
+  AssetGenImage get sdjvvazir =>
+      const AssetGenImage('assets/images/png/sdjvvazir.png');
+
+  /// File path: assets/images/png/selected.png
+  AssetGenImage get selected =>
+      const AssetGenImage('assets/images/png/selected.png');
+
   /// File path: assets/images/png/shah-dozd-jallad.png
   AssetGenImage get shahDozdJallad =>
       const AssetGenImage('assets/images/png/shah-dozd-jallad.png');
 
+  /// File path: assets/images/png/shahnotselect.png
+  AssetGenImage get shahnotselect =>
+      const AssetGenImage('assets/images/png/shahnotselect.png');
+
   /// File path: assets/images/png/star.png
   AssetGenImage get star => const AssetGenImage('assets/images/png/star.png');
+
+  /// File path: assets/images/png/winner.png
+  AssetGenImage get winner =>
+      const AssetGenImage('assets/images/png/winner.png');
 
   /// List of all assets
   List<AssetGenImage> get values => [
         cheshmakMarg,
+        cheshmakghatel,
+        cheshmakkaragah,
+        cheshmaknotselect,
+        cheshmakpooch,
+        connection,
         darbare,
         dor,
         home,
         jasoos,
+        jasoosjasoossade,
+        jasoosjasoosvijeh,
+        jasoosjoker,
+        jasooskalantar,
+        jasoosshahrvand,
         joratHaghighatMiz,
         joratHaghighat,
         logo,
         mafia,
+        mafiadoctor,
+        mafiajansakht,
+        mafiakaragah,
+        mafiamafiasade,
+        mafiaravanshenas,
+        mafiashahrvand,
+        mafiasniper,
         music,
         pantomimMask,
         pantomim,
         rahnama,
+        sdjvdozd,
+        sdjvjalad,
+        sdjvshah,
+        sdjvvazir,
+        selected,
         shahDozdJallad,
-        star
-      ];
-}
-
-class $AssetsImagesSvgGen {
-  const $AssetsImagesSvgGen();
-
-  /// File path: assets/images/svg/cheshmak-naghsh.svg
-  String get cheshmakNaghsh => 'assets/images/svg/cheshmak-naghsh.svg';
-
-  /// File path: assets/images/svg/connection.svg
-  String get connection => 'assets/images/svg/connection.svg';
-
-  /// File path: assets/images/svg/doctor.svg
-  String get doctor => 'assets/images/svg/doctor.svg';
-
-  /// File path: assets/images/svg/done.svg
-  String get done => 'assets/images/svg/done.svg';
-
-  /// File path: assets/images/svg/dor-miz.svg
-  String get dorMiz => 'assets/images/svg/dor-miz.svg';
-
-  /// File path: assets/images/svg/dozd.svg
-  String get dozd => 'assets/images/svg/dozd.svg';
-
-  /// File path: assets/images/svg/ghatel-cheshmak.svg
-  String get ghatelCheshmak => 'assets/images/svg/ghatel-cheshmak.svg';
-
-  /// File path: assets/images/svg/jallad.svg
-  String get jallad => 'assets/images/svg/jallad.svg';
-
-  /// File path: assets/images/svg/jansakht.svg
-  String get jansakht => 'assets/images/svg/jansakht.svg';
-
-  /// File path: assets/images/svg/jasoos-jasoos.svg
-  String get jasoosJasoos => 'assets/images/svg/jasoos-jasoos.svg';
-
-  /// File path: assets/images/svg/jasoosvijeh-jasoos.svg
-  String get jasoosvijehJasoos => 'assets/images/svg/jasoosvijeh-jasoos.svg';
-
-  /// File path: assets/images/svg/joker-jasoos.svg
-  String get jokerJasoos => 'assets/images/svg/joker-jasoos.svg';
-
-  /// File path: assets/images/svg/kalantar-jasoos.svg
-  String get kalantarJasoos => 'assets/images/svg/kalantar-jasoos.svg';
-
-  /// File path: assets/images/svg/karagah-cheshmak.svg
-  String get karagahCheshmak => 'assets/images/svg/karagah-cheshmak.svg';
-
-  /// File path: assets/images/svg/karagah-mafia.svg
-  String get karagahMafia => 'assets/images/svg/karagah-mafia.svg';
-
-  /// File path: assets/images/svg/mafia-sade.svg
-  String get mafiaSade => 'assets/images/svg/mafia-sade.svg';
-
-  /// File path: assets/images/svg/pooch.svg
-  String get pooch => 'assets/images/svg/pooch.svg';
-
-  /// File path: assets/images/svg/ravanshenas.svg
-  String get ravanshenas => 'assets/images/svg/ravanshenas.svg';
-
-  /// File path: assets/images/svg/shah-notselect.svg
-  String get shahNotselect => 'assets/images/svg/shah-notselect.svg';
-
-  /// File path: assets/images/svg/shah.svg
-  String get shah => 'assets/images/svg/shah.svg';
-
-  /// File path: assets/images/svg/shahrvand-jasoos.svg
-  String get shahrvandJasoos => 'assets/images/svg/shahrvand-jasoos.svg';
-
-  /// File path: assets/images/svg/shahrvand-sade.svg
-  String get shahrvandSade => 'assets/images/svg/shahrvand-sade.svg';
-
-  /// File path: assets/images/svg/sniper.svg
-  String get sniper => 'assets/images/svg/sniper.svg';
-
-  /// File path: assets/images/svg/vazir.svg
-  String get vazir => 'assets/images/svg/vazir.svg';
-
-  /// File path: assets/images/svg/winner.svg
-  String get winner => 'assets/images/svg/winner.svg';
-
-  /// List of all assets
-  List<String> get values => [
-        cheshmakNaghsh,
-        connection,
-        doctor,
-        done,
-        dorMiz,
-        dozd,
-        ghatelCheshmak,
-        jallad,
-        jansakht,
-        jasoosJasoos,
-        jasoosvijehJasoos,
-        jokerJasoos,
-        kalantarJasoos,
-        karagahCheshmak,
-        karagahMafia,
-        mafiaSade,
-        pooch,
-        ravanshenas,
-        shahNotselect,
-        shah,
-        shahrvandJasoos,
-        shahrvandSade,
-        sniper,
-        vazir,
+        shahnotselect,
+        star,
         winner
       ];
 }

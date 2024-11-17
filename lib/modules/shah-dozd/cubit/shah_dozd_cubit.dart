@@ -10,10 +10,10 @@ class ShahDozdCubit extends Cubit<RoleModel?> {
 
   final List<String> naghs = ["شاه", "دزد", "وزیر", "جلاد"];
   final List<String> naghsAssets = [
-    "assets/images/svg/shah.svg",
-    "assets/images/svg/dozd.svg",
-    "assets/images/svg/vazir.svg",
-    "assets/images/svg/jallad.svg",
+    "assets/images/png/sdjvshah.png",
+    "assets/images/png/sdjvdozd.png",
+    "assets/images/png/sdjvvazir.png",
+    "assets/images/png/sdjvjalad.png",
   ];
 
   generateNaghshRandom() {
