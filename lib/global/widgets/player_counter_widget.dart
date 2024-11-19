@@ -7,15 +7,17 @@ class PlayerCounterWidget extends StatelessWidget {
       {super.key,
       required this.playerCounts,
       required this.onItemTap,
-      this.selectedItem = 0});
+      this.selectedItem = 0, this.textController});
   final List<int> playerCounts;
   final Function(int number) onItemTap;
   final int selectedItem;
+  final TextEditingController? textController;
   @override
   Widget build(BuildContext context) {
     // text field widget
     final Widget textField = TextFormField(
       readOnly: true,
+      controller: textController,
       textAlign: TextAlign.center,
       decoration: InputDecoration(
         contentPadding: EdgeInsets.symmetric(vertical: 2.w, horizontal: 3.w),
