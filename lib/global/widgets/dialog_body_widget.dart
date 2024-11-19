@@ -9,33 +9,34 @@ class DialogBodyWidget extends StatelessWidget {
   final List<Widget> dialogBody;
   @override
   Widget build(BuildContext context) {
-    return  Dialog(
+    return Dialog(
         backgroundColor: Colors.transparent,
-        insetPadding:  EdgeInsets.all(AppDistances.small8.w),
+        insetPadding: EdgeInsets.all(AppDistances.small8.w),
         child: Container(
           padding: EdgeInsets.all(2.w),
           width: double.infinity,
           decoration: BoxDecoration(
-            color: UiColors.darkBlueColor3,
-            borderRadius: BorderRadius.circular(AppDistances.small4.w),
-            border: Border.all(color: UiColors.lightBlueColor4,width: 2),
-            boxShadow: [
-              BoxShadow(color: UiColors.darkBlueColor3.withOpacity(0.50),offset: const Offset(0, 3),blurRadius: 30)
-            ]
-          ),
+              color: UiColors.darkBlueColor3,
+              borderRadius: BorderRadius.circular(AppDistances.small4.w),
+              border: Border.all(color: UiColors.lightBlueColor4, width: 2),
+              boxShadow: [
+                BoxShadow(
+                    color: UiColors.darkBlueColor3.withOpacity(0.50),
+                    offset: const Offset(0, 3),
+                    blurRadius: 30)
+              ]),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
               const _CloseDialogButtonWidget(),
-              SizedBox(height: AppDistances.small8.w),
+              SizedBox(height: AppDistances.small2.w),
               Column(
                 children: dialogBody,
               )
             ],
           ),
-        )
-    );
+        ));
   }
 }
 
@@ -52,10 +53,9 @@ class _CloseDialogButtonWidget extends StatelessWidget {
           width: 8.w,
           height: 8.w,
           decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            color: UiColors.lightGreyColor2,
-            border: Border.all(color: UiColors.greyColor)
-          ),
+              shape: BoxShape.circle,
+              color: UiColors.lightGreyColor2,
+              border: Border.all(color: UiColors.greyColor)),
           child: const Icon(CupertinoIcons.clear),
         ),
       ),

@@ -109,7 +109,7 @@ class _CheshmakMargScreenState extends State<CheshmakMargScreen> {
                       MainButton(
                         btnText: "نقش من رو بگو!",
                         onPress: () {
-                          cubit.generateNaghshRandom();
+                          cubit.generateNaghshRandom(context);
                         },
                         fontsize: 15,
                       ),
