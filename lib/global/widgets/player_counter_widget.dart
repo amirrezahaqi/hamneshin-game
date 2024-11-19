@@ -15,6 +15,7 @@ class PlayerCounterWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     // text field widget
     final Widget textField = TextFormField(
+      readOnly: true,
       textAlign: TextAlign.center,
       decoration: InputDecoration(
         contentPadding: EdgeInsets.symmetric(vertical: 2.w, horizontal: 3.w),
@@ -44,8 +45,8 @@ class PlayerCounterWidget extends StatelessWidget {
             child: AnimatedContainer(
               duration: const Duration(milliseconds: 350),
               margin: EdgeInsets.all(2.w),
-              width: 12.w,
-              height: 12.w,
+              width: 10.w,
+              height: 10.w,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(2.w),
                   border: Border.all(

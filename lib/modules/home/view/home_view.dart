@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_new/gen/assets.gen.dart';
 import 'package:flutter_application_new/global/widgets/app-bar.dart';
 import 'package:flutter_application_new/global/widgets/home_games_cards.dart';
 import 'package:flutter_application_new/global/widgets/jorat-haghighat-card.dart';
+import 'package:flutter_application_new/global/widgets/main_btn.dart';
+import 'package:flutter_application_new/global/widgets/player_counter_widget.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../../global/utils/constants/ui_colors.dart';
 import '../../../global/widgets/bottom-navigation.dart';
+import '../../../global/widgets/dialog_body_widget.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -58,7 +63,23 @@ class HomeView extends StatelessWidget {
                                 children: [
                                   HomeGamesCards(
                                       btnText: "بازی مافیا",
-                                      onPress: () {},
+                                      onPress: () {
+                                        showDialog(
+                                          context: context,
+                                          builder: (context) => DialogBodyWidget(
+                                            dialogBody: [
+                                              Image.asset(Assets.images.png.mafia.path,scale: 8,),
+                                              PlayerCounterWidget(
+                                                playerCounts: const [6,7,8,9,10,11,12,13,14,15,16],
+                                                 selectedItem: 7,
+                                                 onItemTap: (number) {
+                                              },),
+                                              MainButton(btnText: "شروع بازی", onPress:(){})
+                                            ],
+                                          ));
+
+
+                                      },
                                       imageAsset:
                                           "assets/images/png/mafia.png"),
                                   HomeGamesCards(
