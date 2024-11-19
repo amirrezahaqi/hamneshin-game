@@ -17,6 +17,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    final TextEditingController mafiaPlayerCount = TextEditingController();
     return MaterialApp(
       home: SafeArea(
         child: Container(
@@ -70,9 +71,11 @@ class HomeView extends StatelessWidget {
                                             dialogBody: [
                                               Image.asset(Assets.images.png.mafia.path,scale: 8,),
                                               PlayerCounterWidget(
+                                                textController: mafiaPlayerCount,
                                                 playerCounts: const [6,7,8,9,10,11,12,13,14,15,16],
-                                                 selectedItem: 7,
+                                                 selectedItem: mafiaPlayerCount.text.isNotEmpty ? int.parse(mafiaPlayerCount.text) : 0,
                                                  onItemTap: (number) {
+                                                  mafiaPlayerCount.text = number.toString();
                                               },),
                                               MainButton(btnText: "شروع بازی", onPress:(){})
                                             ],
