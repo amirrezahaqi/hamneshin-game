@@ -57,6 +57,13 @@ class CheshmakmargCubit extends Cubit<RoleModel?> {
                         color: UiColors.whiteColor,
                         fontWeight: FontWeight.normal),
                   ),
+                  SizedBox(
+                    width: AppDistances.medium16.w * 2,
+                    child: const Divider(
+                      color: UiColors.whiteColor,
+                      thickness: 2,
+                    ),
+                  ),
                   SizedBox(height: AppDistances.small2.w),
                   const Text(
                     textAlign: TextAlign.center,
