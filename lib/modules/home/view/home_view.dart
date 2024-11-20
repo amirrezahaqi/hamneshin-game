@@ -5,7 +5,9 @@ import 'package:flutter_application_new/global/widgets/home_games_cards.dart';
 import 'package:flutter_application_new/global/widgets/jorat-haghighat-card.dart';
 import 'package:flutter_application_new/global/widgets/main_btn.dart';
 import 'package:flutter_application_new/global/widgets/player_counter_widget.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:flutter_application_new/modules/home/cubit/home_cubit.dart';
+import 'package:flutter_application_new/modules/mafia/view/mafia_view.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../global/utils/constants/ui_colors.dart';
 import '../../../global/widgets/bottom-navigation.dart';
@@ -67,21 +69,52 @@ class HomeView extends StatelessWidget {
                                       onPress: () {
                                         showDialog(
                                           context: context,
-                                          builder: (context) => DialogBodyWidget(
-                                            dialogBody: [
-                                              Image.asset(Assets.images.png.mafia.path,scale: 8,),
-                                              PlayerCounterWidget(
-                                                textController: mafiaPlayerCount,
-                                                playerCounts: const [6,7,8,9,10,11,12,13,14,15,16],
-                                                 selectedItem: mafiaPlayerCount.text.isNotEmpty ? int.parse(mafiaPlayerCount.text) : 0,
-                                                 onItemTap: (number) {
-                                                  mafiaPlayerCount.text = number.toString();
-                                              },),
-                                              MainButton(btnText: "شروع بازی", onPress:(){})
-                                            ],
-                                          ));
-
-
+                                          builder: (context) {
+                                            final playerCountsList = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+                                            return DialogBodyWidget(
+                                              dialogBody: [
+                                                Image.asset(
+                                                    Assets
+                                                        .images.png.mafia.path,
+                                                    scale: 8),
+                                                BlocBuilder<HomeCubit,
+                                                    HomeState>(
+                                                  builder: (context, state) {
+                                                    final homeCubit = BlocProvider.of<HomeCubit>(context);
+                                                    return PlayerCounterWidget(
+                                                      textController:
+                                                          mafiaPlayerCount,
+                                                      playerCounts:
+                                                          playerCountsList,
+                                                      selectedItem: state is HomeChangeMafiaPlayerCount ? state.playerCount : 0,
+                                                      onItemTap: (number, indexItem) {
+                                                        mafiaPlayerCount.text = number.toString();
+                                                        homeCubit.changeMafiaPlayerCount(playerCount: indexItem);
+                                                      },
+                                                    );
+                                                  },
+                                                ),
+                                                MainButton(
+                                                    btnText: "شروع بازی",
+                                                    onPress: () {
+                                                      if (mafiaPlayerCount
+                                                          .text.isEmpty) {
+                                                        mafiaPlayerCount.text =
+                                                            playerCountsList[0]
+                                                                .toString();
+                                                      }
+                                                      Navigator.push(
+                                                          context,
+                                                          MaterialPageRoute(
+                                                            builder:
+                                                                (context) => MafiaView(playerCount: int.parse(mafiaPlayerCount.text),
+                                                            ),
+                                                          ));
+                                                    }),
+                                              ],
+                                            );
+                                          },
+                                        );
                                       },
                                       imageAsset:
                                           "assets/images/png/mafia.png"),

@@ -10,12 +10,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class MafiaView extends StatelessWidget {
-  const MafiaView({super.key});
-
+  const MafiaView({super.key, required this.playerCount});
+  final int playerCount;
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => MafiaCubit(),
+      create: (context) => MafiaCubit(playerCount: playerCount),
       child: Scaffold(
         body: SafeArea(
             child: Container(

@@ -9,7 +9,7 @@ class PlayerCounterWidget extends StatelessWidget {
       required this.onItemTap,
       this.selectedItem = 0, this.textController});
   final List<int> playerCounts;
-  final Function(int number) onItemTap;
+  final Function(int number , int indexItem) onItemTap;
   final int selectedItem;
   final TextEditingController? textController;
   @override
@@ -43,7 +43,7 @@ class PlayerCounterWidget extends StatelessWidget {
           final bool selectCondition =
               selectedItem == playerCounts.indexOf(playerCounts[index]);
           return GestureDetector(
-            onTap: () => onItemTap(playerCounts[index]),
+            onTap: () => onItemTap(playerCounts[index],playerCounts.indexOf(playerCounts[index])),
             child: AnimatedContainer(
               duration: const Duration(milliseconds: 350),
               margin: EdgeInsets.all(2.w),

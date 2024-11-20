@@ -8,7 +8,8 @@ import "package:meta/meta.dart";
 part 'mafia_state.dart';
 
 class MafiaCubit extends Cubit<MafiaState> {
-  MafiaCubit() : super(MafiaInitial());
+  MafiaCubit({required this.playerCount}) : super(MafiaInitial());
+  final int playerCount;
 
   final List<MafiaRoleModel> mafia6PayerRoleList = [
     MafiaRoleModel(
