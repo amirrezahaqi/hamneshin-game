@@ -5,6 +5,7 @@ sealed class MafiaState {}
 
 final class MafiaInitial extends MafiaState {}
 
+
 final class MafiaChangeRoleState extends MafiaState {
   MafiaChangeRoleState({required this.role});
   final MafiaRoleModel role;

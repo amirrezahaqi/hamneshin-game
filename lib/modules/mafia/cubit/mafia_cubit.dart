@@ -8,8 +8,7 @@ import "package:meta/meta.dart";
 part 'mafia_state.dart';
 
 class MafiaCubit extends Cubit<MafiaState> {
-  MafiaCubit({required this.playerCount}) : super(MafiaInitial());
-  final int playerCount;
+  MafiaCubit() : super(MafiaInitial());
 
   final List<MafiaRoleModel> mafia6PayerRoleList = [
     MafiaRoleModel(
@@ -348,7 +347,6 @@ class MafiaCubit extends Cubit<MafiaState> {
       emit(MafiaDisplayedAllRoleState());
       return; // از تابع خارج می‌شود تا از انتخاب نقش جدید جلوگیری شود
     }
-
     // انتخاب یک نقش تصادفی
     final randomIndex = Random().nextInt(roleList.length);
     final randomRole = roleList[randomIndex];
@@ -362,7 +360,7 @@ class MafiaCubit extends Cubit<MafiaState> {
 
   void hideMafiaRole() => emit(MafiaHideRoleState());
 
-  void getRoleList(int count) {
+  void getRoleList(int playerCount) {
     switch(playerCount) {
       case 6 :
         roleList = mafia6PayerRoleList;
