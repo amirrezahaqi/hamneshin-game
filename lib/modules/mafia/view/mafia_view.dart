@@ -75,6 +75,7 @@ class MafiaView extends StatelessWidget {
                                     MafiaShowRoleWidget(role: state.role)
                                   ] else if(state is MafiaHideRoleState)...[
                                     SizedBox(height: AppDistances.medium12.w),
+                                    Image.asset(Assets.images.png.mafia.path),
                                     Text(
                                       "برای دیدن نقشت ضربه بزن!",
                                       textAlign: TextAlign.center,
