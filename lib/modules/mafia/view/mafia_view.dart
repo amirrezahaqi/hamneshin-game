@@ -63,7 +63,7 @@ class MafiaView extends StatelessWidget {
                                     SizedBox(height: AppDistances.medium12.w),
                                     MainButton(
                                       btnText: "رفتن به صفحه اصلی",
-                                      onPress: () { },
+                                      onPress: () { Navigator.pop(context); },
                                       fontsize: 15.sp,
                                     ),
                                   ],
@@ -100,6 +100,7 @@ class MafiaView extends StatelessWidget {
                                       SizedBox(
                                         width: AppDistances.small4.w,
                                       ),
+                                      if(state is! MafiaInitial)
                                       MainButton2(
                                         btnText: "نقش  رو بپوشون!",
                                         onPress: () => mafiaCubit.hideMafiaRole(),
