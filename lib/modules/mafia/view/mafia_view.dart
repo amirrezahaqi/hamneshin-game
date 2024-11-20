@@ -10,12 +10,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class MafiaView extends StatelessWidget {
-  const MafiaView({super.key});
-
+  const MafiaView({super.key, required this.playerCount});
+  final int playerCount;
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => MafiaCubit(),
+      create: (context) => MafiaCubit()..getRoleList(playerCount),
       child: Scaffold(
         body: SafeArea(
             child: Container(
@@ -63,7 +63,7 @@ class MafiaView extends StatelessWidget {
                                     SizedBox(height: AppDistances.medium12.w),
                                     MainButton(
                                       btnText: "رفتن به صفحه اصلی",
-                                      onPress: () { },
+                                      onPress: () { Navigator.pop(context); },
                                       fontsize: 15.sp,
                                     ),
                                   ],
@@ -75,6 +75,7 @@ class MafiaView extends StatelessWidget {
                                     MafiaShowRoleWidget(role: state.role)
                                   ] else if(state is MafiaHideRoleState)...[
                                     SizedBox(height: AppDistances.medium12.w),
+                                    Image.asset(Assets.images.png.mafia.path),
                                     Text(
                                       "برای دیدن نقشت ضربه بزن!",
                                       textAlign: TextAlign.center,
@@ -100,6 +101,7 @@ class MafiaView extends StatelessWidget {
                                       SizedBox(
                                         width: AppDistances.small4.w,
                                       ),
+                                      if(state is! MafiaInitial)
                                       MainButton2(
                                         btnText: "نقش  رو بپوشون!",
                                         onPress: () => mafiaCubit.hideMafiaRole(),
