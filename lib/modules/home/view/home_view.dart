@@ -103,6 +103,7 @@ class HomeView extends StatelessWidget {
                                                             playerCountsList[0]
                                                                 .toString();
                                                       }
+                                                      Navigator.pop(context);// close dialog
                                                       Navigator.push(
                                                           context,
                                                           MaterialPageRoute(

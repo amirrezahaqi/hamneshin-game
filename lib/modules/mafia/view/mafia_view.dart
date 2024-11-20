@@ -15,7 +15,7 @@ class MafiaView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => MafiaCubit(playerCount: playerCount),
+      create: (context) => MafiaCubit(playerCount: playerCount)..getRoleList(playerCount),
       child: Scaffold(
         body: SafeArea(
             child: Container(
