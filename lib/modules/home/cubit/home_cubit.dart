@@ -10,4 +10,8 @@ class HomeCubit extends Cubit<HomeState> {
   void changeMafiaPlayerCount({required int playerCount}) {
     emit(HomeChangeMafiaPlayerCount(playerCount: playerCount));
   }
+
+  void changeJasosPlayerCount({required int playerCount}) {
+    emit(HomeChangeJasosPlayerCount(playerCount: playerCount));
+  }
 }

@@ -20,6 +20,8 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     final TextEditingController mafiaPlayerCount = TextEditingController();
+    final TextEditingController jasosPlayerCount = TextEditingController();
+    final homeCubit = BlocProvider.of<HomeCubit>(context);
     return MaterialApp(
       home: SafeArea(
         child: Scaffold(
@@ -65,12 +67,11 @@ class HomeView extends StatelessWidget {
                                               BlocBuilder<HomeCubit,
                                                   HomeState>(
                                                 builder: (context, state) {
-                                                  final homeCubit = BlocProvider.of<HomeCubit>(context);
+
                                                   return PlayerCounterWidget(
                                                     textController:
                                                         mafiaPlayerCount,
-                                                    playerCounts:
-                                                        playerCountsList,
+                                                    playerCounts: playerCountsList,
                                                     selectedItem: state is HomeChangeMafiaPlayerCount ? state.playerCount : 0,
                                                     onItemTap: (number, indexItem) {
                                                       mafiaPlayerCount.text = number.toString();
@@ -107,7 +108,37 @@ class HomeView extends StatelessWidget {
                                 HomeGamesCards(
                                     btnText: "بازی جاسوس",
                                     onPress: () {
-                                      Navigator.push(context, MaterialPageRoute(builder: (context) => const JasosView()));
+                                      showDialog(context: context, builder: (context) {
+                                        final playerCountsList = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+                                        return DialogBodyWidget(
+                                            dialogBody: [
+                                           Image.asset(Assets.images.png.jasoos.path,scale: 3),
+                                          BlocBuilder<HomeCubit, HomeState>(
+                                            builder: (context, state) {
+                                              return PlayerCounterWidget(
+                                              textController: jasosPlayerCount,
+                                              playerCounts: playerCountsList,
+                                              selectedItem: state is HomeChangeJasosPlayerCount ? state.playerCount : 0,
+                                              onItemTap: (number, indexItem) {
+                                                jasosPlayerCount.text = number.toString();
+                                                homeCubit.changeJasosPlayerCount(playerCount: indexItem);
+                                              },);
+                                                  },
+                                                ),
+                                          MainButton(
+                                              btnText: "شروع بازی",
+                                              onPress: () {
+                                                if(jasosPlayerCount.text.isEmpty) {
+                                                  jasosPlayerCount.text = playerCountsList[0].toString();
+                                                }
+                                                Navigator.pop(context);// close dialog
+                                                Navigator.push(context, MaterialPageRoute(
+                                                    builder: (context) => JasosView(playerCount: int.parse(jasosPlayerCount.text))
+                                                ));
+                                              }
+                                          )
+                                        ]);
+                                      },);
                                     },
                                     imageAsset:
                                         "assets/images/png/jasoos.png"),

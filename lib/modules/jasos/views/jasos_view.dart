@@ -10,8 +10,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class JasosView extends StatelessWidget {
-  const JasosView({super.key});
-
+  const JasosView({super.key, required this.playerCount});
+  final int playerCount;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
