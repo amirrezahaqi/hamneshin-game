@@ -10,8 +10,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class JasosView extends StatelessWidget {
-  const JasosView({super.key});
-
+  const JasosView({super.key, required this.playerCount});
+  final int playerCount;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +28,7 @@ class JasosView extends StatelessWidget {
           ),
         ),
         child: BlocProvider<JasosCubit>(
-          create: (context) => JasosCubit(),
+          create: (context) => JasosCubit()..getRoleList(playerCount),
           child: Center(
             child: SingleChildScrollView(
               child: BlocBuilder<JasosCubit, JasosState>(
@@ -58,6 +58,7 @@ class JasosView extends StatelessWidget {
                           ),
 
                         if (state is JasosHideRoleState) ...[
+                          Image.asset(Assets.images.png.jasoos.path),
                           SizedBox(height: AppDistances.medium12.w),
                           Text(
                             "برای دیدن نقشت ضربه بزن!",
@@ -84,7 +85,7 @@ class JasosView extends StatelessWidget {
                           SizedBox(height: AppDistances.medium12.w),
                           MainButton(
                             btnText: "رفتن به صفحه اصلی",
-                            onPress: () {},
+                            onPress: () {Navigator.pop(context);},
                             fontsize: 15.sp,
                           ),
                         ],
@@ -101,6 +102,7 @@ class JasosView extends StatelessWidget {
                               SizedBox(
                                 width: AppDistances.small4.w,
                               ),
+                              if(state is! JasosInitial)
                               MainButton2(
                                 btnText: "نقش  رو بپوشون!",
                                 onPress: () => jasosCubit.hideRole(),
