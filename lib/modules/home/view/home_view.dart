@@ -4,8 +4,12 @@ import 'package:flutter_application_new/global/widgets/home_games_cards.dart';
 import 'package:flutter_application_new/global/widgets/jorat-haghighat-card.dart';
 import 'package:flutter_application_new/global/widgets/main_btn.dart';
 import 'package:flutter_application_new/global/widgets/player_counter_widget.dart';
+import 'package:flutter_application_new/modules/cheshmak-marg/view/cheshmak_marg_screen.dart';
 import 'package:flutter_application_new/modules/home/cubit/home_cubit.dart';
+import 'package:flutter_application_new/modules/jasos/views/jasos_view.dart';
 import 'package:flutter_application_new/modules/mafia/view/mafia_view.dart';
+import 'package:flutter_application_new/modules/pantomim/view/pantomim_screen.dart';
+import 'package:flutter_application_new/modules/shah-dozd/view/shah_dozd_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../global/widgets/dialog_body_widget.dart';
 
@@ -102,12 +106,16 @@ class HomeView extends StatelessWidget {
                                         "assets/images/png/mafia.png"),
                                 HomeGamesCards(
                                     btnText: "بازی جاسوس",
-                                    onPress: () {},
+                                    onPress: () {
+                                      Navigator.push(context, MaterialPageRoute(builder: (context) => const JasosView()));
+                                    },
                                     imageAsset:
                                         "assets/images/png/jasoos.png"),
                                 HomeGamesCards(
                                     btnText: "بازی پانتومیم ",
-                                    onPress: () {},
+                                    onPress: () {
+                                      Navigator.push(context, MaterialPageRoute(builder: (context) => const PantomimScreen()));
+                                    },
                                     imageAsset:
                                         "assets/images/png/pantomim.png"),
                               ],
@@ -121,16 +129,22 @@ class HomeView extends StatelessWidget {
                               children: [
                                 HomeGamesCards(
                                     btnText: "بازی دور",
-                                    onPress: () {},
+                                    onPress: () {
+
+                                    },
                                     imageAsset: "assets/images/png/dor.png"),
                                 HomeGamesCards(
                                     btnText: "بازی چشمک مرگ",
-                                    onPress: () {},
+                                    onPress: () {
+                                      Navigator.push(context, MaterialPageRoute(builder: (context) => const CheshmakMargScreen()));
+                                    },
                                     imageAsset:
                                         "assets/images/png/cheshmak-marg.png"),
                                 HomeGamesCards(
                                     btnText: "بازی شاه دزد جلاد",
-                                    onPress: () {},
+                                    onPress: () {
+                                      Navigator.push(context, MaterialPageRoute(builder: (context) => const ShahDozdScreen()));
+                                    },
                                     imageAsset:
                                         "assets/images/png/shah-dozd-jallad.png"),
                               ],
