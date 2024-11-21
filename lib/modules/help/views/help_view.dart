@@ -13,6 +13,9 @@ class HelpView extends StatelessWidget {
       _HelpCard(
           imagePath: Assets.images.png.mafia.path,
           title: 'بازی گروهی مافیا',
+          onTap: () {}),      _HelpCard(
+          imagePath: Assets.images.png.mafia.path,
+          title: 'بازی گروهی مافیا',
           onTap: () {}),
       _HelpCard(
           imagePath: Assets.images.png.jasoos.path,
@@ -39,9 +42,7 @@ class HelpView extends StatelessWidget {
           title: 'بازی گروهی چشمک مرگ',
           onTap: () {}),
     ];
-    return Scaffold(
-      body: SafeArea(
-          child: Container(
+    return Container(
         padding: const EdgeInsets.all(AppDistances.pageBdyMargin),
         width: double.infinity,
         height: double.infinity,
@@ -55,21 +56,18 @@ class HelpView extends StatelessWidget {
             ],
           ),
         ),
-        child: SingleChildScrollView(
-          child: Column(
-            children: List.generate(
-              helpCardsList.length,
-              (index) => Padding(
-                padding: EdgeInsets.only(bottom: 4.w),
-                child: _HelpCard(
-                    imagePath: helpCardsList[index].imagePath,
-                    title: helpCardsList[index].title,
-                    onTap: helpCardsList[index].onTap),
-              ),
-            ),
-          ),
-        ),
-      )),
+        child: ListView.builder(
+          itemCount: helpCardsList.length,
+          itemBuilder: (context, index) {
+            return Padding(
+              padding: EdgeInsets.only(bottom: 4.w),
+              child: _HelpCard(
+                  imagePath: helpCardsList[index].imagePath,
+                  title: helpCardsList[index].title,
+                  onTap: helpCardsList[index].onTap),
+            );
+          },
+        )
     );
   }
 }
