@@ -295,17 +295,17 @@ class JasosCubit extends Cubit<JasosState> {
 
   void changeRole() {
     // اگر همه نقش‌ها نمایش داده شده باشند
-    if (jasos6PlayerRoleList.isEmpty) {
+    if (roleList.isEmpty) {
       emit(JasosDisplayedAllRoleState());
       return; // از تابع خارج می‌شود تا از انتخاب نقش جدید جلوگیری شود
     }
 
     // انتخاب یک نقش تصادفی
-    final randomIndex = Random().nextInt(jasos6PlayerRoleList.length);
-    final randomRole = jasos6PlayerRoleList[randomIndex];
+    final randomIndex = Random().nextInt(roleList.length);
+    final randomRole = roleList[randomIndex];
 
     // حذف نقش انتخاب‌شده از لیست اصلی
-    jasos6PlayerRoleList.removeAt(randomIndex);
+    roleList.removeAt(randomIndex);
 
     // نمایش نقش انتخاب‌شده
     emit(JasosChangeRoleState(role: randomRole));
