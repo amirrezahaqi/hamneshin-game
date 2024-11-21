@@ -6,8 +6,12 @@ import '../utils/constants/ui_colors.dart';
 
 class BottomNavigation extends StatelessWidget {
   const BottomNavigation({
-    super.key,
+    super.key, required this.onPageChange,
   });
+
+    final Function(int pageIndex) onPageChange;
+
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -59,37 +63,43 @@ class BottomNavigation extends StatelessWidget {
                   ),
                 ],
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Image.asset(
-                    "assets/images/png/home.png",
-                    scale: 4,
-                  ),
-                  const Text(
-                    "خانه",
-                    style: TextStyle(
-                        fontFamily: FontFamily.pelak,
-                        color: UiColors.whiteColor,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ],
+              GestureDetector(
+                onTap: () => onPageChange(0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Image.asset(
+                      "assets/images/png/home.png",
+                      scale: 4,
+                    ),
+                    const Text(
+                      "خانه",
+                      style: TextStyle(
+                          fontFamily: FontFamily.pelak,
+                          color: UiColors.whiteColor,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Image.asset(
-                    "assets/images/png/rahnama.png",
-                    scale: 4,
-                  ),
-                  const Text(
-                    "راهنما",
-                    style: TextStyle(
-                        fontFamily: FontFamily.pelak,
-                        color: UiColors.whiteColor,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ],
+              GestureDetector(
+                onTap: () => onPageChange(1),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Image.asset(
+                      "assets/images/png/rahnama.png",
+                      scale: 4,
+                    ),
+                    const Text(
+                      "راهنما",
+                      style: TextStyle(
+                          fontFamily: FontFamily.pelak,
+                          color: UiColors.whiteColor,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

@@ -38,7 +38,7 @@ class _JoratHaghighatScreenState extends State<JoratHaghighatScreen> {
             preferredSize: Size.fromHeight(size.height / 12),
             child: const AppBarWidget(),
           ),
-          bottomNavigationBar: const BottomNavigation(),
+          bottomNavigationBar:  BottomNavigation(onPageChange: (int pageIndex) {  },),
           body: SizedBox(
             width: double.infinity,
             height: double.infinity,

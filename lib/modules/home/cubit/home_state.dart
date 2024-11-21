@@ -10,3 +10,8 @@ final class HomeChangeMafiaPlayerCount extends HomeState {
   HomeChangeMafiaPlayerCount({required this.playerCount});
   final int playerCount;
 }
+
+final class HomeChangeJasosPlayerCount extends HomeState {
+  HomeChangeJasosPlayerCount({required this.playerCount});
+  final int playerCount;
+}

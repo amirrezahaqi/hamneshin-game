@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/global/theme/app_theme.dart';
-import 'package:flutter_application_new/modules/cheshmak-marg/view/cheshmak_marg_screen.dart';
-import 'package:flutter_application_new/modules/home/view/home_view.dart';
+import 'package:flutter_application_new/global/widgets/main_wrapper.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -13,6 +12,7 @@ class AppView extends StatelessWidget {
     return ResponsiveSizer(
         builder: (context, orientation, screenType) => MaterialApp(
             title: 'Hamneshin',
+            debugShowCheckedModeBanner: false,
             localizationsDelegates: const [
               GlobalMaterialLocalizations.delegate,
               GlobalWidgetsLocalizations.delegate,
@@ -23,6 +23,6 @@ class AppView extends StatelessWidget {
             ],
             locale: const Locale("fa"),
             theme: AppTheme.appTheme,
-            home: const HomeView()));
+            home: const MainWrapper()));
   }
 }
