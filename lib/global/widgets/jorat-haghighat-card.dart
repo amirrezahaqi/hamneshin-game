@@ -5,11 +5,11 @@ import 'package:flutter_application_new/global/widgets/main_btn.dart';
 import '../utils/constants/app_distances.dart';
 import '../utils/constants/ui_colors.dart';
 
-class JoratHaghighatCard extends StatelessWidget {
+class CommingSoonCard extends StatelessWidget {
   final String btnText;
   final String imageAsset;
   final Function onPress;
-  const JoratHaghighatCard({
+  const CommingSoonCard({
     super.key,
     required this.btnText,
     required this.onPress,
@@ -41,39 +41,44 @@ class JoratHaghighatCard extends StatelessWidget {
             ),
             onPressed: () => onPress(),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      "بازی هیجان انگیز",
+                      "به زودی بازی هیجان انگیز",
                       style: TextStyle(
+                          fontSize: 15,
                           fontFamily: FontFamily.pelak,
                           color: UiColors.whiteColor,
                           fontWeight: FontWeight.normal),
                     ),
                     const Text(
-                      "جرعت یا حقیقت",
+                      "دورهمی",
                       style: TextStyle(
                           fontFamily: FontFamily.pelak,
                           color: UiColors.whiteColor,
-                          fontSize: 17,
+                          fontSize: 25,
                           fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(
                       height: 20,
                     ),
-                    MainButton(btnText: "شروع بازی", onPress: onPress),
+                    MainButton(
+                      btnText: "درباره بازی",
+                      onPress: onPress,
+                      padding: AppDistances.small2,
+                    ),
                   ],
                 ),
                 SizedBox(
                   child: Image.asset(
                     imageAsset,
-                    height: size.height / 5,
-                    width: size.height / 5,
-                    fit: BoxFit.contain,
+                    height: size.height / 5.5,
+                    width: size.height / 5.5,
+                    fit: BoxFit.cover,
                   ),
                 ),
               ],

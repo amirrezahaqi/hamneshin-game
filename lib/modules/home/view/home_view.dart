@@ -7,10 +7,12 @@ import 'package:flutter_application_new/global/widgets/player_counter_widget.dar
 import 'package:flutter_application_new/modules/cheshmak-marg/view/cheshmak_marg_screen.dart';
 import 'package:flutter_application_new/modules/home/cubit/home_cubit.dart';
 import 'package:flutter_application_new/modules/jasos/views/jasos_view.dart';
+import 'package:flutter_application_new/modules/jorat-haghighat/view/jorathaghighat_screen.dart';
 import 'package:flutter_application_new/modules/mafia/view/mafia_view.dart';
 import 'package:flutter_application_new/modules/pantomim/view/pantomim_screen.dart';
 import 'package:flutter_application_new/modules/shah-dozd/view/shah_dozd_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../../global/widgets/dialog_body_widget.dart';
 
 class HomeView extends StatelessWidget {
@@ -23,6 +25,7 @@ class HomeView extends StatelessWidget {
     final TextEditingController jasosPlayerCount = TextEditingController();
     final homeCubit = BlocProvider.of<HomeCubit>(context);
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
             backgroundColor: Colors.transparent,
@@ -35,10 +38,10 @@ class HomeView extends StatelessWidget {
                     SizedBox(
                       height: size.height / 20,
                     ),
-                    JoratHaghighatCard(
+                    CommingSoonCard(
                       btnText: '',
                       onPress: () {},
-                      imageAsset: 'assets/images/png/jorat-haghighat.png',
+                      imageAsset: 'assets/images/png/dor.png',
                     ),
                     SizedBox(
                       height: size.height / 30,
@@ -48,8 +51,7 @@ class HomeView extends StatelessWidget {
                         child: Column(
                           children: [
                             Row(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceAround,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 HomeGamesCards(
                                     btnText: "بازی مافیا",
@@ -57,25 +59,43 @@ class HomeView extends StatelessWidget {
                                       showDialog(
                                         context: context,
                                         builder: (context) {
-                                          final playerCountsList = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+                                          final playerCountsList = [
+                                            6,
+                                            7,
+                                            8,
+                                            9,
+                                            10,
+                                            11,
+                                            12,
+                                            13,
+                                            14,
+                                            15,
+                                            16
+                                          ];
                                           return DialogBodyWidget(
                                             dialogBody: [
                                               Image.asset(
-                                                  Assets
-                                                      .images.png.mafia.path,
+                                                  Assets.images.png.mafia.path,
                                                   scale: 8),
-                                              BlocBuilder<HomeCubit,
-                                                  HomeState>(
+                                              BlocBuilder<HomeCubit, HomeState>(
                                                 builder: (context, state) {
-
                                                   return PlayerCounterWidget(
                                                     textController:
                                                         mafiaPlayerCount,
-                                                    playerCounts: playerCountsList,
-                                                    selectedItem: state is HomeChangeMafiaPlayerCount ? state.playerCount : 0,
-                                                    onItemTap: (number, indexItem) {
-                                                      mafiaPlayerCount.text = number.toString();
-                                                      homeCubit.changeMafiaPlayerCount(playerCount: indexItem);
+                                                    playerCounts:
+                                                        playerCountsList,
+                                                    selectedItem: state
+                                                            is HomeChangeMafiaPlayerCount
+                                                        ? state.playerCount
+                                                        : 0,
+                                                    onItemTap:
+                                                        (number, indexItem) {
+                                                      mafiaPlayerCount.text =
+                                                          number.toString();
+                                                      homeCubit
+                                                          .changeMafiaPlayerCount(
+                                                              playerCount:
+                                                                  indexItem);
                                                     },
                                                   );
                                                 },
@@ -89,12 +109,16 @@ class HomeView extends StatelessWidget {
                                                           playerCountsList[0]
                                                               .toString();
                                                     }
-                                                    Navigator.pop(context);// close dialog
+                                                    Navigator.pop(
+                                                        context); // close dialog
                                                     Navigator.push(
                                                         context,
                                                         MaterialPageRoute(
-                                                          builder:
-                                                              (context) => MafiaView(playerCount: int.parse(mafiaPlayerCount.text),
+                                                          builder: (context) =>
+                                                              MafiaView(
+                                                            playerCount: int.parse(
+                                                                mafiaPlayerCount
+                                                                    .text),
                                                           ),
                                                         ));
                                                   }),
@@ -103,49 +127,85 @@ class HomeView extends StatelessWidget {
                                         },
                                       );
                                     },
-                                    imageAsset:
-                                        "assets/images/png/mafia.png"),
+                                    imageAsset: "assets/images/png/mafia.png"),
                                 HomeGamesCards(
                                     btnText: "بازی جاسوس",
                                     onPress: () {
-                                      showDialog(context: context, builder: (context) {
-                                        final playerCountsList = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
-                                        return DialogBodyWidget(
-                                            dialogBody: [
-                                           Image.asset(Assets.images.png.jasoos.path,scale: 3),
-                                          BlocBuilder<HomeCubit, HomeState>(
-                                            builder: (context, state) {
-                                              return PlayerCounterWidget(
-                                              textController: jasosPlayerCount,
-                                              playerCounts: playerCountsList,
-                                              selectedItem: state is HomeChangeJasosPlayerCount ? state.playerCount : 0,
-                                              onItemTap: (number, indexItem) {
-                                                jasosPlayerCount.text = number.toString();
-                                                homeCubit.changeJasosPlayerCount(playerCount: indexItem);
-                                              },);
+                                      showDialog(
+                                        context: context,
+                                        builder: (context) {
+                                          final playerCountsList = [
+                                            6,
+                                            7,
+                                            8,
+                                            9,
+                                            10,
+                                            11,
+                                            12,
+                                            13,
+                                            14,
+                                            15,
+                                            16
+                                          ];
+                                          return DialogBodyWidget(dialogBody: [
+                                            Image.asset(
+                                                Assets.images.png.jasoos.path,
+                                                scale: 3),
+                                            BlocBuilder<HomeCubit, HomeState>(
+                                              builder: (context, state) {
+                                                return PlayerCounterWidget(
+                                                  textController:
+                                                      jasosPlayerCount,
+                                                  playerCounts:
+                                                      playerCountsList,
+                                                  selectedItem: state
+                                                          is HomeChangeJasosPlayerCount
+                                                      ? state.playerCount
+                                                      : 0,
+                                                  onItemTap:
+                                                      (number, indexItem) {
+                                                    jasosPlayerCount.text =
+                                                        number.toString();
+                                                    homeCubit
+                                                        .changeJasosPlayerCount(
+                                                            playerCount:
+                                                                indexItem);
                                                   },
-                                                ),
-                                          MainButton(
-                                              btnText: "شروع بازی",
-                                              onPress: () {
-                                                if(jasosPlayerCount.text.isEmpty) {
-                                                  jasosPlayerCount.text = playerCountsList[0].toString();
-                                                }
-                                                Navigator.pop(context);// close dialog
-                                                Navigator.push(context, MaterialPageRoute(
-                                                    builder: (context) => JasosView(playerCount: int.parse(jasosPlayerCount.text))
-                                                ));
-                                              }
-                                          )
-                                        ]);
-                                      },);
+                                                );
+                                              },
+                                            ),
+                                            MainButton(
+                                                btnText: "شروع بازی",
+                                                onPress: () {
+                                                  if (jasosPlayerCount
+                                                      .text.isEmpty) {
+                                                    jasosPlayerCount.text =
+                                                        playerCountsList[0]
+                                                            .toString();
+                                                  }
+                                                  Navigator.pop(
+                                                      context); // close dialog
+                                                  Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                          builder: (context) => JasosView(
+                                                              playerCount: int.parse(
+                                                                  jasosPlayerCount
+                                                                      .text))));
+                                                })
+                                          ]);
+                                        },
+                                      );
                                     },
-                                    imageAsset:
-                                        "assets/images/png/jasoos.png"),
+                                    imageAsset: "assets/images/png/jasoos.png"),
                                 HomeGamesCards(
                                     btnText: "بازی پانتومیم ",
                                     onPress: () {
-                                      Navigator.push(context, MaterialPageRoute(builder: (context) => const PantomimScreen()));
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const PantomimScreen()));
                                     },
                                     imageAsset:
                                         "assets/images/png/pantomim.png"),
@@ -155,26 +215,39 @@ class HomeView extends StatelessWidget {
                               height: size.height / 20,
                             ),
                             Row(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceAround,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 HomeGamesCards(
-                                    btnText: "بازی دور",
-                                    onPress: () {
-
-                                    },
-                                    imageAsset: "assets/images/png/dor.png"),
+                                  btnText: " جرعت یا حقیقت",
+                                  onPress: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const JoratHaghighatScreen()));
+                                  },
+                                  imageAsset:
+                                      "assets/images/png/jorat-haghighat.png",
+                                ),
                                 HomeGamesCards(
                                     btnText: "بازی چشمک مرگ",
                                     onPress: () {
-                                      Navigator.push(context, MaterialPageRoute(builder: (context) => const CheshmakMargScreen()));
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const CheshmakMargScreen()));
                                     },
                                     imageAsset:
                                         "assets/images/png/cheshmak-marg.png"),
                                 HomeGamesCards(
                                     btnText: "بازی شاه دزد جلاد",
                                     onPress: () {
-                                      Navigator.push(context, MaterialPageRoute(builder: (context) => const ShahDozdScreen()));
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const ShahDozdScreen()));
                                     },
                                     imageAsset:
                                         "assets/images/png/shah-dozd-jallad.png"),

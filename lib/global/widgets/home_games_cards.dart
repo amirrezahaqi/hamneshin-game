@@ -45,8 +45,8 @@ class HomeGamesCards extends StatelessWidget {
                     onPressed: () => onPress(),
                     child: Image.asset(
                       imageAsset,
-                      width: size.width / 4,
-                      height: size.width / 4,
+                      width: size.width / 3,
+                      height: size.width / 3,
                       fit: BoxFit.cover,
                     )),
               ),

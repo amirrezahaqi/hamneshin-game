@@ -34,7 +34,7 @@ class MainWrapper extends StatelessWidget {
                 children: [
                   Positioned.fill(
                     child: Padding(
-                      padding: EdgeInsets.only(bottom: 35.w, top: 16.w),
+                      padding: EdgeInsets.only(bottom: 35.w, top: 10.w),
                       child: IndexedStack(
                         index: state,
                         children: const [
@@ -51,21 +51,19 @@ class MainWrapper extends StatelessWidget {
                       bottom: 4.w,
                       left: 0,
                       right: 0,
-                      child: BottomNavigation(onPageChange: (pageIndex) {
-                        navCubit.changePage(pageIndex);
-                      },)
-                  ),
+                      child: BottomNavigation(
+                        onPageChange: (pageIndex) {
+                          navCubit.changePage(pageIndex);
+                        },
+                      )),
 
                   // app bar
                   Positioned(
                       top: 4.w,
                       left: 0,
                       right: 0,
-                      child: SizedBox(
-                          height: 8.h,
-                          child: const AppBarWidget())
-                  ),
-
+                      child:
+                          SizedBox(height: 8.h, child: const AppBarWidget())),
                 ],
               );
             },
