@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/gen/fonts.gen.dart';
+import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
 
 import '../utils/constants/app_distances.dart';
 import '../utils/constants/ui_colors.dart';
 
 class BottomNavigation extends StatelessWidget {
   const BottomNavigation({
-    super.key, required this.onPageChange,
+    super.key,
+    required this.onPageChange,
   });
 
-    final Function(int pageIndex) onPageChange;
-
+  final Function(int pageIndex) onPageChange;
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +56,7 @@ class BottomNavigation extends StatelessWidget {
                     scale: 4,
                   ),
                   const Text(
-                    "درباره ما",
+                    StringConst.about,
                     style: TextStyle(
                         fontFamily: FontFamily.pelak,
                         color: UiColors.whiteColor,
@@ -73,7 +74,7 @@ class BottomNavigation extends StatelessWidget {
                       scale: 4,
                     ),
                     const Text(
-                      "خانه",
+                      StringConst.home,
                       style: TextStyle(
                           fontFamily: FontFamily.pelak,
                           color: UiColors.whiteColor,
@@ -92,7 +93,7 @@ class BottomNavigation extends StatelessWidget {
                       scale: 4,
                     ),
                     const Text(
-                      "راهنما",
+                      StringConst.help,
                       style: TextStyle(
                           fontFamily: FontFamily.pelak,
                           color: UiColors.whiteColor,

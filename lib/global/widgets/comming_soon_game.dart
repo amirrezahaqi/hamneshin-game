@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/gen/fonts.gen.dart';
+import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
 import 'package:flutter_application_new/global/widgets/main_btn.dart';
 
 import '../utils/constants/app_distances.dart';
@@ -48,7 +49,7 @@ class CommingSoonCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      "به زودی بازی هیجان انگیز",
+                      StringConst.commingSoonGame,
                       style: TextStyle(
                           fontSize: 15,
                           fontFamily: FontFamily.pelak,
@@ -56,7 +57,7 @@ class CommingSoonCard extends StatelessWidget {
                           fontWeight: FontWeight.normal),
                     ),
                     const Text(
-                      "دورهمی",
+                      StringConst.dorehami,
                       style: TextStyle(
                           fontFamily: FontFamily.pelak,
                           color: UiColors.whiteColor,
@@ -67,7 +68,7 @@ class CommingSoonCard extends StatelessWidget {
                       height: 20,
                     ),
                     MainButton(
-                      btnText: "درباره بازی",
+                      btnText: StringConst.aboutGame,
                       onPress: onPress,
                       padding: AppDistances.small2,
                     ),

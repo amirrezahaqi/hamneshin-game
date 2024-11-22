@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/gen/assets.gen.dart';
+import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
 import 'package:flutter_application_new/global/utils/constants/app_distances.dart';
 import 'package:flutter_application_new/global/widgets/comming_soon_game.dart';
 import 'package:flutter_application_new/global/widgets/home_games_cards.dart';
@@ -55,7 +56,7 @@ class HomeView extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 HomeGamesCards(
-                                    btnText: "بازی مافیا",
+                                    btnText: StringConst.mafiaGame,
                                     onPress: () {
                                       showDialog(
                                         context: context,
@@ -103,7 +104,8 @@ class HomeView extends StatelessWidget {
                                               ),
                                               MainButton(
                                                   padding: AppDistances.small4,
-                                                  btnText: "شروع بازی",
+                                                  btnText:
+                                                      StringConst.startGameBtn,
                                                   onPress: () {
                                                     if (mafiaPlayerCount
                                                         .text.isEmpty) {
@@ -131,7 +133,7 @@ class HomeView extends StatelessWidget {
                                     },
                                     imageAsset: "assets/images/png/mafia.png"),
                                 HomeGamesCards(
-                                    btnText: "بازی جاسوس",
+                                    btnText: StringConst.jasosGame,
                                     onPress: () {
                                       showDialog(
                                         context: context,
@@ -178,7 +180,8 @@ class HomeView extends StatelessWidget {
                                             ),
                                             MainButton(
                                                 padding: AppDistances.small4,
-                                                btnText: "شروع بازی",
+                                                btnText:
+                                                    StringConst.startGameBtn,
                                                 onPress: () {
                                                   if (jasosPlayerCount
                                                       .text.isEmpty) {
@@ -202,7 +205,7 @@ class HomeView extends StatelessWidget {
                                     },
                                     imageAsset: "assets/images/png/jasoos.png"),
                                 HomeGamesCards(
-                                    btnText: "بازی پانتومیم ",
+                                    btnText: StringConst.pantomimGame,
                                     onPress: () {
                                       Navigator.push(
                                           context,
@@ -221,7 +224,7 @@ class HomeView extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 HomeGamesCards(
-                                  btnText: " جرعت یا حقیقت",
+                                  btnText: StringConst.jorathaghighat,
                                   onPress: () {
                                     Navigator.push(
                                         context,
@@ -233,7 +236,7 @@ class HomeView extends StatelessWidget {
                                       "assets/images/png/jorat-haghighat.png",
                                 ),
                                 HomeGamesCards(
-                                    btnText: "بازی چشمک مرگ",
+                                    btnText: StringConst.cheshmakGame,
                                     onPress: () {
                                       Navigator.push(
                                           context,
@@ -244,7 +247,7 @@ class HomeView extends StatelessWidget {
                                     imageAsset:
                                         "assets/images/png/cheshmak-marg.png"),
                                 HomeGamesCards(
-                                    btnText: "بازی شاه دزد جلاد",
+                                    btnText: StringConst.sdjvGame,
                                     onPress: () {
                                       Navigator.push(
                                           context,
