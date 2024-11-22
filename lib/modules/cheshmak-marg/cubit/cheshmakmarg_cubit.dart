@@ -9,7 +9,6 @@ import 'package:flutter_application_new/global/utils/constants/app_distances.dar
 import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
 import 'package:flutter_application_new/global/widgets/dialog_body_widget.dart';
 import 'package:flutter_application_new/global/widgets/main_btn.dart';
-import 'package:flutter_application_new/global/widgets/main_btn2.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 part 'cheshmakmarg_state.dart';
@@ -77,7 +76,7 @@ class CheshmakmargCubit extends Cubit<RoleModel?> {
                     textAlign: TextAlign.center,
                     StringConst.endRole,
                     style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 13,
                         fontFamily: FontFamily.pelak,
                         color: UiColors.whiteColor,
                         fontWeight: FontWeight.bold),
@@ -90,12 +89,9 @@ class CheshmakmargCubit extends Cubit<RoleModel?> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       MainButton(
-                          btnText: StringConst.backToHome, onPress: () {}),
+                          btnText: StringConst.backToHome,
+                          onPress: () => Navigator.pop(context)),
                       SizedBox(width: AppDistances.small2.w),
-                      MainButton2(
-                        btnText: StringConst.startAgain,
-                        onPress: () {},
-                      )
                     ],
                   ),
                   SizedBox(height: AppDistances.small2.w),

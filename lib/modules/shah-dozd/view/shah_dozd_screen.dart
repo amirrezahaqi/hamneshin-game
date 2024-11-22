@@ -112,7 +112,7 @@ class _ShahDozdScreenState extends State<ShahDozdScreen> {
                       MainButton(
                         btnText: StringConst.yourRoleBtn,
                         onPress: () {
-                          cubit.generateNaghshRandom();
+                          cubit.generateNaghshRandom(context);
                         },
                         fontsize: 15,
                       ),

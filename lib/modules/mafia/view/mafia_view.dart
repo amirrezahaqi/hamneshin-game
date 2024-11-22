@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/gen/assets.gen.dart';
+import 'package:flutter_application_new/gen/fonts.gen.dart';
 import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
 import 'package:flutter_application_new/global/utils/constants/app_distances.dart';
 import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
+import 'package:flutter_application_new/global/widgets/dialog_body_widget.dart';
 import 'package:flutter_application_new/global/widgets/main_btn.dart';
 import 'package:flutter_application_new/global/widgets/main_btn2.dart';
 import 'package:flutter_application_new/modules/mafia/cubit/mafia_cubit.dart';
@@ -53,23 +55,50 @@ class MafiaView extends StatelessWidget {
                             ),
                           // نمایش وضعیت پایانی(انتخاب شدن تمام نقش ها)
                           if (state is MafiaDisplayedAllRoleState) ...[
-                            Image.asset(Assets.images.png.mafia.path),
-                            Text(
-                              StringConst.endRole,
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  fontSize: 16.sp,
-                                  fontWeight: FontWeight.bold,
-                                  color: UiColors.whiteColor),
-                            ),
-                            SizedBox(height: AppDistances.medium12.w),
-                            MainButton(
-                              btnText: StringConst.goToHome,
-                              onPress: () {
-                                Navigator.pop(context);
-                              },
-                              fontsize: 15.sp,
-                            ),
+                            DialogBodyWidget(
+                              dialogBody: [
+                                const Text(
+                                  textAlign: TextAlign.center,
+                                  StringConst.endend,
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      fontFamily: FontFamily.pelak,
+                                      color: UiColors.whiteColor,
+                                      fontWeight: FontWeight.normal),
+                                ),
+                                SizedBox(
+                                  width: AppDistances.medium16.w * 2,
+                                  child: const Divider(
+                                    color: UiColors.whiteColor,
+                                    thickness: 2,
+                                  ),
+                                ),
+                                SizedBox(height: AppDistances.small2.w),
+                                const Text(
+                                  textAlign: TextAlign.center,
+                                  StringConst.endRole,
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      fontFamily: FontFamily.pelak,
+                                      color: UiColors.whiteColor,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Image.asset(
+                                  Assets.images.png.selected.path,
+                                  scale: 1,
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    MainButton(
+                                        btnText: StringConst.backToHome,
+                                        onPress: () => Navigator.pop(context)),
+                                    SizedBox(width: AppDistances.small2.w),
+                                  ],
+                                ),
+                                SizedBox(height: AppDistances.small2.w),
+                              ],
+                            )
                           ],
 
                           // نمایش و مخفی کردن نقش ها
