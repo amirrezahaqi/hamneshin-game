@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:bloc/bloc.dart';
+import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
 import 'package:meta/meta.dart';
 
 part 'shah_dozd_state.dart';
@@ -8,7 +9,12 @@ part 'shah_dozd_state.dart';
 class ShahDozdCubit extends Cubit<RoleModel?> {
   ShahDozdCubit() : super(null);
 
-  final List<String> naghs = ["شاه", "دزد", "وزیر", "جلاد"];
+  final List<String> naghs = [
+    StringConst.shah,
+    StringConst.dozd,
+    StringConst.vazir,
+    StringConst.jallad
+  ];
   final List<String> naghsAssets = [
     "assets/images/png/sdjvshah.png",
     "assets/images/png/sdjvdozd.png",
@@ -33,7 +39,7 @@ class ShahDozdCubit extends Cubit<RoleModel?> {
       print(roleModel.assetPath);
       print(roleModel.role);
     } else {
-      print("تمام نقش‌ها انتخاب شده‌اند!");
+      print(StringConst.endRole);
     }
   }
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/gen/fonts.gen.dart';
+import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
 import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
 import 'package:flutter_application_new/global/widgets/app-bar.dart';
 import 'package:flutter_application_new/global/widgets/bottom-navigation.dart';
@@ -54,7 +55,7 @@ class _JoratHaghighatScreenState extends State<JoratHaghighatScreen> {
                     width: size.width / 1.25,
                     child: const Text(
                       textAlign: TextAlign.center,
-                      "با چرخوندن بطری مشخص میشه کی از کی بپرسه جرعت یا حقیقت؟",
+                      StringConst.jhInfo,
                       style: TextStyle(
                           fontSize: 20,
                           fontFamily: FontFamily.pelak,
@@ -75,7 +76,7 @@ class _JoratHaghighatScreenState extends State<JoratHaghighatScreen> {
                   ),
                   SizedBox(height: size.height / 50),
                   MainButton(
-                    btnText: "بطریو بچرخون!",
+                    btnText: StringConst.rotateBtn,
                     onPress: () {
                       cubit.generateRandomDeg();
                     },

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
 import 'package:flutter_application_new/global/utils/constants/app_distances.dart';
 import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
 import 'package:flutter_application_new/modules/jasos/models/jasos_role_model.dart';
@@ -12,7 +13,7 @@ class JasosShowRoleWidget extends StatelessWidget {
     return Column(
       children: [
         Image.asset(role.imagePath),
-        Text("نقش شما:",
+        Text(StringConst.yourRole,
             style: TextStyle(fontSize: 17.sp, color: UiColors.whiteColor)),
         SizedBox(height: AppDistances.small2.w),
         Text(

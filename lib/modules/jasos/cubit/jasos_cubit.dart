@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter_application_new/gen/assets.gen.dart';
+import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
 import 'package:flutter_application_new/modules/jasos/models/jasos_role_model.dart';
 import 'package:meta/meta.dart';
 
@@ -12,284 +13,388 @@ class JasosCubit extends Cubit<JasosState> {
 
   final List<JasosRoleModel> jasos6PlayerRoleList = [
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path, roleName: "کلانتر"),
+        imagePath: Assets.images.png.jasooskalantar.path,
+        roleName: StringConst.kalantar),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjoker.path, roleName: "جوکر"),
+        imagePath: Assets.images.png.jasoosjoker.path,
+        roleName: StringConst.joker),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: "جاسوس ویژه"),
+        roleName: StringConst.jasoosVijeh),
   ];
   final List<JasosRoleModel> jasos7PlayerRoleList = [
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path, roleName: "کلانتر"),
+        imagePath: Assets.images.png.jasooskalantar.path,
+        roleName: StringConst.kalantar),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjoker.path, roleName: "جوکر"),
+        imagePath: Assets.images.png.jasoosjoker.path,
+        roleName: StringConst.joker),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: "جاسوس ویژه"),
+        roleName: StringConst.jasoosVijeh),
   ];
   final List<JasosRoleModel> jasos8PlayerRoleList = [
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path, roleName: "کلانتر"),
+        imagePath: Assets.images.png.jasooskalantar.path,
+        roleName: StringConst.kalantar),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjoker.path, roleName: "جوکر"),
+        imagePath: Assets.images.png.jasoosjoker.path,
+        roleName: StringConst.joker),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: "جاسوس ویژه"),
+        roleName: StringConst.jasoosVijeh),
   ];
   final List<JasosRoleModel> jasos9PlayerRoleList = [
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path, roleName: "کلانتر"),
+        imagePath: Assets.images.png.jasooskalantar.path,
+        roleName: StringConst.kalantar),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path, roleName: "کلانتر"),
+        imagePath: Assets.images.png.jasooskalantar.path,
+        roleName: StringConst.kalantar),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjoker.path, roleName: "جوکر"),
+        imagePath: Assets.images.png.jasoosjoker.path,
+        roleName: StringConst.joker),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: "جاسوس ویژه"),
+        roleName: StringConst.jasoosVijeh),
   ];
   final List<JasosRoleModel> jasos10PlayerRoleList = [
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path, roleName: "کلانتر"),
+        imagePath: Assets.images.png.jasooskalantar.path,
+        roleName: StringConst.kalantar),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path, roleName: "کلانتر"),
+        imagePath: Assets.images.png.jasooskalantar.path,
+        roleName: StringConst.kalantar),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjoker.path, roleName: "جوکر"),
+        imagePath: Assets.images.png.jasoosjoker.path,
+        roleName: StringConst.joker),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: "جاسوس ویژه"),
+        roleName: StringConst.jasoosVijeh),
   ];
   final List<JasosRoleModel> jasos11PlayerRoleList = [
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path, roleName: "کلانتر"),
+        imagePath: Assets.images.png.jasooskalantar.path,
+        roleName: StringConst.kalantar),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path, roleName: "کلانتر"),
+        imagePath: Assets.images.png.jasooskalantar.path,
+        roleName: StringConst.kalantar),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjoker.path, roleName: "جوکر"),
+        imagePath: Assets.images.png.jasoosjoker.path,
+        roleName: StringConst.joker),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: "جاسوس ویژه"),
+        roleName: StringConst.jasoosVijeh),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: "جاسوس ویژه"),
+        roleName: StringConst.jasoosVijeh),
   ];
   final List<JasosRoleModel> jasos12PlayerRoleList = [
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path, roleName: "کلانتر"),
+        imagePath: Assets.images.png.jasooskalantar.path,
+        roleName: StringConst.kalantar),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path, roleName: "کلانتر"),
+        imagePath: Assets.images.png.jasooskalantar.path,
+        roleName: StringConst.kalantar),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjoker.path, roleName: "جوکر"),
+        imagePath: Assets.images.png.jasoosjoker.path,
+        roleName: StringConst.joker),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: "جاسوس ویژه"),
+        roleName: StringConst.jasoosVijeh),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: "جاسوس ویژه"),
+        roleName: StringConst.jasoosVijeh),
   ];
   final List<JasosRoleModel> jasos13PlayerRoleList = [
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path, roleName: "کلانتر"),
+        imagePath: Assets.images.png.jasooskalantar.path,
+        roleName: StringConst.kalantar),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path, roleName: "کلانتر"),
+        imagePath: Assets.images.png.jasooskalantar.path,
+        roleName: StringConst.kalantar),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjoker.path, roleName: "جوکر"),
+        imagePath: Assets.images.png.jasoosjoker.path,
+        roleName: StringConst.joker),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: "جاسوس ویژه"),
+        roleName: StringConst.jasoosVijeh),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: "جاسوس ویژه"),
+        roleName: StringConst.jasoosVijeh),
   ];
   final List<JasosRoleModel> jasos14PlayerRoleList = [
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path, roleName: "کلانتر"),
+        imagePath: Assets.images.png.jasooskalantar.path,
+        roleName: StringConst.kalantar),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path, roleName: "کلانتر"),
+        imagePath: Assets.images.png.jasooskalantar.path,
+        roleName: StringConst.kalantar),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjoker.path, roleName: "جوکر"),
+        imagePath: Assets.images.png.jasoosjoker.path,
+        roleName: StringConst.joker),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: "جاسوس ویژه"),
+        roleName: StringConst.jasoosVijeh),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: "جاسوس ویژه"),
+        roleName: StringConst.jasoosVijeh),
   ];
   final List<JasosRoleModel> jasos15PlayerRoleList = [
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path, roleName: "کلانتر"),
+        imagePath: Assets.images.png.jasooskalantar.path,
+        roleName: StringConst.kalantar),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path, roleName: "کلانتر"),
+        imagePath: Assets.images.png.jasooskalantar.path,
+        roleName: StringConst.kalantar),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjoker.path, roleName: "جوکر"),
+        imagePath: Assets.images.png.jasoosjoker.path,
+        roleName: StringConst.joker),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: "جاسوس ویژه"),
+        roleName: StringConst.jasoosVijeh),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: "جاسوس ویژه"),
+        roleName: StringConst.jasoosVijeh),
   ];
   final List<JasosRoleModel> jasos16PlayerRoleList = [
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path, roleName: "جاسوس"),
+        imagePath: Assets.images.png.jasoosjasoossade.path,
+        roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosshahrvand.path, roleName: "شهروند"),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path, roleName: "کلانتر"),
+        imagePath: Assets.images.png.jasooskalantar.path,
+        roleName: StringConst.kalantar),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path, roleName: "کلانتر"),
+        imagePath: Assets.images.png.jasooskalantar.path,
+        roleName: StringConst.kalantar),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjoker.path, roleName: "جوکر"),
+        imagePath: Assets.images.png.jasoosjoker.path,
+        roleName: StringConst.joker),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: "جاسوس ویژه"),
+        roleName: StringConst.jasoosVijeh),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: "جاسوس ویژه"),
+        roleName: StringConst.jasoosVijeh),
   ];
   List<JasosRoleModel> roleList = [];
 
@@ -314,28 +419,28 @@ class JasosCubit extends Cubit<JasosState> {
   void hideRole() => emit(JasosHideRoleState());
 
   void getRoleList(int playerCount) {
-    switch(playerCount) {
-      case 6 :
+    switch (playerCount) {
+      case 6:
         roleList = jasos6PlayerRoleList;
-      case 7 :
+      case 7:
         roleList = jasos7PlayerRoleList;
-      case 8 :
+      case 8:
         roleList = jasos8PlayerRoleList;
-      case 9 :
+      case 9:
         roleList = jasos9PlayerRoleList;
-      case 10 :
+      case 10:
         roleList = jasos10PlayerRoleList;
-      case 11 :
+      case 11:
         roleList = jasos11PlayerRoleList;
-      case 12 :
+      case 12:
         roleList = jasos12PlayerRoleList;
-      case 13 :
+      case 13:
         roleList = jasos13PlayerRoleList;
-      case 14 :
+      case 14:
         roleList = jasos14PlayerRoleList;
-      case 15 :
+      case 15:
         roleList = jasos15PlayerRoleList;
-      case 16 :
+      case 16:
         roleList = jasos16PlayerRoleList;
     }
   }

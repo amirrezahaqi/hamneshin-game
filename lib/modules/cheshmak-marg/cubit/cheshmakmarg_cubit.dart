@@ -4,6 +4,7 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/gen/assets.gen.dart';
 import 'package:flutter_application_new/gen/fonts.gen.dart';
+import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
 import 'package:flutter_application_new/global/utils/constants/app_distances.dart';
 import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
 import 'package:flutter_application_new/global/widgets/dialog_body_widget.dart';
@@ -16,7 +17,14 @@ part 'cheshmakmarg_state.dart';
 class CheshmakmargCubit extends Cubit<RoleModel?> {
   CheshmakmargCubit() : super(null);
 
-  final List<String> naghs = ["کارآگاه", "قاتل", "پوچ", "پوچ", "پوچ", "پوچ"];
+  final List<String> naghs = [
+    StringConst.karagah2,
+    StringConst.ghatel,
+    StringConst.pooch,
+    StringConst.pooch,
+    StringConst.pooch,
+    StringConst.pooch
+  ];
   final List<String> naghsAssets = [
     "assets/images/png/cheshmakkaragah.png",
     "assets/images/png/cheshmakghatel.png",
@@ -43,14 +51,14 @@ class CheshmakmargCubit extends Cubit<RoleModel?> {
       print(roleModel.assetPath);
       print(roleModel.role);
     } else {
-      print("تمام نقش‌ها انتخاب شده‌اند!");
+      print(StringConst.endRole);
       showDialog(
           context: context,
           builder: (context) => DialogBodyWidget(
                 dialogBody: [
                   const Text(
                     textAlign: TextAlign.center,
-                    "تمام تمام!",
+                    StringConst.endend,
                     style: TextStyle(
                         fontSize: 16,
                         fontFamily: FontFamily.pelak,
@@ -67,7 +75,7 @@ class CheshmakmargCubit extends Cubit<RoleModel?> {
                   SizedBox(height: AppDistances.small2.w),
                   const Text(
                     textAlign: TextAlign.center,
-                    "تمامی نقش های بازی انتخاب شدند",
+                    StringConst.endRole,
                     style: TextStyle(
                         fontSize: 18,
                         fontFamily: FontFamily.pelak,
@@ -81,10 +89,11 @@ class CheshmakmargCubit extends Cubit<RoleModel?> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      MainButton(btnText: "بازگشت به خانه", onPress: () {}),
+                      MainButton(
+                          btnText: StringConst.backToHome, onPress: () {}),
                       SizedBox(width: AppDistances.small2.w),
                       MainButton2(
-                        btnText: "شروع مجدد",
+                        btnText: StringConst.startAgain,
                         onPress: () {},
                       )
                     ],

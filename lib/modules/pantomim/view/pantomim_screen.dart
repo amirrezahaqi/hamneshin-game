@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/gen/fonts.gen.dart';
+import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
 import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
 import 'package:flutter_application_new/global/widgets/app-bar.dart';
 import 'package:flutter_application_new/global/widgets/bottom-navigation.dart';
@@ -38,7 +39,9 @@ class _PantomimScreenState extends State<PantomimScreen> {
             preferredSize: Size.fromHeight(size.height / 12),
             child: const AppBarWidget(),
           ),
-          bottomNavigationBar:  BottomNavigation(onPageChange: (int pageIndex) {  },),
+          bottomNavigationBar: BottomNavigation(
+            onPageChange: (int pageIndex) {},
+          ),
           body: SizedBox(
             width: double.infinity,
             height: double.infinity,
@@ -52,7 +55,7 @@ class _PantomimScreenState extends State<PantomimScreen> {
                     width: size.width / 1.25,
                     child: const Text(
                       textAlign: TextAlign.center,
-                      "به صورت رندوم از میون کلی کلمات، کلمه مناسب رو برای اجرا پانتومیم خود پیدا کنید",
+                      StringConst.pantomimStartInfo,
                       style: TextStyle(
                           fontSize: 16,
                           fontFamily: FontFamily.pelak,
@@ -67,7 +70,7 @@ class _PantomimScreenState extends State<PantomimScreen> {
                         width: size.width / 1.25,
                         child: const Text(
                           textAlign: TextAlign.center,
-                          "کلمه شما:",
+                          StringConst.yourWords,
                           style: TextStyle(
                               fontSize: 12,
                               fontFamily: FontFamily.pelak,
@@ -81,7 +84,7 @@ class _PantomimScreenState extends State<PantomimScreen> {
                           builder: (context, word) {
                             return Text(
                               textAlign: TextAlign.center,
-                              word.isEmpty ? 'کلمه‌ای انتخاب نشده' : word,
+                              word.isEmpty ? StringConst.notSelectWords : word,
                               style: const TextStyle(
                                   fontSize: 25,
                                   fontFamily: FontFamily.pelak,
@@ -95,7 +98,7 @@ class _PantomimScreenState extends State<PantomimScreen> {
                   ),
                   SizedBox(height: size.height / 50),
                   MainButton(
-                    btnText: "پانتومیم من رو بگو!",
+                    btnText: StringConst.yourPantomimBtn,
                     onPress: () {
                       cubit.generateRandomWord();
                     },

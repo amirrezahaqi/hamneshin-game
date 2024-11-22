@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/gen/fonts.gen.dart';
+import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
 import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
 import 'package:flutter_application_new/global/widgets/app-bar.dart';
 import 'package:flutter_application_new/global/widgets/bottom-navigation.dart';
@@ -39,7 +40,9 @@ class _CheshmakMargScreenState extends State<CheshmakMargScreen> {
             preferredSize: Size.fromHeight(size.height / 12),
             child: const AppBarWidget(),
           ),
-          bottomNavigationBar:  BottomNavigation(onPageChange: (int pageIndex) {  },),
+          bottomNavigationBar: BottomNavigation(
+            onPageChange: (int pageIndex) {},
+          ),
           body: SizedBox(
             width: double.infinity,
             height: double.infinity,
@@ -53,7 +56,7 @@ class _CheshmakMargScreenState extends State<CheshmakMargScreen> {
                     width: size.width / 1.25,
                     child: const Text(
                       textAlign: TextAlign.center,
-                      "افراد به صورت نوبتی با کلیک بروی دکمه پایین نقششون رو  به شکل رندوم مشخص می کنند",
+                      StringConst.gameStartInfo,
                       style: TextStyle(
                           fontSize: 16,
                           fontFamily: FontFamily.pelak,
@@ -76,7 +79,7 @@ class _CheshmakMargScreenState extends State<CheshmakMargScreen> {
                         width: size.width / 1.25,
                         child: const Text(
                           textAlign: TextAlign.center,
-                          "نقش شما:",
+                          StringConst.yourRole,
                           style: TextStyle(
                               fontSize: 12,
                               fontFamily: FontFamily.pelak,
@@ -90,7 +93,7 @@ class _CheshmakMargScreenState extends State<CheshmakMargScreen> {
                           builder: (context, roleModel) {
                             return Text(
                               textAlign: TextAlign.center,
-                              roleModel?.role ?? 'نقشی انتخاب نشده',
+                              roleModel?.role ?? StringConst.notSelectRole,
                               style: const TextStyle(
                                   fontSize: 25,
                                   fontFamily: FontFamily.pelak,
@@ -107,7 +110,7 @@ class _CheshmakMargScreenState extends State<CheshmakMargScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       MainButton(
-                        btnText: "نقش من رو بگو!",
+                        btnText: StringConst.yourRoleBtn,
                         onPress: () {
                           cubit.generateNaghshRandom(context);
                         },
@@ -117,7 +120,7 @@ class _CheshmakMargScreenState extends State<CheshmakMargScreen> {
                         width: 10,
                       ),
                       MainButton2(
-                        btnText: "نقش  رو بپوشون!",
+                        btnText: StringConst.hideYourRoleBtn,
                         onPress: () {
                           cubit.hideCurrentRole();
                         },

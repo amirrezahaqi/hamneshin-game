@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/gen/assets.gen.dart';
+import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
 import 'package:flutter_application_new/global/utils/constants/app_distances.dart';
 import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
 import 'package:flutter_application_new/global/widgets/main_btn.dart';
@@ -39,7 +40,7 @@ class JasosView extends StatelessWidget {
                     child: Column(
                       children: [
                         Text(
-                          "افراد به صورت نوبتی با کلیک بروی دکمه پایین نقششون رو  به شکل رندوم مشخص می کنند",
+                          StringConst.gameStartInfo,
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontSize: 16.sp,
@@ -61,7 +62,7 @@ class JasosView extends StatelessWidget {
                           Image.asset(Assets.images.png.jasoos.path),
                           SizedBox(height: AppDistances.medium12.w),
                           Text(
-                            "برای دیدن نقشت ضربه بزن!",
+                            StringConst.yourRoleBtn,
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontSize: 16.sp,
@@ -75,7 +76,7 @@ class JasosView extends StatelessWidget {
                           Image.asset(Assets.images.png.jasoos.path),
                           SizedBox(height: AppDistances.small4.w),
                           Text(
-                            "تمام نقش ها انتخاب شدن، بازی رو شروع کنید :)",
+                            StringConst.endRole,
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontSize: 16.sp,
@@ -84,8 +85,10 @@ class JasosView extends StatelessWidget {
                           ),
                           SizedBox(height: AppDistances.medium12.w),
                           MainButton(
-                            btnText: "رفتن به صفحه اصلی",
-                            onPress: () {Navigator.pop(context);},
+                            btnText: StringConst.goToHome,
+                            onPress: () {
+                              Navigator.pop(context);
+                            },
                             fontsize: 15.sp,
                           ),
                         ],
@@ -95,19 +98,19 @@ class JasosView extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               MainButton(
-                                btnText: "نقش من رو بگو!",
+                                btnText: StringConst.yourRoleBtn,
                                 onPress: () => jasosCubit.changeRole(),
                                 fontsize: 15.sp,
                               ),
                               SizedBox(
                                 width: AppDistances.small4.w,
                               ),
-                              if(state is! JasosInitial)
-                              MainButton2(
-                                btnText: "نقش  رو بپوشون!",
-                                onPress: () => jasosCubit.hideRole(),
-                                fontsize: 15.sp,
-                              ),
+                              if (state is! JasosInitial)
+                                MainButton2(
+                                  btnText: StringConst.hideYourRoleBtn,
+                                  onPress: () => jasosCubit.hideRole(),
+                                  fontsize: 15.sp,
+                                ),
                             ],
                           ),
                       ],

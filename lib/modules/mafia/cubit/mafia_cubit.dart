@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter_application_new/gen/assets.gen.dart';
+import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
 import 'package:flutter_application_new/modules/mafia/models/mafia_role_model.dart';
 import "package:meta/meta.dart";
 
@@ -13,333 +14,390 @@ class MafiaCubit extends Cubit<MafiaState> {
   final List<MafiaRoleModel> mafia6PayerRoleList = [
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiadoctor.path, roleName: "دکتر"),
+        imagePath: Assets.images.png.mafiadoctor.path,
+        roleName: StringConst.dr),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiakaragah.path, roleName: "کارآگاه"),
+        imagePath: Assets.images.png.mafiakaragah.path,
+        roleName: StringConst.karagah),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiasniper.path, roleName: "اسنایپر"),
+        imagePath: Assets.images.png.mafiasniper.path,
+        roleName: StringConst.sniper),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiajansakht.path, roleName: "جان سخت"),
+        imagePath: Assets.images.png.mafiajansakht.path,
+        roleName: StringConst.jansakht),
   ];
   final List<MafiaRoleModel> mafia7PayerRoleList = [
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiadoctor.path, roleName: "دکتر"),
+        imagePath: Assets.images.png.mafiadoctor.path,
+        roleName: StringConst.dr),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiakaragah.path, roleName: "کارآگاه"),
+        imagePath: Assets.images.png.mafiakaragah.path,
+        roleName: StringConst.karagah),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiasniper.path, roleName: "اسنایپر"),
+        imagePath: Assets.images.png.mafiasniper.path,
+        roleName: StringConst.sniper),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiajansakht.path, roleName: "جان سخت"),
+        imagePath: Assets.images.png.mafiajansakht.path,
+        roleName: StringConst.jansakht),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiaravanshenas.path,
-        roleName: "روانشناس"),
+        roleName: StringConst.ravanshenas),
   ];
   final List<MafiaRoleModel> mafia8PayerRoleList = [
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiadoctor.path, roleName: "دکتر"),
+        imagePath: Assets.images.png.mafiadoctor.path,
+        roleName: StringConst.dr),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiakaragah.path, roleName: "کارآگاه"),
+        imagePath: Assets.images.png.mafiakaragah.path,
+        roleName: StringConst.karagah),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiasniper.path, roleName: "اسنایپر"),
+        imagePath: Assets.images.png.mafiasniper.path,
+        roleName: StringConst.sniper),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiajansakht.path, roleName: "جان سخت"),
+        imagePath: Assets.images.png.mafiajansakht.path,
+        roleName: StringConst.jansakht),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiaravanshenas.path,
-        roleName: "روانشناس"),
+        roleName: StringConst.ravanshenas),
   ];
   final List<MafiaRoleModel> mafia9PayerRoleList = [
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiadoctor.path, roleName: "دکتر"),
+        imagePath: Assets.images.png.mafiadoctor.path,
+        roleName: StringConst.dr),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiakaragah.path, roleName: "کارآگاه"),
+        imagePath: Assets.images.png.mafiakaragah.path,
+        roleName: StringConst.karagah),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiasniper.path, roleName: "اسنایپر"),
+        imagePath: Assets.images.png.mafiasniper.path,
+        roleName: StringConst.sniper),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiajansakht.path, roleName: "جان سخت"),
+        imagePath: Assets.images.png.mafiajansakht.path,
+        roleName: StringConst.jansakht),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiaravanshenas.path,
-        roleName: "روانشناس"),
+        roleName: StringConst.ravanshenas),
   ];
   final List<MafiaRoleModel> mafia10PayerRoleList = [
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiadoctor.path, roleName: "دکتر"),
+        imagePath: Assets.images.png.mafiadoctor.path,
+        roleName: StringConst.dr),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiakaragah.path, roleName: "کارآگاه"),
+        imagePath: Assets.images.png.mafiakaragah.path,
+        roleName: StringConst.karagah),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiasniper.path, roleName: "اسنایپر"),
+        imagePath: Assets.images.png.mafiasniper.path,
+        roleName: StringConst.sniper),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiasniper.path, roleName: "اسنایپر"),
+        imagePath: Assets.images.png.mafiasniper.path,
+        roleName: StringConst.sniper),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiajansakht.path, roleName: "جان سخت"),
+        imagePath: Assets.images.png.mafiajansakht.path,
+        roleName: StringConst.jansakht),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiaravanshenas.path,
-        roleName: "روانشناس"),
+        roleName: StringConst.ravanshenas),
   ];
   final List<MafiaRoleModel> mafia11PayerRoleList = [
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiadoctor.path, roleName: "دکتر"),
+        imagePath: Assets.images.png.mafiadoctor.path,
+        roleName: StringConst.dr),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiakaragah.path, roleName: "کارآگاه"),
+        imagePath: Assets.images.png.mafiakaragah.path,
+        roleName: StringConst.karagah),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiasniper.path, roleName: "اسنایپر"),
+        imagePath: Assets.images.png.mafiasniper.path,
+        roleName: StringConst.sniper),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiasniper.path, roleName: "اسنایپر"),
+        imagePath: Assets.images.png.mafiasniper.path,
+        roleName: StringConst.sniper),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiajansakht.path, roleName: "جان سخت"),
+        imagePath: Assets.images.png.mafiajansakht.path,
+        roleName: StringConst.jansakht),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiaravanshenas.path,
-        roleName: "روانشناس"),
+        roleName: StringConst.ravanshenas),
   ];
   final List<MafiaRoleModel> mafia12PayerRoleList = [
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiadoctor.path, roleName: "دکتر"),
+        imagePath: Assets.images.png.mafiadoctor.path,
+        roleName: StringConst.dr),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiakaragah.path, roleName: "کارآگاه"),
+        imagePath: Assets.images.png.mafiakaragah.path,
+        roleName: StringConst.karagah),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiasniper.path, roleName: "اسنایپر"),
+        imagePath: Assets.images.png.mafiasniper.path,
+        roleName: StringConst.sniper),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiasniper.path, roleName: "اسنایپر"),
+        imagePath: Assets.images.png.mafiasniper.path,
+        roleName: StringConst.sniper),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiajansakht.path, roleName: "جان سخت"),
+        imagePath: Assets.images.png.mafiajansakht.path,
+        roleName: StringConst.jansakht),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiaravanshenas.path,
-        roleName: "روانشناس"),
+        roleName: StringConst.ravanshenas),
   ];
   final List<MafiaRoleModel> mafia13PayerRoleList = [
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiadoctor.path, roleName: "دکتر"),
+        imagePath: Assets.images.png.mafiadoctor.path,
+        roleName: StringConst.dr),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiakaragah.path, roleName: "کارآگاه"),
+        imagePath: Assets.images.png.mafiakaragah.path,
+        roleName: StringConst.karagah),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiakaragah.path, roleName: "کارآگاه"),
+        imagePath: Assets.images.png.mafiakaragah.path,
+        roleName: StringConst.karagah),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiasniper.path, roleName: "اسنایپر"),
+        imagePath: Assets.images.png.mafiasniper.path,
+        roleName: StringConst.sniper),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiasniper.path, roleName: "اسنایپر"),
+        imagePath: Assets.images.png.mafiasniper.path,
+        roleName: StringConst.sniper),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiajansakht.path, roleName: "جان سخت"),
+        imagePath: Assets.images.png.mafiajansakht.path,
+        roleName: StringConst.jansakht),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiaravanshenas.path,
-        roleName: "روانشناس"),
+        roleName: StringConst.ravanshenas),
   ];
   final List<MafiaRoleModel> mafia14PayerRoleList = [
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiadoctor.path, roleName: "دکتر"),
+        imagePath: Assets.images.png.mafiadoctor.path,
+        roleName: StringConst.dr),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiadoctor.path, roleName: "دکتر"),
+        imagePath: Assets.images.png.mafiadoctor.path,
+        roleName: StringConst.dr),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiakaragah.path, roleName: "کارآگاه"),
+        imagePath: Assets.images.png.mafiakaragah.path,
+        roleName: StringConst.karagah),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiakaragah.path, roleName: "کارآگاه"),
+        imagePath: Assets.images.png.mafiakaragah.path,
+        roleName: StringConst.karagah),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiasniper.path, roleName: "اسنایپر"),
+        imagePath: Assets.images.png.mafiasniper.path,
+        roleName: StringConst.sniper),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiasniper.path, roleName: "اسنایپر"),
+        imagePath: Assets.images.png.mafiasniper.path,
+        roleName: StringConst.sniper),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiajansakht.path, roleName: "جان سخت"),
+        imagePath: Assets.images.png.mafiajansakht.path,
+        roleName: StringConst.jansakht),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiaravanshenas.path,
-        roleName: "روانشناس"),
+        roleName: StringConst.ravanshenas),
   ];
   final List<MafiaRoleModel> mafia15PayerRoleList = [
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiadoctor.path, roleName: "دکتر"),
+        imagePath: Assets.images.png.mafiadoctor.path,
+        roleName: StringConst.dr),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiadoctor.path, roleName: "دکتر"),
+        imagePath: Assets.images.png.mafiadoctor.path,
+        roleName: StringConst.dr),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiakaragah.path, roleName: "کارآگاه"),
+        imagePath: Assets.images.png.mafiakaragah.path,
+        roleName: StringConst.karagah),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiakaragah.path, roleName: "کارآگاه"),
+        imagePath: Assets.images.png.mafiakaragah.path,
+        roleName: StringConst.karagah),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiasniper.path, roleName: "اسنایپر"),
+        imagePath: Assets.images.png.mafiasniper.path,
+        roleName: StringConst.sniper),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiasniper.path, roleName: "اسنایپر"),
+        imagePath: Assets.images.png.mafiasniper.path,
+        roleName: StringConst.sniper),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiajansakht.path, roleName: "جان سخت"),
+        imagePath: Assets.images.png.mafiajansakht.path,
+        roleName: StringConst.jansakht),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiaravanshenas.path,
-        roleName: "روانشناس"),
+        roleName: StringConst.ravanshenas),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiaravanshenas.path,
-        roleName: "روانشناس"),
+        roleName: StringConst.ravanshenas),
   ];
   final List<MafiaRoleModel> mafia16PayerRoleList = [
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiamafiasade.path,
-        roleName: "مافیا ساده"),
+        roleName: StringConst.mafiaSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiashahrvand.path,
-        roleName: "شهروند ساده"),
+        roleName: StringConst.shahrvandSade),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiadoctor.path, roleName: "دکتر"),
+        imagePath: Assets.images.png.mafiadoctor.path,
+        roleName: StringConst.dr),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiadoctor.path, roleName: "دکتر"),
+        imagePath: Assets.images.png.mafiadoctor.path,
+        roleName: StringConst.dr),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiakaragah.path, roleName: "کارآگاه"),
+        imagePath: Assets.images.png.mafiakaragah.path,
+        roleName: StringConst.karagah),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiakaragah.path, roleName: "کارآگاه"),
+        imagePath: Assets.images.png.mafiakaragah.path,
+        roleName: StringConst.karagah),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiasniper.path, roleName: "اسنایپر"),
+        imagePath: Assets.images.png.mafiasniper.path,
+        roleName: StringConst.sniper),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiasniper.path, roleName: "اسنایپر"),
+        imagePath: Assets.images.png.mafiasniper.path,
+        roleName: StringConst.sniper),
     MafiaRoleModel(
-        imagePath: Assets.images.png.mafiajansakht.path, roleName: "جان سخت"),
+        imagePath: Assets.images.png.mafiajansakht.path,
+        roleName: StringConst.jansakht),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiaravanshenas.path,
-        roleName: "روانشناس"),
+        roleName: StringConst.ravanshenas),
     MafiaRoleModel(
         imagePath: Assets.images.png.mafiaravanshenas.path,
-        roleName: "روانشناس"),
+        roleName: StringConst.ravanshenas),
   ];
 
   List<MafiaRoleModel> roleList = [];
-
 
   void changeRole() {
     // اگر همه نقش‌ها نمایش داده شده باشند
@@ -361,28 +419,28 @@ class MafiaCubit extends Cubit<MafiaState> {
   void hideMafiaRole() => emit(MafiaHideRoleState());
 
   void getRoleList(int playerCount) {
-    switch(playerCount) {
-      case 6 :
+    switch (playerCount) {
+      case 6:
         roleList = mafia6PayerRoleList;
-      case 7 :
+      case 7:
         roleList = mafia7PayerRoleList;
-      case 8 :
+      case 8:
         roleList = mafia8PayerRoleList;
-      case 9 :
+      case 9:
         roleList = mafia9PayerRoleList;
-      case 10 :
+      case 10:
         roleList = mafia10PayerRoleList;
-      case 11 :
+      case 11:
         roleList = mafia11PayerRoleList;
-      case 12 :
+      case 12:
         roleList = mafia12PayerRoleList;
-      case 13 :
+      case 13:
         roleList = mafia13PayerRoleList;
-      case 14 :
+      case 14:
         roleList = mafia14PayerRoleList;
-      case 15 :
+      case 15:
         roleList = mafia15PayerRoleList;
-      case 16 :
+      case 16:
         roleList = mafia16PayerRoleList;
     }
   }
