@@ -13,9 +13,6 @@ class HelpView extends StatelessWidget {
       _HelpCard(
           imagePath: Assets.images.png.mafia.path,
           title: 'بازی گروهی مافیا',
-          onTap: () {}),      _HelpCard(
-          imagePath: Assets.images.png.mafia.path,
-          title: 'بازی گروهی مافیا',
           onTap: () {}),
       _HelpCard(
           imagePath: Assets.images.png.jasoos.path,
@@ -56,19 +53,21 @@ class HelpView extends StatelessWidget {
             ],
           ),
         ),
-        child: ListView.builder(
-          itemCount: helpCardsList.length,
-          itemBuilder: (context, index) {
-            return Padding(
-              padding: EdgeInsets.only(bottom: 4.w),
-              child: _HelpCard(
-                  imagePath: helpCardsList[index].imagePath,
-                  title: helpCardsList[index].title,
-                  onTap: helpCardsList[index].onTap),
-            );
-          },
-        )
-    );
+        child: Padding(
+          padding: const EdgeInsets.only(top: AppDistances.large),
+          child: ListView.builder(
+            itemCount: helpCardsList.length,
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: EdgeInsets.only(bottom: 4.w),
+                child: _HelpCard(
+                    imagePath: helpCardsList[index].imagePath,
+                    title: helpCardsList[index].title,
+                    onTap: helpCardsList[index].onTap),
+              );
+            },
+          ),
+        ));
   }
 }
 

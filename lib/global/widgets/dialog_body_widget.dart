@@ -13,7 +13,7 @@ class DialogBodyWidget extends StatelessWidget {
         backgroundColor: Colors.transparent,
         insetPadding: EdgeInsets.all(AppDistances.small8.w),
         child: Container(
-          padding: EdgeInsets.all(2.w),
+          padding: EdgeInsets.all(3.w),
           width: double.infinity,
           decoration: BoxDecoration(
               color: UiColors.darkBlueColor3,
@@ -30,7 +30,7 @@ class DialogBodyWidget extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               const _CloseDialogButtonWidget(),
-              SizedBox(height: AppDistances.small2.w),
+              // SizedBox(height: AppDistances.small2.w),
               Column(
                 children: dialogBody,
               )

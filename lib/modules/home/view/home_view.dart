@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/gen/assets.gen.dart';
+import 'package:flutter_application_new/global/utils/constants/app_distances.dart';
+import 'package:flutter_application_new/global/widgets/comming_soon_game.dart';
 import 'package:flutter_application_new/global/widgets/home_games_cards.dart';
-import 'package:flutter_application_new/global/widgets/jorat-haghighat-card.dart';
 import 'package:flutter_application_new/global/widgets/main_btn.dart';
 import 'package:flutter_application_new/global/widgets/player_counter_widget.dart';
 import 'package:flutter_application_new/modules/cheshmak-marg/view/cheshmak_marg_screen.dart';
@@ -76,7 +77,7 @@ class HomeView extends StatelessWidget {
                                             dialogBody: [
                                               Image.asset(
                                                   Assets.images.png.mafia.path,
-                                                  scale: 8),
+                                                  scale: 1),
                                               BlocBuilder<HomeCubit, HomeState>(
                                                 builder: (context, state) {
                                                   return PlayerCounterWidget(
@@ -101,6 +102,7 @@ class HomeView extends StatelessWidget {
                                                 },
                                               ),
                                               MainButton(
+                                                  padding: AppDistances.small4,
                                                   btnText: "شروع بازی",
                                                   onPress: () {
                                                     if (mafiaPlayerCount
@@ -150,7 +152,7 @@ class HomeView extends StatelessWidget {
                                           return DialogBodyWidget(dialogBody: [
                                             Image.asset(
                                                 Assets.images.png.jasoos.path,
-                                                scale: 3),
+                                                scale: 1),
                                             BlocBuilder<HomeCubit, HomeState>(
                                               builder: (context, state) {
                                                 return PlayerCounterWidget(
@@ -175,6 +177,7 @@ class HomeView extends StatelessWidget {
                                               },
                                             ),
                                             MainButton(
+                                                padding: AppDistances.small4,
                                                 btnText: "شروع بازی",
                                                 onPress: () {
                                                   if (jasosPlayerCount
