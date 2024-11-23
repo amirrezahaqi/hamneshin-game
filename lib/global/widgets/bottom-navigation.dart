@@ -48,21 +48,24 @@ class BottomNavigation extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Image.asset(
-                    "assets/images/png/darbare.png",
-                    scale: 4,
-                  ),
-                  const Text(
-                    StringConst.about,
-                    style: TextStyle(
-                        fontFamily: FontFamily.pelak,
-                        color: UiColors.whiteColor,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ],
+              GestureDetector(
+                onTap: () => onPageChange(2),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Image.asset(
+                      "assets/images/png/darbare.png",
+                      scale: 4,
+                    ),
+                    const Text(
+                      StringConst.about,
+                      style: TextStyle(
+                          fontFamily: FontFamily.pelak,
+                          color: UiColors.whiteColor,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
               ),
               GestureDetector(
                 onTap: () => onPageChange(0),

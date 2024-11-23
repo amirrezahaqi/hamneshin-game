@@ -41,7 +41,7 @@ class AppBarWidget extends StatelessWidget {
             ),
             Positioned(
               child: Image.asset(
-                "assets/images/png/logo.png",
+                "assets/images/png/hamneshin.png",
                 height: 40,
               ),
             ),

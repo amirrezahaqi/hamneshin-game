@@ -3,6 +3,12 @@ class StringConst {
 //home strings
   static const home = "خانه";
   static const about = "درباره";
+  static const developers = "توسعه دهندگان:";
+  static const git = "مخزن گیت هاب";
+  static const amirreza = "امیررضا جلوس حقی";
+  static const mohammad = "محمد دهقانی فرد";
+  static const aboutText =
+      "همنشین یک بازی ایرانی مناسب دورهمی های دوستانه میان جوان های ایرانی است که به گونه ای طراحی شده است که کاربران به راحت ترین شیوه بازی های مختلف را اجرا نمایند ، این بازی در حال حاضر شامل شش بازی مهیج و جذاب به نام های  پانتومیم، شاه دزد جلاد، مافیا، جاسوس ، جرعت حقیقت، چشمک مرگ، است و ما قصد داریم در آینده و در آپدیت های بعدی بازی های بیشتری به این مجموعه اضافه شود .";
   static const help = "راهنما";
   static const pantomimGame = "بازی پانتومیم";
   static const jasosGame = "بازی جاسوس";

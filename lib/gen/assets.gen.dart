@@ -72,6 +72,13 @@ class $AssetsImagesPngGen {
   /// File path: assets/images/png/dor.png
   AssetGenImage get dor => const AssetGenImage('assets/images/png/dor.png');
 
+  /// File path: assets/images/png/git.png
+  AssetGenImage get git => const AssetGenImage('assets/images/png/git.png');
+
+  /// File path: assets/images/png/hamneshin.png
+  AssetGenImage get hamneshin =>
+      const AssetGenImage('assets/images/png/hamneshin.png');
+
   /// File path: assets/images/png/home.png
   AssetGenImage get home => const AssetGenImage('assets/images/png/home.png');
 
@@ -201,6 +208,8 @@ class $AssetsImagesPngGen {
         connection,
         darbare,
         dor,
+        git,
+        hamneshin,
         home,
         jasoos,
         jasoosjasoossade,

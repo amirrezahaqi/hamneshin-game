@@ -3,6 +3,7 @@ import 'package:flutter_application_new/global/cubits/navigation_cubit.dart';
 import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
 import 'package:flutter_application_new/global/widgets/app-bar.dart';
 import 'package:flutter_application_new/global/widgets/bottom-navigation.dart';
+import 'package:flutter_application_new/modules/about/view/about_view.dart';
 import 'package:flutter_application_new/modules/help/views/help_view.dart';
 import 'package:flutter_application_new/modules/home/view/home_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -40,7 +41,7 @@ class MainWrapper extends StatelessWidget {
                         children: const [
                           HomeView(),
                           HelpView(),
-                          SizedBox(),
+                          AboutView(),
                         ],
                       ),
                     ),
