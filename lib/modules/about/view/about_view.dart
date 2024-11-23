@@ -30,7 +30,7 @@ class AboutView extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 10.w,
+                    height: 2.w,
                   ),
                   SizedBox(
                     width: 50.w,
@@ -99,7 +99,7 @@ class AboutView extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 5.w,
+                    height: 2.w,
                   ),
                   const Text(
                     textAlign: TextAlign.justify,
@@ -126,7 +126,26 @@ class AboutView extends StatelessWidget {
                         scale: 10,
                       ),
                     ],
-                  )
+                  ),
+                  const Text(
+                    StringConst.created,
+                    style: TextStyle(
+                        fontSize: 12,
+                        fontFamily: FontFamily.pelak,
+                        color: UiColors.whiteColor,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: 2.w,
+                  ),
+                  const Text(
+                    StringConst.version,
+                    style: TextStyle(
+                        fontSize: 10,
+                        fontFamily: FontFamily.pelak,
+                        color: UiColors.whiteColor,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ],
               ),
             )));
