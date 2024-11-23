@@ -4,6 +4,8 @@ import 'package:flutter_application_new/gen/fonts.gen.dart';
 import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
 import 'package:flutter_application_new/global/utils/constants/app_distances.dart';
 import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
+import 'package:flutter_application_new/global/widgets/app-bar.dart';
+import 'package:flutter_application_new/global/widgets/bottom-navigation.dart';
 import 'package:flutter_application_new/global/widgets/dialog_body_widget.dart';
 import 'package:flutter_application_new/global/widgets/main_btn.dart';
 import 'package:flutter_application_new/global/widgets/main_btn2.dart';
@@ -17,20 +19,25 @@ class JasosView extends StatelessWidget {
   final int playerCount;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        height: double.infinity,
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              UiColors.darkBlueColor3,
-              UiColors.darkBlueColor5,
-            ],
-          ),
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            UiColors.darkBlueColor3,
+            UiColors.darkBlueColor5,
+          ],
         ),
-        child: BlocProvider<JasosCubit>(
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: PreferredSize(preferredSize: Size.fromHeight(20.w), child: Padding(
+          padding: EdgeInsets.only(top: 8.w),
+          child: const AppBarWidget(),
+        )),
+        bottomNavigationBar: BottomNavigation(onPageChange: (int pageIndex) {  },),
+        body: BlocProvider<JasosCubit>(
           create: (context) => JasosCubit()..getRoleList(playerCount),
           child: Center(
             child: SingleChildScrollView(
@@ -56,7 +63,7 @@ class JasosView extends StatelessWidget {
                         if (state is JasosChangeRoleState)
                           Padding(
                             padding:
-                                EdgeInsets.only(bottom: AppDistances.small8.w),
+                            EdgeInsets.only(bottom: AppDistances.small8.w),
                             child: JasosShowRoleWidget(role: state.role),
                           ),
 
