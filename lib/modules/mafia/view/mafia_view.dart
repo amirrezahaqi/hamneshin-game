@@ -4,6 +4,8 @@ import 'package:flutter_application_new/gen/fonts.gen.dart';
 import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
 import 'package:flutter_application_new/global/utils/constants/app_distances.dart';
 import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
+import 'package:flutter_application_new/global/widgets/app-bar.dart';
+import 'package:flutter_application_new/global/widgets/bottom-navigation.dart';
 import 'package:flutter_application_new/global/widgets/dialog_body_widget.dart';
 import 'package:flutter_application_new/global/widgets/main_btn.dart';
 import 'package:flutter_application_new/global/widgets/main_btn2.dart';
@@ -19,21 +21,25 @@ class MafiaView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => MafiaCubit()..getRoleList(playerCount),
-      child: Scaffold(
-        body: SafeArea(
-            child: Container(
-          height: double.infinity,
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                UiColors.darkBlueColor3,
-                UiColors.darkBlueColor5,
-              ],
-            ),
+      child: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              UiColors.darkBlueColor3,
+              UiColors.darkBlueColor5,
+            ],
           ),
-          child: Padding(
+        ),
+        child: Scaffold(
+          backgroundColor: Colors.transparent,
+          appBar: PreferredSize(preferredSize: Size.fromHeight(20.w), child: Padding(
+            padding: EdgeInsets.only(top: 8.w),
+            child: const AppBarWidget(),
+          )),
+          bottomNavigationBar: BottomNavigation(onPageChange: (int pageIndex) {  },),
+          body: Padding(
             padding: const EdgeInsets.all(AppDistances.pageBdyMargin),
             child: Builder(builder: (context) {
               return BlocBuilder<MafiaCubit, MafiaState>(
@@ -151,7 +157,7 @@ class MafiaView extends StatelessWidget {
               );
             }),
           ),
-        )),
+        ),
       ),
     );
   }
