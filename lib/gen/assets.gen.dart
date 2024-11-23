@@ -191,6 +191,10 @@ class $AssetsImagesPngGen {
   AssetGenImage get shahnotselect =>
       const AssetGenImage('assets/images/png/shahnotselect.png');
 
+  /// File path: assets/images/png/splashText.png
+  AssetGenImage get splashText =>
+      const AssetGenImage('assets/images/png/splashText.png');
+
   /// File path: assets/images/png/star.png
   AssetGenImage get star => const AssetGenImage('assets/images/png/star.png');
 
@@ -239,6 +243,7 @@ class $AssetsImagesPngGen {
         selected,
         shahDozdJallad,
         shahnotselect,
+        splashText,
         star,
         winner
       ];

@@ -13,6 +13,8 @@ class UiColors {
   static const lightBlueColor2 = Color(0xFFC0D6FF);
   static const lightBlueColor3 = Color(0xFF2B73DE);
   static const lightBlueColor4 = Color(0xFFB2C7ED);
+  static const lightBlueColor5 = Color(0xFF3184FD);
+  static const lightBlueColor6 = Color(0xFF2F7FFD);
   static const greenColor = Color(0xFF7ACD55);
   static const darkGreenColor = Color(0xFF467B2E);
   static const greyColor = Color(0xFF707070);
