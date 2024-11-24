@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/gen/assets.gen.dart';
+import 'package:flutter_application_new/gen/fonts.gen.dart';
 import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
 import 'package:flutter_application_new/global/utils/constants/app_distances.dart';
+import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
+import 'package:flutter_application_new/global/widgets/bottom_sheet_body_widget.dart';
 import 'package:flutter_application_new/global/widgets/comming_soon_game.dart';
 import 'package:flutter_application_new/global/widgets/home_games_cards.dart';
 import 'package:flutter_application_new/global/widgets/main_btn.dart';
@@ -14,6 +17,7 @@ import 'package:flutter_application_new/modules/mafia/view/mafia_view.dart';
 import 'package:flutter_application_new/modules/pantomim/view/pantomim_screen.dart';
 import 'package:flutter_application_new/modules/shah-dozd/view/shah_dozd_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../../global/widgets/dialog_body_widget.dart';
 
@@ -42,7 +46,87 @@ class HomeView extends StatelessWidget {
                     ),
                     CommingSoonCard(
                       btnText: '',
-                      onPress: () {},
+                      onPress: () {
+                        showModalBottomSheet(
+                          context: context,
+                          builder: (context) {
+                            return BottomSheetBodyWidget(children: [
+                              Column(
+                                children: [
+                                  SizedBox(
+                                    height: 2.w,
+                                  ),
+                                  SizedBox(
+                                    width: 50.w,
+                                    child: Image.asset(
+                                      "assets/images/png/dor.png",
+                                      scale: 3,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 5.w,
+                                  ),
+                                  Container(
+                                    decoration: const BoxDecoration(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(10)),
+                                        color: UiColors.lightBlueColor),
+                                    child: const Padding(
+                                      padding: EdgeInsets.all(8.0),
+                                      child: Text(
+                                        StringConst.aboutGame,
+                                        style: TextStyle(
+                                            fontFamily: FontFamily.pelak,
+                                            color: UiColors.whiteColor,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 4.w,
+                                  ),
+                                  const Text(
+                                    StringConst.dorehami,
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontFamily: FontFamily.pelak,
+                                        color: UiColors.whiteColor,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  SizedBox(
+                                    height: 5.w,
+                                  ),
+                                  SizedBox(
+                                    width: AppDistances.medium16.w * 4,
+                                    child: const Divider(
+                                      color: UiColors.whiteColor,
+                                      thickness: 1,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 2.w,
+                                  ),
+                                  SizedBox(
+                                    width: 90.w,
+                                    child: const Text(
+                                      textAlign: TextAlign.justify,
+                                      StringConst.dorGame,
+                                      style: TextStyle(
+                                          height: 1.5,
+                                          fontFamily: FontFamily.pelak,
+                                          color: UiColors.whiteColor,
+                                          fontWeight: FontWeight.normal),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 10.w,
+                                  ),
+                                ],
+                              )
+                            ]);
+                          },
+                        );
+                      },
                       imageAsset: 'assets/images/png/dor.png',
                     ),
                     SizedBox(
