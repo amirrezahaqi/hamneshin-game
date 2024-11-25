@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/gen/fonts.gen.dart';
 import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
@@ -17,6 +18,7 @@ class ShahDozdScreen extends StatefulWidget {
 }
 
 class _ShahDozdScreenState extends State<ShahDozdScreen> {
+  final AudioPlayer _audioPlayer = AudioPlayer();
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -111,8 +113,10 @@ class _ShahDozdScreenState extends State<ShahDozdScreen> {
                     children: [
                       MainButton(
                         btnText: StringConst.yourRoleBtn,
-                        onPress: () {
+                        onPress: () async {
                           cubit.generateNaghshRandom(context);
+                          await _audioPlayer
+                              .play(AssetSource('sounds/greenbtn.mp3'));
                         },
                         fontsize: 15,
                       ),
@@ -121,8 +125,10 @@ class _ShahDozdScreenState extends State<ShahDozdScreen> {
                       ),
                       MainButton2(
                         btnText: StringConst.hideYourRoleBtn,
-                        onPress: () {
+                        onPress: () async {
                           cubit.hideCurrentRole();
+                          await _audioPlayer
+                              .play(AssetSource('sounds/orangebtn.mp3'));
                         },
                         fontsize: 15,
                       ),

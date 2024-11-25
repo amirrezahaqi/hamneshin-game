@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/gen/fonts.gen.dart';
 import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
@@ -16,6 +17,7 @@ class PantomimScreen extends StatefulWidget {
 }
 
 class _PantomimScreenState extends State<PantomimScreen> {
+  final AudioPlayer _audioPlayer = AudioPlayer();
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -99,8 +101,10 @@ class _PantomimScreenState extends State<PantomimScreen> {
                   SizedBox(height: size.height / 50),
                   MainButton(
                     btnText: StringConst.yourPantomimBtn,
-                    onPress: () {
+                    onPress: () async {
                       cubit.generateRandomWord();
+                      await _audioPlayer
+                          .play(AssetSource('sounds/greenbtn.mp3'));
                     },
                     fontsize: 20,
                   ),

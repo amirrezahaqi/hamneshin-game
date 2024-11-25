@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/gen/assets.gen.dart';
 import 'package:flutter_application_new/gen/fonts.gen.dart';
@@ -17,8 +18,10 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 class JasosView extends StatelessWidget {
   const JasosView({super.key, required this.playerCount});
   final int playerCount;
+
   @override
   Widget build(BuildContext context) {
+    final AudioPlayer audioPlayer = AudioPlayer();
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
@@ -32,11 +35,15 @@ class JasosView extends StatelessWidget {
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        appBar: PreferredSize(preferredSize: Size.fromHeight(20.w), child: Padding(
-          padding: EdgeInsets.only(top: 8.w),
-          child: const AppBarWidget(),
-        )),
-        bottomNavigationBar: BottomNavigation(onPageChange: (int pageIndex) {  },),
+        appBar: PreferredSize(
+            preferredSize: Size.fromHeight(20.w),
+            child: Padding(
+              padding: EdgeInsets.only(top: 8.w),
+              child: const AppBarWidget(),
+            )),
+        bottomNavigationBar: BottomNavigation(
+          onPageChange: (int pageIndex) {},
+        ),
         body: BlocProvider<JasosCubit>(
           create: (context) => JasosCubit()..getRoleList(playerCount),
           child: Center(
@@ -63,7 +70,7 @@ class JasosView extends StatelessWidget {
                         if (state is JasosChangeRoleState)
                           Padding(
                             padding:
-                            EdgeInsets.only(bottom: AppDistances.small8.w),
+                                EdgeInsets.only(bottom: AppDistances.small8.w),
                             child: JasosShowRoleWidget(role: state.role),
                           ),
 
@@ -134,7 +141,11 @@ class JasosView extends StatelessWidget {
                             children: [
                               MainButton(
                                 btnText: StringConst.yourRoleBtn,
-                                onPress: () => jasosCubit.changeRole(),
+                                onPress: () async {
+                                  jasosCubit.changeRole();
+                                  await audioPlayer
+                                      .play(AssetSource('sounds/greenbtn.mp3'));
+                                },
                                 fontsize: 15.sp,
                               ),
                               SizedBox(
@@ -143,7 +154,11 @@ class JasosView extends StatelessWidget {
                               if (state is! JasosInitial)
                                 MainButton2(
                                   btnText: StringConst.hideYourRoleBtn,
-                                  onPress: () => jasosCubit.hideRole(),
+                                  onPress: () async {
+                                    jasosCubit.hideRole();
+                                    await audioPlayer.play(
+                                        AssetSource('sounds/orangebtn.mp3'));
+                                  },
                                   fontsize: 15.sp,
                                 ),
                             ],

@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/gen/assets.gen.dart';
 import 'package:flutter_application_new/gen/fonts.gen.dart';
@@ -19,6 +20,7 @@ class MafiaView extends StatelessWidget {
   final int playerCount;
   @override
   Widget build(BuildContext context) {
+    final AudioPlayer audioPlayer = AudioPlayer();
     return BlocProvider(
       create: (context) => MafiaCubit()..getRoleList(playerCount),
       child: Container(
@@ -34,11 +36,15 @@ class MafiaView extends StatelessWidget {
         ),
         child: Scaffold(
           backgroundColor: Colors.transparent,
-          appBar: PreferredSize(preferredSize: Size.fromHeight(20.w), child: Padding(
-            padding: EdgeInsets.only(top: 8.w),
-            child: const AppBarWidget(),
-          )),
-          bottomNavigationBar: BottomNavigation(onPageChange: (int pageIndex) {  },),
+          appBar: PreferredSize(
+              preferredSize: Size.fromHeight(20.w),
+              child: Padding(
+                padding: EdgeInsets.only(top: 8.w),
+                child: const AppBarWidget(),
+              )),
+          bottomNavigationBar: BottomNavigation(
+            onPageChange: (int pageIndex) {},
+          ),
           body: Padding(
             padding: const EdgeInsets.all(AppDistances.pageBdyMargin),
             child: Builder(builder: (context) {
@@ -135,7 +141,11 @@ class MafiaView extends StatelessWidget {
                               children: [
                                 MainButton(
                                   btnText: StringConst.yourRoleBtn,
-                                  onPress: () => mafiaCubit.changeRole(),
+                                  onPress: () async {
+                                    mafiaCubit.changeRole();
+                                    await audioPlayer.play(
+                                        AssetSource('sounds/greenbtn.mp3'));
+                                  },
                                   fontsize: 15.sp,
                                 ),
                                 SizedBox(
@@ -144,7 +154,11 @@ class MafiaView extends StatelessWidget {
                                 if (state is! MafiaInitial)
                                   MainButton2(
                                     btnText: StringConst.hideYourRoleBtn,
-                                    onPress: () => mafiaCubit.hideMafiaRole(),
+                                    onPress: () async {
+                                      mafiaCubit.hideMafiaRole();
+                                      await audioPlayer.play(
+                                          AssetSource('sounds/orangebtn.mp3'));
+                                    },
                                     fontsize: 15.sp,
                                   ),
                               ],

@@ -30,7 +30,7 @@ environment:
 dependencies:
   flutter_spinkit: ^5.2.1
   flutter_svg: ^2.0.10+1
-  just_audio: ^0.9.41
+  audioplayers: ^6.1.0
   flutter:
     sdk: flutter
 
@@ -69,7 +69,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/png/
-    # - assets/images/svg/
+    - assets/sounds/ 
     - assets/fonts/
 
 

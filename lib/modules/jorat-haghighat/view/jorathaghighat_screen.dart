@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/gen/fonts.gen.dart';
 import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
@@ -16,6 +17,8 @@ class JoratHaghighatScreen extends StatefulWidget {
 }
 
 class _JoratHaghighatScreenState extends State<JoratHaghighatScreen> {
+  final AudioPlayer _audioPlayer = AudioPlayer();
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -77,8 +80,10 @@ class _JoratHaghighatScreenState extends State<JoratHaghighatScreen> {
                   SizedBox(height: size.height / 50),
                   MainButton(
                     btnText: StringConst.rotateBtn,
-                    onPress: () {
+                    onPress: () async {
                       cubit.generateRandomDeg();
+                      await _audioPlayer
+                          .play(AssetSource('sounds/greenbtn.mp3'));
                     },
                     fontsize: 20,
                   ),

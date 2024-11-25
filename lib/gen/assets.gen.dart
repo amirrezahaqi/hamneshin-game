@@ -38,6 +38,19 @@ class $AssetsImagesGen {
   $AssetsImagesPngGen get png => const $AssetsImagesPngGen();
 }
 
+class $AssetsSoundsGen {
+  const $AssetsSoundsGen();
+
+  /// File path: assets/sounds/greenbtn.mp3
+  String get greenbtn => 'assets/sounds/greenbtn.mp3';
+
+  /// File path: assets/sounds/orangebtn.mp3
+  String get orangebtn => 'assets/sounds/orangebtn.mp3';
+
+  /// List of all assets
+  List<String> get values => [greenbtn, orangebtn];
+}
+
 class $AssetsImagesPngGen {
   const $AssetsImagesPngGen();
 
@@ -254,6 +267,7 @@ class Assets {
 
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsSoundsGen sounds = $AssetsSoundsGen();
 }
 
 class AssetGenImage {
