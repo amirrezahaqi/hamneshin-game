@@ -43,6 +43,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   responsive_sizer: ^3.3.1
+  flutter_animate: ^4.5.2
 
 dev_dependencies:
   flutter_test:

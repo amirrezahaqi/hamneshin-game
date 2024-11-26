@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_application_new/gen/assets.gen.dart';
 import 'package:flutter_application_new/gen/fonts.gen.dart';
 import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
@@ -16,6 +17,7 @@ import 'package:flutter_application_new/modules/jorat-haghighat/view/jorathaghig
 import 'package:flutter_application_new/modules/mafia/view/mafia_view.dart';
 import 'package:flutter_application_new/modules/pantomim/view/pantomim_screen.dart';
 import 'package:flutter_application_new/modules/shah-dozd/view/shah_dozd_screen.dart';
+import 'package:flutter_application_new/modules/splash/view/splash_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -128,7 +130,7 @@ class HomeView extends StatelessWidget {
                         );
                       },
                       imageAsset: 'assets/images/png/dor.png',
-                    ),
+                    ).animate(effects: [const ScaleEffect(duration: Duration(milliseconds: 350))]),
                     SizedBox(
                       height: size.height / 30,
                     ),
@@ -300,7 +302,7 @@ class HomeView extends StatelessWidget {
                                     imageAsset:
                                         "assets/images/png/pantomim.png"),
                               ],
-                            ),
+                            ).animate(effects: [const ScaleEffect(duration: Duration(milliseconds: 350),delay: Duration(milliseconds: 350))]),
                             SizedBox(
                               height: size.height / 20,
                             ),
@@ -342,7 +344,7 @@ class HomeView extends StatelessWidget {
                                     imageAsset:
                                         "assets/images/png/shah-dozd-jallad.png"),
                               ],
-                            ),
+                            ).animate(effects: [const ScaleEffect(duration: Duration(milliseconds: 350),delay: Duration(milliseconds: 700))]),
                           ],
                         ))
                   ],

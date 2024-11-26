@@ -1,5 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_application_new/gen/fonts.gen.dart';
 import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
 import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
@@ -7,6 +8,7 @@ import 'package:flutter_application_new/global/widgets/app-bar.dart';
 import 'package:flutter_application_new/global/widgets/bottom-navigation.dart';
 import 'package:flutter_application_new/global/widgets/main_btn.dart';
 import 'package:flutter_application_new/global/widgets/main_btn2.dart';
+import 'package:flutter_application_new/modules/cheshmak-marg/view/cheshmak_marg_screen.dart';
 import 'package:flutter_application_new/modules/shah-dozd/cubit/shah_dozd_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -72,7 +74,7 @@ class _ShahDozdScreenState extends State<ShahDozdScreen> {
                         height: size.height / 2.25,
                         roleModel?.assetPath ??
                             "assets/images/png/shahnotselect.png",
-                      );
+                      ).animate(effects: [const ScaleEffect()]);
                     },
                   ),
                   Column(
