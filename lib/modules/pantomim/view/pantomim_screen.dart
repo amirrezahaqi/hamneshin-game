@@ -1,5 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_application_new/gen/fonts.gen.dart';
 import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
 import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
@@ -65,7 +66,7 @@ class _PantomimScreenState extends State<PantomimScreen> {
                           fontWeight: FontWeight.bold),
                     ),
                   ),
-                  Image.asset("assets/images/png/pantomim-mask.png"),
+                  Image.asset("assets/images/png/pantomim-mask.png").animate(effects: [const FadeEffect(duration: Duration(milliseconds: 450))]),
                   Column(
                     children: [
                       SizedBox(
