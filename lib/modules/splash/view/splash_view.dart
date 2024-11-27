@@ -20,12 +20,12 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     super.initState();
 
-    // Future.delayed(const Duration(seconds: 3), () {
-    //   Navigator.pushReplacement(
-    //     context,
-    //     MaterialPageRoute(builder: (context) => const MainWrapper()),
-    //   );
-    // });
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const MainWrapper()),
+      );
+    });
   }
 
   @override
