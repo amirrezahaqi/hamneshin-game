@@ -1,5 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_application_new/gen/assets.gen.dart';
 import 'package:flutter_application_new/gen/fonts.gen.dart';
 import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
@@ -10,6 +11,7 @@ import 'package:flutter_application_new/global/widgets/bottom-navigation.dart';
 import 'package:flutter_application_new/global/widgets/dialog_body_widget.dart';
 import 'package:flutter_application_new/global/widgets/main_btn.dart';
 import 'package:flutter_application_new/global/widgets/main_btn2.dart';
+import 'package:flutter_application_new/modules/home/view/home_view.dart';
 import 'package:flutter_application_new/modules/mafia/cubit/mafia_cubit.dart';
 import 'package:flutter_application_new/modules/mafia/widgets/mafia_show_role_widget.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -115,12 +117,12 @@ class MafiaView extends StatelessWidget {
 
                           // نمایش و مخفی کردن نقش ها
                           if (state is MafiaInitial) ...[
-                            Image.asset(Assets.images.png.mafia.path)
+                            Image.asset(Assets.images.png.mafia.path).animate(effects: [const ScaleEffect()])
                           ] else if (state is MafiaChangeRoleState) ...[
                             MafiaShowRoleWidget(role: state.role)
                           ] else if (state is MafiaHideRoleState) ...[
                             SizedBox(height: AppDistances.medium12.w),
-                            Image.asset(Assets.images.png.mafia.path),
+                            Image.asset(Assets.images.png.mafia.path).animate(effects: [const ScaleEffect()]),
                             Text(
                               StringConst.forYourRole,
                               textAlign: TextAlign.center,

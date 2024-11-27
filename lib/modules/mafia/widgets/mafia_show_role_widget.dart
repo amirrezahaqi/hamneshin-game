@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
 import 'package:flutter_application_new/global/utils/constants/app_distances.dart';
 import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
@@ -12,7 +13,7 @@ class MafiaShowRoleWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset(role.imagePath),
+        Image.asset(role.imagePath).animate(effects: [ScaleEffect()]),
         Text(StringConst.yourRole,
             style: TextStyle(fontSize: 17.sp, color: UiColors.whiteColor)),
         SizedBox(height: AppDistances.small2.w),
