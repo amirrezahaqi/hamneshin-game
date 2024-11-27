@@ -1,5 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_application_new/gen/assets.gen.dart';
 import 'package:flutter_application_new/gen/fonts.gen.dart';
 import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
@@ -64,7 +65,7 @@ class JasosView extends StatelessWidget {
                               color: UiColors.whiteColor),
                         ),
                         if (state is JasosInitial)
-                          Image.asset(Assets.images.png.jasoos.path),
+                          Image.asset(Assets.images.png.jasoos.path).animate(effects: [const ScaleEffect()]),
 
                         // نمایش نقش
                         if (state is JasosChangeRoleState)
@@ -75,7 +76,7 @@ class JasosView extends StatelessWidget {
                           ),
 
                         if (state is JasosHideRoleState) ...[
-                          Image.asset(Assets.images.png.jasoos.path),
+                          Image.asset(Assets.images.png.jasoos.path).animate(effects: [const ScaleEffect()]),
                           SizedBox(height: AppDistances.medium12.w),
                           Text(
                             StringConst.yourRoleBtn,
