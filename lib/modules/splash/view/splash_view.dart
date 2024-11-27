@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_application_new/gen/fonts.gen.dart';
 import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
 import 'package:flutter_application_new/global/utils/constants/app_distances.dart';
@@ -19,12 +20,12 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     super.initState();
 
-    Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => const MainWrapper()),
-      );
-    });
+    // Future.delayed(const Duration(seconds: 3), () {
+    //   Navigator.pushReplacement(
+    //     context,
+    //     MaterialPageRoute(builder: (context) => const MainWrapper()),
+    //   );
+    // });
   }
 
   @override
@@ -63,7 +64,7 @@ class _SplashViewState extends State<SplashView> {
                             "assets/images/png/hamneshin.png",
                             scale: 3,
                           ),
-                        ),
+                        ).animate(effects: [const FadeEffect(duration: Duration(milliseconds: 350))]),
                         SizedBox(
                           height: 2.w,
                         ),
@@ -73,7 +74,7 @@ class _SplashViewState extends State<SplashView> {
                             "assets/images/png/splashText.png",
                             scale: 1,
                           ),
-                        ),
+                        ).animate(effects: [const FadeEffect(duration: Duration(milliseconds: 350),delay: Duration(milliseconds: 750))]),
                       ],
                     ),
                   ),
