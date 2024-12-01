@@ -8,7 +8,6 @@ import 'package:flutter_application_new/global/widgets/app-bar.dart';
 import 'package:flutter_application_new/global/widgets/bottom-navigation.dart';
 import 'package:flutter_application_new/global/widgets/main_btn.dart';
 import 'package:flutter_application_new/global/widgets/main_btn2.dart';
-import 'package:flutter_application_new/modules/cheshmak-marg/view/cheshmak_marg_screen.dart';
 import 'package:flutter_application_new/modules/shah-dozd/cubit/shah_dozd_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -42,7 +41,7 @@ class _ShahDozdScreenState extends State<ShahDozdScreen> {
           backgroundColor: Colors.transparent,
           appBar: PreferredSize(
             preferredSize: Size.fromHeight(size.height / 12),
-            child: const AppBarWidget(),
+            child: AppBarWidget(),
           ),
           bottomNavigationBar: BottomNavigation(
             onPageChange: (int pageIndex) {},

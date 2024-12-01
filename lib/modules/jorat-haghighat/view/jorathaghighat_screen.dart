@@ -7,7 +7,6 @@ import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
 import 'package:flutter_application_new/global/widgets/app-bar.dart';
 import 'package:flutter_application_new/global/widgets/bottom-navigation.dart';
 import 'package:flutter_application_new/global/widgets/main_btn.dart';
-import 'package:flutter_application_new/modules/home/view/home_view.dart';
 import 'package:flutter_application_new/modules/jorat-haghighat/cubit/jorathaghighat_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -42,7 +41,7 @@ class _JoratHaghighatScreenState extends State<JoratHaghighatScreen> {
           backgroundColor: Colors.transparent,
           appBar: PreferredSize(
             preferredSize: Size.fromHeight(size.height / 12),
-            child: const AppBarWidget(),
+            child: AppBarWidget(),
           ),
           bottomNavigationBar: BottomNavigation(
             onPageChange: (int pageIndex) {},
@@ -75,7 +74,11 @@ class _JoratHaghighatScreenState extends State<JoratHaghighatScreen> {
                         turns: deg * 10,
                         duration: const Duration(seconds: 2),
                         child: Image.asset(
-                            "assets/images/png/jorat-haghighat-miz.png").animate(effects: [const FadeEffect(duration: Duration(milliseconds: 500))]),
+                                "assets/images/png/jorat-haghighat-miz.png")
+                            .animate(effects: [
+                          const FadeEffect(
+                              duration: Duration(milliseconds: 500))
+                        ]),
                       );
                     },
                   ),

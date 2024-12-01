@@ -64,7 +64,10 @@ class _SplashViewState extends State<SplashView> {
                             "assets/images/png/hamneshin.png",
                             scale: 3,
                           ),
-                        ).animate(effects: [const FadeEffect(duration: Duration(milliseconds: 350))]),
+                        ).animate(effects: [
+                          const FadeEffect(
+                              duration: Duration(milliseconds: 350))
+                        ]),
                         SizedBox(
                           height: 2.w,
                         ),
@@ -74,7 +77,11 @@ class _SplashViewState extends State<SplashView> {
                             "assets/images/png/splashText.png",
                             scale: 1,
                           ),
-                        ).animate(effects: [const FadeEffect(duration: Duration(milliseconds: 350),delay: Duration(milliseconds: 750))]),
+                        ).animate(effects: [
+                          const FadeEffect(
+                              duration: Duration(milliseconds: 350),
+                              delay: Duration(milliseconds: 750))
+                        ]),
                       ],
                     ),
                   ),
@@ -89,7 +96,7 @@ class _SplashViewState extends State<SplashView> {
                           StringConst.loaded,
                           style: TextStyle(
                               height: 1.5, // فاصله بین خطوط
-      
+
                               fontSize: 20,
                               fontFamily: FontFamily.pelak,
                               color: UiColors.whiteColor,
@@ -104,7 +111,7 @@ class _SplashViewState extends State<SplashView> {
                       StringConst.created,
                       style: TextStyle(
                           height: 1.5, // فاصله بین خطوط
-      
+
                           fontSize: 15,
                           fontFamily: FontFamily.pelak,
                           color: UiColors.whiteColor,
@@ -117,7 +124,7 @@ class _SplashViewState extends State<SplashView> {
                       StringConst.version,
                       style: TextStyle(
                           height: 1.5, // فاصله بین خطوط
-      
+
                           fontSize: 10,
                           fontFamily: FontFamily.pelak,
                           color: UiColors.whiteColor,

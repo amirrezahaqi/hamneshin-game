@@ -9,7 +9,6 @@ import 'package:flutter_application_new/global/widgets/bottom-navigation.dart';
 import 'package:flutter_application_new/global/widgets/main_btn.dart';
 import 'package:flutter_application_new/global/widgets/main_btn2.dart';
 import 'package:flutter_application_new/modules/cheshmak-marg/cubit/cheshmakmarg_cubit.dart';
-import 'package:flutter_application_new/modules/home/view/home_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CheshmakMargScreen extends StatefulWidget {
@@ -42,7 +41,7 @@ class _CheshmakMargScreenState extends State<CheshmakMargScreen> {
           backgroundColor: Colors.transparent,
           appBar: PreferredSize(
             preferredSize: Size.fromHeight(size.height / 12),
-            child: const AppBarWidget(),
+            child: AppBarWidget(),
           ),
           bottomNavigationBar: BottomNavigation(
             onPageChange: (int pageIndex) {},

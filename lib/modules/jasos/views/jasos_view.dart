@@ -40,7 +40,7 @@ class JasosView extends StatelessWidget {
             preferredSize: Size.fromHeight(20.w),
             child: Padding(
               padding: EdgeInsets.only(top: 8.w),
-              child: const AppBarWidget(),
+              child: AppBarWidget(),
             )),
         bottomNavigationBar: BottomNavigation(
           onPageChange: (int pageIndex) {},
@@ -65,7 +65,8 @@ class JasosView extends StatelessWidget {
                               color: UiColors.whiteColor),
                         ),
                         if (state is JasosInitial)
-                          Image.asset(Assets.images.png.jasoos.path).animate(effects: [const ScaleEffect()]),
+                          Image.asset(Assets.images.png.jasoos.path)
+                              .animate(effects: [const ScaleEffect()]),
 
                         // نمایش نقش
                         if (state is JasosChangeRoleState)
@@ -76,7 +77,8 @@ class JasosView extends StatelessWidget {
                           ),
 
                         if (state is JasosHideRoleState) ...[
-                          Image.asset(Assets.images.png.jasoos.path).animate(effects: [const ScaleEffect()]),
+                          Image.asset(Assets.images.png.jasoos.path)
+                              .animate(effects: [const ScaleEffect()]),
                           SizedBox(height: AppDistances.medium12.w),
                           Text(
                             StringConst.yourRoleBtn,

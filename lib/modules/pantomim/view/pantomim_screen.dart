@@ -40,7 +40,7 @@ class _PantomimScreenState extends State<PantomimScreen> {
           backgroundColor: Colors.transparent,
           appBar: PreferredSize(
             preferredSize: Size.fromHeight(size.height / 12),
-            child: const AppBarWidget(),
+            child: AppBarWidget(),
           ),
           bottomNavigationBar: BottomNavigation(
             onPageChange: (int pageIndex) {},
@@ -66,7 +66,10 @@ class _PantomimScreenState extends State<PantomimScreen> {
                           fontWeight: FontWeight.bold),
                     ),
                   ),
-                  Image.asset("assets/images/png/pantomim-mask.png").animate(effects: [const FadeEffect(duration: Duration(milliseconds: 450))]),
+                  Image.asset("assets/images/png/pantomim-mask.png").animate(
+                      effects: [
+                        const FadeEffect(duration: Duration(milliseconds: 450))
+                      ]),
                   Column(
                     children: [
                       SizedBox(

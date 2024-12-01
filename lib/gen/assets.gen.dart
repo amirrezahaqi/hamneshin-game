@@ -41,6 +41,9 @@ class $AssetsImagesGen {
 class $AssetsSoundsGen {
   const $AssetsSoundsGen();
 
+  /// File path: assets/sounds/gamesound.mp3
+  String get gamesound => 'assets/sounds/gamesound.mp3';
+
   /// File path: assets/sounds/greenbtn.mp3
   String get greenbtn => 'assets/sounds/greenbtn.mp3';
 
@@ -48,7 +51,7 @@ class $AssetsSoundsGen {
   String get orangebtn => 'assets/sounds/orangebtn.mp3';
 
   /// List of all assets
-  List<String> get values => [greenbtn, orangebtn];
+  List<String> get values => [gamesound, greenbtn, orangebtn];
 }
 
 class $AssetsImagesPngGen {
@@ -84,6 +87,9 @@ class $AssetsImagesPngGen {
 
   /// File path: assets/images/png/dor.png
   AssetGenImage get dor => const AssetGenImage('assets/images/png/dor.png');
+
+  /// File path: assets/images/png/eitaa.png
+  AssetGenImage get eitaa => const AssetGenImage('assets/images/png/eitaa.png');
 
   /// File path: assets/images/png/git.png
   AssetGenImage get git => const AssetGenImage('assets/images/png/git.png');
@@ -161,9 +167,6 @@ class $AssetsImagesPngGen {
   AssetGenImage get mafiasniper =>
       const AssetGenImage('assets/images/png/mafiasniper.png');
 
-  /// File path: assets/images/png/music.png
-  AssetGenImage get music => const AssetGenImage('assets/images/png/music.png');
-
   /// File path: assets/images/png/pantomim-mask.png
   AssetGenImage get pantomimMask =>
       const AssetGenImage('assets/images/png/pantomim-mask.png');
@@ -211,6 +214,16 @@ class $AssetsImagesPngGen {
   /// File path: assets/images/png/star.png
   AssetGenImage get star => const AssetGenImage('assets/images/png/star.png');
 
+  /// File path: assets/images/png/sup.png
+  AssetGenImage get sup => const AssetGenImage('assets/images/png/sup.png');
+
+  /// File path: assets/images/png/supp.png
+  AssetGenImage get supp => const AssetGenImage('assets/images/png/supp.png');
+
+  /// File path: assets/images/png/telegram.png
+  AssetGenImage get telegram =>
+      const AssetGenImage('assets/images/png/telegram.png');
+
   /// File path: assets/images/png/winner.png
   AssetGenImage get winner =>
       const AssetGenImage('assets/images/png/winner.png');
@@ -225,6 +238,7 @@ class $AssetsImagesPngGen {
         connection,
         darbare,
         dor,
+        eitaa,
         git,
         hamneshin,
         home,
@@ -245,7 +259,6 @@ class $AssetsImagesPngGen {
         mafiaravanshenas,
         mafiashahrvand,
         mafiasniper,
-        music,
         pantomimMask,
         pantomim,
         rahnama,
@@ -258,6 +271,9 @@ class $AssetsImagesPngGen {
         shahnotselect,
         splashText,
         star,
+        sup,
+        supp,
+        telegram,
         winner
       ];
 }

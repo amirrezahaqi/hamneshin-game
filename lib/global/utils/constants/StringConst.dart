@@ -3,8 +3,12 @@ class StringConst {
 //home strings
   static const home = "خانه";
   static const about = "درباره";
+  static const sup = "پشتیبانی برنامه";
+  static const supp = "راه های ارتباط با ما";
   static const developers = "توسعه دهندگان:";
   static const git = "مخزن گیت هاب";
+  static const telegram = "پشتیبانی در تلگرام";
+  static const eitaa = "پشتیبانی در اپ ایتا";
   static const amirreza = "امیررضا جلوس حقی";
   static const mohammad = "محمد دهقانی فرد";
   static const version = "نسخه برنامه 1.1";

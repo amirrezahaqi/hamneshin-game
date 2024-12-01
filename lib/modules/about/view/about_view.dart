@@ -4,9 +4,25 @@ import 'package:flutter_application_new/global/utils/constants/StringConst.dart'
 import 'package:flutter_application_new/global/utils/constants/app_distances.dart';
 import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutView extends StatelessWidget {
   const AboutView({super.key});
+
+  // final String url = "https://github.com/amirrezahaqi/hamneshin-game";
+
+  // Future<void> _launchURL() async {
+  //   final Uri uri = Uri.parse(url);
+
+  //   if (await canLaunchUrl(uri)) {
+  //     await launchUrl(
+  //       uri,
+  //       mode: LaunchMode.externalApplication, // باز کردن در مرورگر خارجی
+  //     );
+  //   } else {
+  //     throw "Could not launch $url";
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -110,22 +126,39 @@ class AboutView extends StatelessWidget {
                         color: UiColors.whiteColor,
                         fontWeight: FontWeight.normal),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Text(
-                        StringConst.git,
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontFamily: FontFamily.pelak,
-                            color: UiColors.whiteColor,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      Image.asset(
-                        "assets/images/png/git.png",
-                        scale: 10,
-                      ),
-                    ],
+                  GestureDetector(
+                    onTap: () {
+                      myLaunchUrl(String url) async {
+                        var uri = Uri.parse(url);
+                        if (await canLaunchUrl(uri)) {
+                          await launchUrl(uri,
+                              mode: LaunchMode
+                                  .externalApplication); // استفاده از LaunchMode مناسب
+                        } else {
+                          print("Could not launch $url");
+                        }
+                      }
+
+                      myLaunchUrl(
+                          "https://www.github.com/amirrezahaqi/hamneshin-game");
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          "assets/images/png/git.png",
+                          scale: 10,
+                        ),
+                        const Text(
+                          StringConst.git,
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontFamily: FontFamily.pelak,
+                              color: UiColors.whiteColor,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
                   ),
                   const Text(
                     StringConst.created,
