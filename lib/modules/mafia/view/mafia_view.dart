@@ -17,11 +17,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class MafiaView extends StatelessWidget {
-  const MafiaView({super.key, required this.playerCount});
+  MafiaView({super.key, required this.playerCount});
   final int playerCount;
+  final AudioPlayer audioPlayer = AudioPlayer();
   @override
   Widget build(BuildContext context) {
-    final AudioPlayer audioPlayer = AudioPlayer();
     return BlocProvider(
       create: (context) => MafiaCubit()..getRoleList(playerCount),
       child: Container(
@@ -41,7 +41,7 @@ class MafiaView extends StatelessWidget {
               preferredSize: Size.fromHeight(20.w),
               child: Padding(
                 padding: EdgeInsets.only(top: 8.w),
-                child: AppBarWidget(),
+                child: const AppBarWidget(),
               )),
           bottomNavigationBar: BottomNavigation(
             onPageChange: (int pageIndex) {},
@@ -105,7 +105,11 @@ class MafiaView extends StatelessWidget {
                                   children: [
                                     MainButton(
                                         btnText: StringConst.backToHome,
-                                        onPress: () => Navigator.pop(context)),
+                                        onPress: () async {
+                                          await audioPlayer.play(AssetSource(
+                                              'sounds/greenbtn.mp3'));
+                                          Navigator.pop(context);
+                                        }),
                                     SizedBox(width: AppDistances.small2.w),
                                   ],
                                 ),

@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/gen/assets.gen.dart';
 import 'package:flutter_application_new/gen/fonts.gen.dart';
@@ -8,15 +9,16 @@ import 'package:flutter_application_new/global/widgets/bottom_sheet_body_widget.
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class HelpView extends StatelessWidget {
-  const HelpView({super.key});
-
+  HelpView({super.key});
+  final AudioPlayer audioPlayer = AudioPlayer();
   @override
   Widget build(BuildContext context) {
     final List<_HelpCard> helpCardsList = [
       _HelpCard(
           imagePath: Assets.images.png.mafia.path,
           title: 'بازی گروهی مافیا',
-          onTap: () {
+          onTap: () async {
+            await audioPlayer.play(AssetSource('sounds/buttomSheet.mp3'));
             showModalBottomSheet(
               context: context,
               builder: (context) {
@@ -99,7 +101,8 @@ class HelpView extends StatelessWidget {
       _HelpCard(
           imagePath: Assets.images.png.jasoos.path,
           title: 'بازی گروهی جاسوس',
-          onTap: () {
+          onTap: () async {
+            await audioPlayer.play(AssetSource('sounds/buttomSheet.mp3'));
             showModalBottomSheet(
               context: context,
               builder: (context) {
@@ -182,7 +185,8 @@ class HelpView extends StatelessWidget {
       _HelpCard(
           imagePath: Assets.images.png.shahDozdJallad.path,
           title: 'بازی گروهی شاه دزد جلاد',
-          onTap: () {
+          onTap: () async {
+            await audioPlayer.play(AssetSource('sounds/buttomSheet.mp3'));
             showModalBottomSheet(
               context: context,
               builder: (context) {
@@ -265,7 +269,8 @@ class HelpView extends StatelessWidget {
       _HelpCard(
           imagePath: Assets.images.png.joratHaghighat.path,
           title: 'بازی گروهی جرعت یا حقیقت',
-          onTap: () {
+          onTap: () async {
+            await audioPlayer.play(AssetSource('sounds/buttomSheet.mp3'));
             showModalBottomSheet(
               context: context,
               builder: (context) {
@@ -348,7 +353,8 @@ class HelpView extends StatelessWidget {
       _HelpCard(
           imagePath: Assets.images.png.dor.path,
           title: 'بازی گروهی دور',
-          onTap: () {
+          onTap: () async {
+            await audioPlayer.play(AssetSource('sounds/buttomSheet.mp3'));
             showModalBottomSheet(
               context: context,
               builder: (context) {
@@ -431,7 +437,8 @@ class HelpView extends StatelessWidget {
       _HelpCard(
           imagePath: Assets.images.png.pantomim.path,
           title: 'بازی گروهی پانتومیم',
-          onTap: () {
+          onTap: () async {
+            await audioPlayer.play(AssetSource('sounds/buttomSheet.mp3'));
             showModalBottomSheet(
               context: context,
               builder: (context) {
@@ -514,7 +521,8 @@ class HelpView extends StatelessWidget {
       _HelpCard(
           imagePath: Assets.images.png.cheshmakMarg.path,
           title: 'بازی گروهی چشمک مرگ',
-          onTap: () {
+          onTap: () async {
+            await audioPlayer.play(AssetSource('sounds/buttomSheet.mp3'));
             showModalBottomSheet(
               context: context,
               builder: (context) {

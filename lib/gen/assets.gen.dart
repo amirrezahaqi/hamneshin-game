@@ -41,17 +41,49 @@ class $AssetsImagesGen {
 class $AssetsSoundsGen {
   const $AssetsSoundsGen();
 
-  /// File path: assets/sounds/gamesound.mp3
-  String get gamesound => 'assets/sounds/gamesound.mp3';
+  /// File path: assets/sounds/buttomSheet.mp3
+  String get buttomSheet => 'assets/sounds/buttomSheet.mp3';
+
+  /// File path: assets/sounds/cheshmak.mp3
+  String get cheshmak => 'assets/sounds/cheshmak.mp3';
+
+  /// File path: assets/sounds/dialog.mp3
+  String get dialog => 'assets/sounds/dialog.mp3';
 
   /// File path: assets/sounds/greenbtn.mp3
   String get greenbtn => 'assets/sounds/greenbtn.mp3';
 
+  /// File path: assets/sounds/jasoos.mp3
+  String get jasoos => 'assets/sounds/jasoos.mp3';
+
+  /// File path: assets/sounds/jorat.mp3
+  String get jorat => 'assets/sounds/jorat.mp3';
+
+  /// File path: assets/sounds/mafia.mp3
+  String get mafia => 'assets/sounds/mafia.mp3';
+
   /// File path: assets/sounds/orangebtn.mp3
   String get orangebtn => 'assets/sounds/orangebtn.mp3';
 
+  /// File path: assets/sounds/pantomim.mp3
+  String get pantomim => 'assets/sounds/pantomim.mp3';
+
+  /// File path: assets/sounds/shah.mp3
+  String get shah => 'assets/sounds/shah.mp3';
+
   /// List of all assets
-  List<String> get values => [gamesound, greenbtn, orangebtn];
+  List<String> get values => [
+        buttomSheet,
+        cheshmak,
+        dialog,
+        greenbtn,
+        jasoos,
+        jorat,
+        mafia,
+        orangebtn,
+        pantomim,
+        shah
+      ];
 }
 
 class $AssetsImagesPngGen {

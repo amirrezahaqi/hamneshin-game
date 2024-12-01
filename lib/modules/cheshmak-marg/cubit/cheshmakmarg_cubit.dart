@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:audioplayers/audioplayers.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/gen/assets.gen.dart';
@@ -15,7 +16,7 @@ part 'cheshmakmarg_state.dart';
 
 class CheshmakmargCubit extends Cubit<RoleModel?> {
   CheshmakmargCubit() : super(null);
-
+  final AudioPlayer audioPlayer = AudioPlayer();
   final List<String> naghs = [
     StringConst.karagah2,
     StringConst.ghatel,
@@ -33,7 +34,7 @@ class CheshmakmargCubit extends Cubit<RoleModel?> {
     "assets/images/png/cheshmakpooch.png",
   ];
 
-  generateNaghshRandom(BuildContext context) {
+  generateNaghshRandom(BuildContext context) async {
     if (naghs.isNotEmpty && naghsAssets.isNotEmpty) {
       final randomIndex = Random().nextInt(naghs.length);
       final roleModel = RoleModel(
@@ -51,6 +52,7 @@ class CheshmakmargCubit extends Cubit<RoleModel?> {
       print(roleModel.role);
     } else {
       print(StringConst.endRole);
+      await audioPlayer.play(AssetSource('sounds/dialog.mp3'));
       showDialog(
           context: context,
           builder: (context) => DialogBodyWidget(
@@ -90,7 +92,11 @@ class CheshmakmargCubit extends Cubit<RoleModel?> {
                     children: [
                       MainButton(
                           btnText: StringConst.backToHome,
-                          onPress: () => Navigator.pop(context)),
+                          onPress: () async {
+                            await audioPlayer
+                                .play(AssetSource('sounds/greenbtn.mp3'));
+                            Navigator.pop(context);
+                          }),
                       SizedBox(width: AppDistances.small2.w),
                     ],
                   ),

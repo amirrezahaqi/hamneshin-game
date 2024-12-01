@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/gen/fonts.gen.dart';
 import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
@@ -15,6 +16,7 @@ class AppBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    final AudioPlayer audioPlayer = AudioPlayer();
     return Padding(
       padding: const EdgeInsets.only(
           right: AppDistances.large,
@@ -40,7 +42,9 @@ class AppBarWidget extends StatelessWidget {
                       borderRadius:
                           BorderRadius.circular(AppDistances.large * 2)),
                   child: GestureDetector(
-                    onTap: () {
+                    onTap: () async {
+                      await audioPlayer
+                          .play(AssetSource('sounds/buttomSheet.mp3'));
                       showModalBottomSheet(
                         context: context,
                         builder: (context) {

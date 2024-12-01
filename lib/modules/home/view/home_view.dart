@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_application_new/gen/assets.gen.dart';
@@ -17,7 +18,6 @@ import 'package:flutter_application_new/modules/jorat-haghighat/view/jorathaghig
 import 'package:flutter_application_new/modules/mafia/view/mafia_view.dart';
 import 'package:flutter_application_new/modules/pantomim/view/pantomim_screen.dart';
 import 'package:flutter_application_new/modules/shah-dozd/view/shah_dozd_screen.dart';
-import 'package:flutter_application_new/modules/splash/view/splash_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -28,6 +28,7 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final AudioPlayer audioPlayer = AudioPlayer();
     Size size = MediaQuery.of(context).size;
     final TextEditingController mafiaPlayerCount = TextEditingController();
     final TextEditingController jasosPlayerCount = TextEditingController();
@@ -130,7 +131,9 @@ class HomeView extends StatelessWidget {
                         );
                       },
                       imageAsset: 'assets/images/png/dor.png',
-                    ).animate(effects: [const ScaleEffect(duration: Duration(milliseconds: 350))]),
+                    ).animate(effects: [
+                      const ScaleEffect(duration: Duration(milliseconds: 350))
+                    ]),
                     SizedBox(
                       height: size.height / 30,
                     ),
@@ -143,7 +146,9 @@ class HomeView extends StatelessWidget {
                               children: [
                                 HomeGamesCards(
                                     btnText: StringConst.mafiaGame,
-                                    onPress: () {
+                                    onPress: () async {
+                                      await audioPlayer.play(
+                                          AssetSource('sounds/mafia.mp3'));
                                       showDialog(
                                         context: context,
                                         builder: (context) {
@@ -192,7 +197,10 @@ class HomeView extends StatelessWidget {
                                                   padding: AppDistances.small4,
                                                   btnText:
                                                       StringConst.startGameBtn,
-                                                  onPress: () {
+                                                  onPress: () async {
+                                                    await audioPlayer.play(
+                                                        AssetSource(
+                                                            'sounds/greenbtn.mp3'));
                                                     if (mafiaPlayerCount
                                                         .text.isEmpty) {
                                                       mafiaPlayerCount.text =
@@ -220,7 +228,10 @@ class HomeView extends StatelessWidget {
                                     imageAsset: "assets/images/png/mafia.png"),
                                 HomeGamesCards(
                                     btnText: StringConst.jasosGame,
-                                    onPress: () {
+                                    onPress: () async {
+                                      await audioPlayer.play(
+                                          AssetSource('sounds/jasoos.mp3'));
+
                                       showDialog(
                                         context: context,
                                         builder: (context) {
@@ -268,7 +279,10 @@ class HomeView extends StatelessWidget {
                                                 padding: AppDistances.small4,
                                                 btnText:
                                                     StringConst.startGameBtn,
-                                                onPress: () {
+                                                onPress: () async {
+                                                  await audioPlayer.play(
+                                                      AssetSource(
+                                                          'sounds/greenbtn.mp3'));
                                                   if (jasosPlayerCount
                                                       .text.isEmpty) {
                                                     jasosPlayerCount.text =
@@ -292,7 +306,10 @@ class HomeView extends StatelessWidget {
                                     imageAsset: "assets/images/png/jasoos.png"),
                                 HomeGamesCards(
                                     btnText: StringConst.pantomimGame,
-                                    onPress: () {
+                                    onPress: () async {
+                                      await audioPlayer.play(
+                                          AssetSource('sounds/pantomim.mp3'));
+
                                       Navigator.push(
                                           context,
                                           MaterialPageRoute(
@@ -302,7 +319,11 @@ class HomeView extends StatelessWidget {
                                     imageAsset:
                                         "assets/images/png/pantomim.png"),
                               ],
-                            ).animate(effects: [const ScaleEffect(duration: Duration(milliseconds: 350),delay: Duration(milliseconds: 350))]),
+                            ).animate(effects: [
+                              const ScaleEffect(
+                                  duration: Duration(milliseconds: 350),
+                                  delay: Duration(milliseconds: 350))
+                            ]),
                             SizedBox(
                               height: size.height / 20,
                             ),
@@ -311,7 +332,10 @@ class HomeView extends StatelessWidget {
                               children: [
                                 HomeGamesCards(
                                   btnText: StringConst.jorathaghighat,
-                                  onPress: () {
+                                  onPress: () async {
+                                    await audioPlayer
+                                        .play(AssetSource('sounds/jorat.mp3'));
+
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
@@ -323,7 +347,10 @@ class HomeView extends StatelessWidget {
                                 ),
                                 HomeGamesCards(
                                     btnText: StringConst.cheshmakGame,
-                                    onPress: () {
+                                    onPress: () async {
+                                      await audioPlayer.play(
+                                          AssetSource('sounds/cheshmak.mp3'));
+
                                       Navigator.push(
                                           context,
                                           MaterialPageRoute(
@@ -334,7 +361,10 @@ class HomeView extends StatelessWidget {
                                         "assets/images/png/cheshmak-marg.png"),
                                 HomeGamesCards(
                                     btnText: StringConst.sdjvGame,
-                                    onPress: () {
+                                    onPress: () async {
+                                      await audioPlayer
+                                          .play(AssetSource('sounds/shah.mp3'));
+
                                       Navigator.push(
                                           context,
                                           MaterialPageRoute(
@@ -344,7 +374,11 @@ class HomeView extends StatelessWidget {
                                     imageAsset:
                                         "assets/images/png/shah-dozd-jallad.png"),
                               ],
-                            ).animate(effects: [const ScaleEffect(duration: Duration(milliseconds: 350),delay: Duration(milliseconds: 700))]),
+                            ).animate(effects: [
+                              const ScaleEffect(
+                                  duration: Duration(milliseconds: 350),
+                                  delay: Duration(milliseconds: 700))
+                            ]),
                           ],
                         ))
                   ],

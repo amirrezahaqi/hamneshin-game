@@ -38,10 +38,10 @@ class MainWrapper extends StatelessWidget {
                       padding: EdgeInsets.only(bottom: 35.w, top: 10.w),
                       child: IndexedStack(
                         index: state,
-                        children: const [
-                          HomeView(),
+                        children: [
+                          const HomeView(),
                           HelpView(),
-                          AboutView(),
+                          const AboutView(),
                         ],
                       ),
                     ),

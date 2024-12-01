@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:audioplayers/audioplayers.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/gen/assets.gen.dart';
@@ -28,8 +29,8 @@ class ShahDozdCubit extends Cubit<RoleModel?> {
     "assets/images/png/sdjvvazir.png",
     "assets/images/png/sdjvjalad.png",
   ];
-
-  generateNaghshRandom(BuildContext context) {
+  final AudioPlayer _audioPlayer = AudioPlayer();
+  generateNaghshRandom(BuildContext context) async {
     if (naghs.isNotEmpty && naghsAssets.isNotEmpty) {
       final randomIndex = Random().nextInt(naghs.length);
       final roleModel = RoleModel(
@@ -47,6 +48,7 @@ class ShahDozdCubit extends Cubit<RoleModel?> {
       print(roleModel.role);
     } else {
       print(StringConst.endRole);
+      await _audioPlayer.play(AssetSource('sounds/dialog.mp3'));
       showDialog(
           context: context,
           builder: (context) => DialogBodyWidget(
@@ -86,7 +88,11 @@ class ShahDozdCubit extends Cubit<RoleModel?> {
                     children: [
                       MainButton(
                           btnText: StringConst.backToHome,
-                          onPress: () => Navigator.pop(context)),
+                          onPress: () async {
+                            Navigator.pop(context);
+                            await _audioPlayer
+                                .play(AssetSource('sounds/greenbtn.mp3'));
+                          }),
                       SizedBox(width: AppDistances.small2.w),
                     ],
                   ),
