@@ -11,7 +11,7 @@ class StringConst {
   static const eitaa = "پشتیبانی در اپ ایتا";
   static const amirreza = "امیررضا جلوس حقی";
   static const mohammad = "محمد دهقانی فرد";
-  static const version = "نسخه برنامه 1.1";
+  static const version = "نسخه برنامه ۱.۱";
   static const loaded = "کمی صبر کنید...";
   static const created = "ساخته شده با ❤️ در ایران زمین";
   static const aboutText =

@@ -49,7 +49,9 @@ class HomeView extends StatelessWidget {
                     ),
                     CommingSoonCard(
                       btnText: '',
-                      onPress: () {
+                      onPress: () async {
+                        await audioPlayer
+                            .play(AssetSource('sounds/buttomSheet.mp3'));
                         showModalBottomSheet(
                           context: context,
                           builder: (context) {
