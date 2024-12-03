@@ -10,6 +10,7 @@ import 'package:flutter_application_new/global/utils/constants/app_distances.dar
 import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
 import 'package:flutter_application_new/global/widgets/dialog_body_widget.dart';
 import 'package:flutter_application_new/global/widgets/main_btn.dart';
+import 'package:flutter_application_new/global/widgets/main_wrapper.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 part 'shah_dozd_state.dart';
@@ -89,7 +90,10 @@ class ShahDozdCubit extends Cubit<RoleModel?> {
                       MainButton(
                           btnText: StringConst.backToHome,
                           onPress: () async {
-                            Navigator.pop(context);
+                            Navigator.of(context)
+                                .pushReplacement(MaterialPageRoute(
+                              builder: (context) => const MainWrapper(),
+                            ));
                             await _audioPlayer
                                 .play(AssetSource('sounds/greenbtn.mp3'));
                           }),

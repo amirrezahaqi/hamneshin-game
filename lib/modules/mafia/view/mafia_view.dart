@@ -50,92 +50,128 @@ class MafiaView extends StatelessWidget {
               )),
           bottomNavigationBar: BottomNavigation(
             onPageChange: (int pageIndex) {
-              if(pageIndex == 0) {
+              if (pageIndex == 0) {
                 buildShowCustomModalBottomSheet(
                   builder: (context) {
                     return BottomSheetBodyWidget(
                       children: [
-                        Text(
-                            "آیا قصد خروج از بازی را دارید؟",
-                            style: TextStyle(fontSize: 18.sp,fontWeight: FontWeight.bold,color: UiColors.whiteColor)),
+                        Text("آیا قصد خروج از بازی را دارید؟",
+                            style: TextStyle(
+                                fontSize: 18.sp,
+                                fontWeight: FontWeight.bold,
+                                color: UiColors.whiteColor)),
                         SizedBox(height: 8.w),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             MainButton2(
-                              onPress: (){
-                                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const MainWrapper(),));
+                              onPress: () async {
+                                await audioPlayer
+                                    .play(AssetSource('sounds/orangebtn.mp3'));
+                                Navigator.of(context)
+                                    .pushReplacement(MaterialPageRoute(
+                                  builder: (context) => const MainWrapper(),
+                                ));
                               },
-                              btnText: "خروج از بازی",),
-
+                              btnText: "خروج از بازی",
+                            ),
                             MainButton(
-                              onPress: (){
+                              onPress: () async {
+                                await audioPlayer
+                                    .play(AssetSource('sounds/greenbtn.mp3'));
                                 Navigator.pop(context);
                               },
-                              btnText: "ادامه بازی",),
+                              btnText: "ادامه بازی",
+                            ),
                           ],
                         )
                       ],
                     );
-                  }, context: context,);
-              } else if(pageIndex == 1) {
+                  },
+                  context: context,
+                );
+              } else if (pageIndex == 1) {
                 buildShowCustomModalBottomSheet(
                   builder: (context) {
                     return BottomSheetBodyWidget(
                       children: [
-                        Text(
-                            "آیا قصد خروج از بازی را دارید؟",
-                            style: TextStyle(fontSize: 18.sp,fontWeight: FontWeight.bold,color: UiColors.whiteColor)),
+                        Text("آیا قصد خروج از بازی را دارید؟",
+                            style: TextStyle(
+                                fontSize: 18.sp,
+                                fontWeight: FontWeight.bold,
+                                color: UiColors.whiteColor)),
                         SizedBox(height: 8.w),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             MainButton2(
-                              onPress: (){
+                              onPress: () async {
+                                await audioPlayer
+                                    .play(AssetSource('sounds/orangebtn.mp3'));
                                 navCubit.changePage(1);
-                                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const MainWrapper(),));
+                                Navigator.of(context)
+                                    .pushReplacement(MaterialPageRoute(
+                                  builder: (context) => const MainWrapper(),
+                                ));
                               },
-                              btnText: "خروج از بازی",),
-
+                              btnText: "خروج از بازی",
+                            ),
                             MainButton(
-                              onPress: (){
+                              onPress: () async {
+                                await audioPlayer
+                                    .play(AssetSource('sounds/greenbtn.mp3'));
                                 Navigator.pop(context);
                               },
-                              btnText: "ادامه بازی",),
+                              btnText: "ادامه بازی",
+                            ),
                           ],
                         )
                       ],
                     );
-                  }, context: context,);
-              } else if(pageIndex == 2) {
+                  },
+                  context: context,
+                );
+              } else if (pageIndex == 2) {
                 buildShowCustomModalBottomSheet(
                   builder: (context) {
                     return BottomSheetBodyWidget(
                       children: [
-                        Text(
-                            "آیا قصد خروج از بازی را دارید؟",
-                            style: TextStyle(fontSize: 18.sp,fontWeight: FontWeight.bold,color: UiColors.whiteColor)),
+                        Text("آیا قصد خروج از بازی را دارید؟",
+                            style: TextStyle(
+                                fontSize: 18.sp,
+                                fontWeight: FontWeight.bold,
+                                color: UiColors.whiteColor)),
                         SizedBox(height: 8.w),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             MainButton2(
-                              onPress: (){
+                              onPress: () async {
+                                await audioPlayer
+                                    .play(AssetSource('sounds/orangebtn.mp3'));
                                 navCubit.changePage(2);
-                                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const MainWrapper(),));
+                                Navigator.of(context)
+                                    .pushReplacement(MaterialPageRoute(
+                                  builder: (context) => const MainWrapper(),
+                                ));
                               },
-                              btnText: "خروج از بازی",),
-
+                              btnText: "خروج از بازی",
+                            ),
                             MainButton(
-                              onPress: (){
+                              onPress: () async {
+                                await audioPlayer
+                                    .play(AssetSource('sounds/greenbtn.mp3'));
                                 Navigator.pop(context);
                               },
-                              btnText: "ادامه بازی",),
+                              btnText: "ادامه بازی",
+                            ),
                           ],
                         )
                       ],
                     );
-                  }, context: context,);
+                  },
+                  context: context,
+                );
               }
             },
           ),
