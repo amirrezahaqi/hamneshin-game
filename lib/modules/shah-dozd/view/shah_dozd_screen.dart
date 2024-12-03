@@ -70,7 +70,11 @@ class _ShahDozdScreenState extends State<ShahDozdScreen> {
                                     .play(AssetSource('sounds/orangebtn.mp3'));
                                 Navigator.of(context)
                                     .pushReplacement(MaterialPageRoute(
-                                  builder: (context) => const MainWrapper(),
+                                  builder: (context) {
+                                    final cubit = context.read<ShahDozdCubit>();
+                                    cubit.resetShahCubit();
+                                    return const MainWrapper();
+                                  },
                                 ));
                               },
                               btnText: "خروج از بازی",
@@ -111,7 +115,11 @@ class _ShahDozdScreenState extends State<ShahDozdScreen> {
                                 navCubit.changePage(1);
                                 Navigator.of(context)
                                     .pushReplacement(MaterialPageRoute(
-                                  builder: (context) => const MainWrapper(),
+                                  builder: (context) {
+                                    final cubit = context.read<ShahDozdCubit>();
+                                    cubit.resetShahCubit();
+                                    return const MainWrapper();
+                                  },
                                 ));
                               },
                               btnText: "خروج از بازی",
@@ -152,7 +160,11 @@ class _ShahDozdScreenState extends State<ShahDozdScreen> {
                                 navCubit.changePage(2);
                                 Navigator.of(context)
                                     .pushReplacement(MaterialPageRoute(
-                                  builder: (context) => const MainWrapper(),
+                                  builder: (context) {
+                                    final cubit = context.read<ShahDozdCubit>();
+                                    cubit.resetShahCubit();
+                                    return const MainWrapper();
+                                  },
                                 ));
                               },
                               btnText: "خروج از بازی",

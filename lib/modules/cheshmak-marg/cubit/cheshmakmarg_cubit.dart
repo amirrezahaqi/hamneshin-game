@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:audioplayers/audioplayers.dart';
-import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/gen/assets.gen.dart';
 import 'package:flutter_application_new/gen/fonts.gen.dart';
@@ -11,6 +10,7 @@ import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
 import 'package:flutter_application_new/global/widgets/dialog_body_widget.dart';
 import 'package:flutter_application_new/global/widgets/main_btn.dart';
 import 'package:flutter_application_new/global/widgets/main_wrapper.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 part 'cheshmakmarg_state.dart';
@@ -96,9 +96,14 @@ class CheshmakmargCubit extends Cubit<RoleModel?> {
                           onPress: () async {
                             await audioPlayer
                                 .play(AssetSource('sounds/greenbtn.mp3'));
+
                             Navigator.of(context)
                                 .pushReplacement(MaterialPageRoute(
-                              builder: (context) => const MainWrapper(),
+                              builder: (context) {
+                                final cubit = context.read<CheshmakmargCubit>();
+                                cubit.resetCheshmakCubit();
+                                return const MainWrapper();
+                              },
                             ));
                           }),
                       SizedBox(width: AppDistances.small2.w),
@@ -112,6 +117,28 @@ class CheshmakmargCubit extends Cubit<RoleModel?> {
 
   hideCurrentRole() {
     emit(null); // ارسال مقدار null برای مخفی کردن نقش
+  }
+
+  void resetCheshmakCubit() {
+    naghs.clear();
+    naghsAssets.clear();
+    naghs.addAll([
+      StringConst.karagah2,
+      StringConst.ghatel,
+      StringConst.pooch,
+      StringConst.pooch,
+      StringConst.pooch,
+      StringConst.pooch,
+    ]);
+    naghsAssets.addAll([
+      "assets/images/png/cheshmakkaragah.png",
+      "assets/images/png/cheshmakghatel.png",
+      "assets/images/png/cheshmakpooch.png",
+      "assets/images/png/cheshmakpooch.png",
+      "assets/images/png/cheshmakpooch.png",
+      "assets/images/png/cheshmakpooch.png",
+    ]);
+    emit(null); // ریست کردن State به مقدار اولیه
   }
 }
 

@@ -69,7 +69,12 @@ class _CheshmakMargScreenState extends State<CheshmakMargScreen> {
                                     .play(AssetSource('sounds/orangebtn.mp3'));
                                 Navigator.of(context)
                                     .pushReplacement(MaterialPageRoute(
-                                  builder: (context) => const MainWrapper(),
+                                  builder: (context) {
+                                    final cubit =
+                                        context.read<CheshmakmargCubit>();
+                                    cubit.resetCheshmakCubit();
+                                    return const MainWrapper();
+                                  },
                                 ));
                               },
                               btnText: "خروج از بازی",
@@ -110,7 +115,12 @@ class _CheshmakMargScreenState extends State<CheshmakMargScreen> {
                                 navCubit.changePage(1);
                                 Navigator.of(context)
                                     .pushReplacement(MaterialPageRoute(
-                                  builder: (context) => const MainWrapper(),
+                                  builder: (context) {
+                                    final cubit =
+                                        context.read<CheshmakmargCubit>();
+                                    cubit.resetCheshmakCubit();
+                                    return const MainWrapper();
+                                  },
                                 ));
                               },
                               btnText: "خروج از بازی",
@@ -151,7 +161,12 @@ class _CheshmakMargScreenState extends State<CheshmakMargScreen> {
                                 navCubit.changePage(2);
                                 Navigator.of(context)
                                     .pushReplacement(MaterialPageRoute(
-                                  builder: (context) => const MainWrapper(),
+                                  builder: (context) {
+                                    final cubit =
+                                        context.read<CheshmakmargCubit>();
+                                    cubit.resetCheshmakCubit();
+                                    return const MainWrapper();
+                                  },
                                 ));
                               },
                               btnText: "خروج از بازی",

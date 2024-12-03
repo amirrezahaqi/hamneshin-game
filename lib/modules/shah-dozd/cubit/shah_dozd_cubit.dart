@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:audioplayers/audioplayers.dart';
-import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_new/gen/assets.gen.dart';
 import 'package:flutter_application_new/gen/fonts.gen.dart';
@@ -11,6 +10,7 @@ import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
 import 'package:flutter_application_new/global/widgets/dialog_body_widget.dart';
 import 'package:flutter_application_new/global/widgets/main_btn.dart';
 import 'package:flutter_application_new/global/widgets/main_wrapper.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 part 'shah_dozd_state.dart';
@@ -92,7 +92,11 @@ class ShahDozdCubit extends Cubit<RoleModel?> {
                           onPress: () async {
                             Navigator.of(context)
                                 .pushReplacement(MaterialPageRoute(
-                              builder: (context) => const MainWrapper(),
+                              builder: (context) {
+                                final cubit = context.read<ShahDozdCubit>();
+                                cubit.resetShahCubit();
+                                return const MainWrapper();
+                              },
                             ));
                             await _audioPlayer
                                 .play(AssetSource('sounds/greenbtn.mp3'));
@@ -108,6 +112,24 @@ class ShahDozdCubit extends Cubit<RoleModel?> {
 
   hideCurrentRole() {
     emit(null); // ارسال مقدار null برای مخفی کردن نقش
+  }
+
+  void resetShahCubit() {
+    naghs.clear();
+    naghsAssets.clear();
+    naghs.addAll([
+      StringConst.shah,
+      StringConst.dozd,
+      StringConst.vazir,
+      StringConst.jallad
+    ]);
+    naghsAssets.addAll([
+      "assets/images/png/sdjvshah.png",
+      "assets/images/png/sdjvdozd.png",
+      "assets/images/png/sdjvvazir.png",
+      "assets/images/png/sdjvjalad.png",
+    ]);
+    emit(null); // ریست کردن State به مقدار اولیه
   }
 }
 
