@@ -55,10 +55,10 @@ class AppBarWidget extends StatelessWidget {
                                   height: 2.w,
                                 ),
                                 SizedBox(
-                                  width: 60.w,
+                                  width: 50.w,
                                   child: Image.asset(
                                     "assets/images/png/sup.png",
-                                    scale: 2,
+                                    scale: 3,
                                   ),
                                 ),
                                 Container(
