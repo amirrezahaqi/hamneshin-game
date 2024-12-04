@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_new/global/cubits/navigation_cubit.dart';
 import 'package:flutter_application_new/global/widgets/app_view.dart';
 import 'package:flutter_application_new/modules/cheshmak-marg/cubit/cheshmakmarg_cubit.dart';
 import 'package:flutter_application_new/modules/home/cubit/home_cubit.dart';
@@ -15,7 +16,8 @@ void main() {
         BlocProvider(create: (_) => PantomimCubit()),
         BlocProvider(create: (_) => ShahDozdCubit()),
         BlocProvider(create: (_) => JorathaghighatCubit()),
-        BlocProvider(create: (_) => HomeCubit())
+        BlocProvider(create: (_) => HomeCubit()),
+        BlocProvider(create: (_) => NavigationCubit())
       ],
       child: const AppView(),
     ),

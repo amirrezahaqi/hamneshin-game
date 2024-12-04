@@ -3,14 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_application_new/gen/assets.gen.dart';
 import 'package:flutter_application_new/gen/fonts.gen.dart';
+import 'package:flutter_application_new/global/cubits/navigation_cubit.dart';
 import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
 import 'package:flutter_application_new/global/utils/constants/app_distances.dart';
 import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
 import 'package:flutter_application_new/global/widgets/app-bar.dart';
 import 'package:flutter_application_new/global/widgets/bottom-navigation.dart';
+import 'package:flutter_application_new/global/widgets/bottom_sheet_body_widget.dart';
 import 'package:flutter_application_new/global/widgets/dialog_body_widget.dart';
 import 'package:flutter_application_new/global/widgets/main_btn.dart';
 import 'package:flutter_application_new/global/widgets/main_btn2.dart';
+import 'package:flutter_application_new/global/widgets/main_wrapper.dart';
 import 'package:flutter_application_new/modules/mafia/cubit/mafia_cubit.dart';
 import 'package:flutter_application_new/modules/mafia/widgets/mafia_show_role_widget.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -20,8 +23,10 @@ class MafiaView extends StatelessWidget {
   MafiaView({super.key, required this.playerCount});
   final int playerCount;
   final AudioPlayer audioPlayer = AudioPlayer();
+
   @override
   Widget build(BuildContext context) {
+    final navCubit = context.watch<NavigationCubit>();
     return BlocProvider(
       create: (context) => MafiaCubit()..getRoleList(playerCount),
       child: Container(
@@ -44,7 +49,95 @@ class MafiaView extends StatelessWidget {
                 child: const AppBarWidget(),
               )),
           bottomNavigationBar: BottomNavigation(
-            onPageChange: (int pageIndex) {},
+            onPageChange: (int pageIndex) {
+              if(pageIndex == 0) {
+                buildShowCustomModalBottomSheet(
+                  builder: (context) {
+                    return BottomSheetBodyWidget(
+                      children: [
+                        Text(
+                            "آیا قصد خروج از بازی را دارید؟",
+                            style: TextStyle(fontSize: 18.sp,fontWeight: FontWeight.bold,color: UiColors.whiteColor)),
+                        SizedBox(height: 8.w),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            MainButton2(
+                              onPress: (){
+                                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const MainWrapper(),));
+                              },
+                              btnText: "خروج از بازی",),
+
+                            MainButton(
+                              onPress: (){
+                                Navigator.pop(context);
+                              },
+                              btnText: "ادامه بازی",),
+                          ],
+                        )
+                      ],
+                    );
+                  }, context: context,);
+              } else if(pageIndex == 1) {
+                buildShowCustomModalBottomSheet(
+                  builder: (context) {
+                    return BottomSheetBodyWidget(
+                      children: [
+                        Text(
+                            "آیا قصد خروج از بازی را دارید؟",
+                            style: TextStyle(fontSize: 18.sp,fontWeight: FontWeight.bold,color: UiColors.whiteColor)),
+                        SizedBox(height: 8.w),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            MainButton2(
+                              onPress: (){
+                                navCubit.changePage(1);
+                                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const MainWrapper(),));
+                              },
+                              btnText: "خروج از بازی",),
+
+                            MainButton(
+                              onPress: (){
+                                Navigator.pop(context);
+                              },
+                              btnText: "ادامه بازی",),
+                          ],
+                        )
+                      ],
+                    );
+                  }, context: context,);
+              } else if(pageIndex == 2) {
+                buildShowCustomModalBottomSheet(
+                  builder: (context) {
+                    return BottomSheetBodyWidget(
+                      children: [
+                        Text(
+                            "آیا قصد خروج از بازی را دارید؟",
+                            style: TextStyle(fontSize: 18.sp,fontWeight: FontWeight.bold,color: UiColors.whiteColor)),
+                        SizedBox(height: 8.w),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            MainButton2(
+                              onPress: (){
+                                navCubit.changePage(2);
+                                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const MainWrapper(),));
+                              },
+                              btnText: "خروج از بازی",),
+
+                            MainButton(
+                              onPress: (){
+                                Navigator.pop(context);
+                              },
+                              btnText: "ادامه بازی",),
+                          ],
+                        )
+                      ],
+                    );
+                  }, context: context,);
+              }
+            },
           ),
           body: Padding(
             padding: const EdgeInsets.all(AppDistances.pageBdyMargin),

@@ -26,49 +26,46 @@ class MainWrapper extends StatelessWidget {
             ],
           ),
         ),
-        child: BlocProvider(
-          create: (context) => NavigationCubit(),
-          child: BlocBuilder<NavigationCubit, int>(
-            builder: (context, state) {
-              final navCubit = BlocProvider.of<NavigationCubit>(context);
-              return Stack(
-                children: [
-                  Positioned.fill(
-                    child: Padding(
-                      padding: EdgeInsets.only(bottom: 35.w, top: 10.w),
-                      child: IndexedStack(
-                        index: state,
-                        children: [
-                          const HomeView(),
-                          HelpView(),
-                          const AboutView(),
-                        ],
-                      ),
+        child: BlocBuilder<NavigationCubit, int>(
+          builder: (context, state) {
+            final navCubit = BlocProvider.of<NavigationCubit>(context);
+            return Stack(
+              children: [
+                Positioned.fill(
+                  child: Padding(
+                    padding: EdgeInsets.only(bottom: 35.w, top: 10.w),
+                    child: IndexedStack(
+                      index: state,
+                      children: [
+                        const HomeView(),
+                        HelpView(),
+                        const AboutView(),
+                      ],
                     ),
                   ),
+                ),
 
-                  // navigation
-                  Positioned(
-                      bottom: 4.w,
-                      left: 0,
-                      right: 0,
-                      child: BottomNavigation(
-                        onPageChange: (pageIndex) {
-                          navCubit.changePage(pageIndex);
-                        },
-                      )),
+                // navigation
+                Positioned(
+                    bottom: 4.w,
+                    left: 0,
+                    right: 0,
+                    child: BottomNavigation(
+                      onPageChange: (pageIndex) {
+                        navCubit.changePage(pageIndex);
+                      },
+                    )),
 
-                  // app bar
-                  Positioned(
-                      top: 4.w,
-                      left: 0,
-                      right: 0,
-                      child:
-                          SizedBox(height: 8.h, child: const AppBarWidget())),
-                ],
-              );
-            },
-          ),
+                // app bar
+                Positioned(
+                    top: 4.w,
+                    left: 0,
+                    right: 0,
+                    child:
+                        SizedBox(height: 8.h, child: const AppBarWidget())),
+              ],
+            );
+          },
         ),
       ),
     );
