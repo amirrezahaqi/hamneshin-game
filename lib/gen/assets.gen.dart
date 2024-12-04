@@ -109,10 +109,6 @@ class $AssetsImagesPngGen {
   AssetGenImage get cheshmakpooch =>
       const AssetGenImage('assets/images/png/cheshmakpooch.png');
 
-  /// File path: assets/images/png/connection.png
-  AssetGenImage get connection =>
-      const AssetGenImage('assets/images/png/connection.png');
-
   /// File path: assets/images/png/darbare.png
   AssetGenImage get darbare =>
       const AssetGenImage('assets/images/png/darbare.png');
@@ -164,9 +160,6 @@ class $AssetsImagesPngGen {
   /// File path: assets/images/png/jorat-haghighat.png
   AssetGenImage get joratHaghighat =>
       const AssetGenImage('assets/images/png/jorat-haghighat.png');
-
-  /// File path: assets/images/png/logo.png
-  AssetGenImage get logo => const AssetGenImage('assets/images/png/logo.png');
 
   /// File path: assets/images/png/mafia.png
   AssetGenImage get mafia => const AssetGenImage('assets/images/png/mafia.png');
@@ -256,10 +249,6 @@ class $AssetsImagesPngGen {
   AssetGenImage get telegram =>
       const AssetGenImage('assets/images/png/telegram.png');
 
-  /// File path: assets/images/png/winner.png
-  AssetGenImage get winner =>
-      const AssetGenImage('assets/images/png/winner.png');
-
   /// List of all assets
   List<AssetGenImage> get values => [
         cheshmakMarg,
@@ -267,7 +256,6 @@ class $AssetsImagesPngGen {
         cheshmakkaragah,
         cheshmaknotselect,
         cheshmakpooch,
-        connection,
         darbare,
         dor,
         eitaa,
@@ -282,7 +270,6 @@ class $AssetsImagesPngGen {
         jasoosshahrvand,
         joratHaghighatMiz,
         joratHaghighat,
-        logo,
         mafia,
         mafiadoctor,
         mafiajansakht,
@@ -305,8 +292,7 @@ class $AssetsImagesPngGen {
         star,
         sup,
         supp,
-        telegram,
-        winner
+        telegram
       ];
 }
 
