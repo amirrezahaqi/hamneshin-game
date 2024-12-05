@@ -32,6 +32,16 @@ class $AssetsFontsGen {
       [pelakBlack, pelakBold, pelakMedium, pelakRegular, pelakLight];
 }
 
+class $AssetsIconGen {
+  const $AssetsIconGen();
+
+  /// File path: assets/icon/icon.png
+  AssetGenImage get icon => const AssetGenImage('assets/icon/icon.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [icon];
+}
+
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
@@ -300,6 +310,7 @@ class Assets {
   Assets._();
 
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
+  static const $AssetsIconGen icon = $AssetsIconGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsSoundsGen sounds = $AssetsSoundsGen();
 }
