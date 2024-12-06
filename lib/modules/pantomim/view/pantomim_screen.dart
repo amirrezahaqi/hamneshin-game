@@ -183,7 +183,7 @@ class _PantomimScreenState extends State<PantomimScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(height: size.height / 50),
+                  SizedBox(height: size.height / 80),
                   SizedBox(
                     width: size.width / 1.25,
                     child: const Text(
@@ -196,7 +196,7 @@ class _PantomimScreenState extends State<PantomimScreen> {
                           fontWeight: FontWeight.bold),
                     ),
                   ),
-                  Image.asset("assets/images/png/pantomim-mask.png").animate(
+                  Image.asset("assets/images/png/pantomim.png").animate(
                       effects: [
                         const FadeEffect(duration: Duration(milliseconds: 450))
                       ]),

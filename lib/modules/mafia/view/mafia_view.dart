@@ -45,7 +45,7 @@ class MafiaView extends StatelessWidget {
           appBar: PreferredSize(
               preferredSize: Size.fromHeight(20.w),
               child: Padding(
-                padding: EdgeInsets.only(top: 8.w),
+                padding: EdgeInsets.only(top: 10.w),
                 child: const AppBarWidget(),
               )),
           bottomNavigationBar: BottomNavigation(
