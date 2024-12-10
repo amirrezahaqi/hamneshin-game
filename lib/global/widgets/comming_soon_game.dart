@@ -42,7 +42,7 @@ class CommingSoonCard extends StatelessWidget {
             ),
             onPressed: () => onPress(),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
