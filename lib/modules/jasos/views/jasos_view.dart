@@ -174,7 +174,7 @@ class JasosView extends StatelessWidget {
           },
         ),
         body: BlocProvider<JasosCubit>(
-          create: (context) => JasosCubit()..getRoleList(playerCount),
+          create: (context) => JasosCubit()..getRoleListAndWord(playerCount),
           child: Center(
             child: SingleChildScrollView(
               child: BlocBuilder<JasosCubit, JasosState>(
@@ -201,7 +201,7 @@ class JasosView extends StatelessWidget {
                           Padding(
                             padding:
                                 EdgeInsets.only(bottom: AppDistances.small8.w),
-                            child: JasosShowRoleWidget(role: state.role),
+                            child: JasosShowRoleWidget(role: state.role,word: state.word),
                           ),
 
                         if (state is JasosHideRoleState) ...[

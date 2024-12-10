@@ -14,7 +14,11 @@ class JasosCubit extends Cubit<JasosState> {
   final List<JasosRoleModel> jasos6PlayerRoleList = [
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoossade.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.jasoos),
+    JasosRoleModel(
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosshahrvand.path,
         roleName: StringConst.shahrvand),
@@ -26,15 +30,17 @@ class JasosCubit extends Cubit<JasosState> {
         roleName: StringConst.kalantar),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjoker.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.joker),
-    JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: StringConst.jasoosVijeh),
   ];
   final List<JasosRoleModel> jasos7PlayerRoleList = [
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoossade.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.jasoos),
+    JasosRoleModel(
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosshahrvand.path,
         roleName: StringConst.shahrvand),
@@ -49,18 +55,20 @@ class JasosCubit extends Cubit<JasosState> {
         roleName: StringConst.kalantar),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjoker.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.joker),
-    JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: StringConst.jasoosVijeh),
   ];
   final List<JasosRoleModel> jasos8PlayerRoleList = [
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoossade.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path,
-        roleName: StringConst.jasoos),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
+    JasosRoleModel(
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosshahrvand.path,
         roleName: StringConst.shahrvand),
@@ -75,19 +83,15 @@ class JasosCubit extends Cubit<JasosState> {
         roleName: StringConst.kalantar),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjoker.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.joker),
-    JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: StringConst.jasoosVijeh),
   ];
   final List<JasosRoleModel> jasos9PlayerRoleList = [
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoossade.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path,
-        roleName: StringConst.jasoos),
-    JasosRoleModel(
         imagePath: Assets.images.png.jasoosshahrvand.path,
         roleName: StringConst.shahrvand),
     JasosRoleModel(
@@ -97,26 +101,28 @@ class JasosCubit extends Cubit<JasosState> {
         imagePath: Assets.images.png.jasoosshahrvand.path,
         roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path,
-        roleName: StringConst.kalantar),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
+    JasosRoleModel(
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
+    JasosRoleModel(
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
         imagePath: Assets.images.png.jasooskalantar.path,
         roleName: StringConst.kalantar),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjoker.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.joker),
-    JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: StringConst.jasoosVijeh),
   ];
   final List<JasosRoleModel> jasos10PlayerRoleList = [
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoossade.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path,
-        roleName: StringConst.jasoos),
-    JasosRoleModel(
         imagePath: Assets.images.png.jasoosshahrvand.path,
         roleName: StringConst.shahrvand),
     JasosRoleModel(
@@ -129,26 +135,28 @@ class JasosCubit extends Cubit<JasosState> {
         imagePath: Assets.images.png.jasoosshahrvand.path,
         roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path,
-        roleName: StringConst.kalantar),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
+    JasosRoleModel(
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
+    JasosRoleModel(
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
         imagePath: Assets.images.png.jasooskalantar.path,
         roleName: StringConst.kalantar),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjoker.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.joker),
-    JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: StringConst.jasoosVijeh),
   ];
   final List<JasosRoleModel> jasos11PlayerRoleList = [
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoossade.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path,
-        roleName: StringConst.jasoos),
-    JasosRoleModel(
         imagePath: Assets.images.png.jasoosshahrvand.path,
         roleName: StringConst.shahrvand),
     JasosRoleModel(
@@ -161,27 +169,33 @@ class JasosCubit extends Cubit<JasosState> {
         imagePath: Assets.images.png.jasoosshahrvand.path,
         roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path,
-        roleName: StringConst.kalantar),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
+    JasosRoleModel(
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
+    JasosRoleModel(
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
+    JasosRoleModel(
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
         imagePath: Assets.images.png.jasooskalantar.path,
         roleName: StringConst.kalantar),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjoker.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.joker),
-    JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: StringConst.jasoosVijeh),
-    JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: StringConst.jasoosVijeh),
   ];
   final List<JasosRoleModel> jasos12PlayerRoleList = [
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoossade.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.jasoos),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoossade.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.jasoos),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosshahrvand.path,
@@ -199,32 +213,32 @@ class JasosCubit extends Cubit<JasosState> {
         imagePath: Assets.images.png.jasoosshahrvand.path,
         roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path,
-        roleName: StringConst.kalantar),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
+    JasosRoleModel(
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
+    JasosRoleModel(
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
         imagePath: Assets.images.png.jasooskalantar.path,
         roleName: StringConst.kalantar),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjoker.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.joker),
-    JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: StringConst.jasoosVijeh),
-    JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: StringConst.jasoosVijeh),
   ];
   final List<JasosRoleModel> jasos13PlayerRoleList = [
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoossade.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.jasoos),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoossade.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.jasoos),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoossade.path,
-        roleName: StringConst.jasoos),
-    JasosRoleModel(
         imagePath: Assets.images.png.jasoosshahrvand.path,
         roleName: StringConst.shahrvand),
     JasosRoleModel(
@@ -240,30 +254,37 @@ class JasosCubit extends Cubit<JasosState> {
         imagePath: Assets.images.png.jasoosshahrvand.path,
         roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path,
-        roleName: StringConst.kalantar),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
+    JasosRoleModel(
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
+    JasosRoleModel(
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
+    JasosRoleModel(
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
         imagePath: Assets.images.png.jasooskalantar.path,
         roleName: StringConst.kalantar),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjoker.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.joker),
-    JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: StringConst.jasoosVijeh),
-    JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: StringConst.jasoosVijeh),
   ];
   final List<JasosRoleModel> jasos14PlayerRoleList = [
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoossade.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.jasoos),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoossade.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.jasoos),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoossade.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.jasoos),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosshahrvand.path,
@@ -284,30 +305,34 @@ class JasosCubit extends Cubit<JasosState> {
         imagePath: Assets.images.png.jasoosshahrvand.path,
         roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path,
-        roleName: StringConst.kalantar),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
+    JasosRoleModel(
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
+    JasosRoleModel(
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
         imagePath: Assets.images.png.jasooskalantar.path,
         roleName: StringConst.kalantar),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjoker.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.joker),
-    JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: StringConst.jasoosVijeh),
-    JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: StringConst.jasoosVijeh),
   ];
   final List<JasosRoleModel> jasos15PlayerRoleList = [
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoossade.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.jasoos),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoossade.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.jasoos),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoossade.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.jasoos),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosshahrvand.path,
@@ -331,33 +356,38 @@ class JasosCubit extends Cubit<JasosState> {
         imagePath: Assets.images.png.jasoosshahrvand.path,
         roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path,
-        roleName: StringConst.kalantar),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
+    JasosRoleModel(
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
+    JasosRoleModel(
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
         imagePath: Assets.images.png.jasooskalantar.path,
         roleName: StringConst.kalantar),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjoker.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.joker),
-    JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: StringConst.jasoosVijeh),
-    JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: StringConst.jasoosVijeh),
   ];
   final List<JasosRoleModel> jasos16PlayerRoleList = [
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoossade.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.jasoos),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoossade.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.jasoos),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoossade.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.jasoos),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjasoossade.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.jasoos),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosshahrvand.path,
@@ -381,22 +411,29 @@ class JasosCubit extends Cubit<JasosState> {
         imagePath: Assets.images.png.jasoosshahrvand.path,
         roleName: StringConst.shahrvand),
     JasosRoleModel(
-        imagePath: Assets.images.png.jasooskalantar.path,
-        roleName: StringConst.kalantar),
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
+    JasosRoleModel(
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
+    JasosRoleModel(
+        imagePath: Assets.images.png.jasoosshahrvand.path,
+        roleName: StringConst.shahrvand),
     JasosRoleModel(
         imagePath: Assets.images.png.jasooskalantar.path,
         roleName: StringConst.kalantar),
     JasosRoleModel(
         imagePath: Assets.images.png.jasoosjoker.path,
+        playerMode: JasosPlayerMode.jasos,
         roleName: StringConst.joker),
-    JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: StringConst.jasoosVijeh),
-    JasosRoleModel(
-        imagePath: Assets.images.png.jasoosjasoosvijeh.path,
-        roleName: StringConst.jasoosVijeh),
   ];
+
   List<JasosRoleModel> roleList = [];
+  final List<String> words = [
+    "ماشین","باشگاه","افریقا","گل","پارکینگ","هواپیما","کافه","سوپرمارکت","مدرسه",
+    "معتاد","دادگاه"
+  ];
+  String? word;
 
   void changeRole() {
     // اگر همه نقش‌ها نمایش داده شده باشند
@@ -409,16 +446,22 @@ class JasosCubit extends Cubit<JasosState> {
     final randomIndex = Random().nextInt(roleList.length);
     final randomRole = roleList[randomIndex];
 
+
+
     // حذف نقش انتخاب‌شده از لیست اصلی
     roleList.removeAt(randomIndex);
 
     // نمایش نقش انتخاب‌شده
-    emit(JasosChangeRoleState(role: randomRole));
+    emit(JasosChangeRoleState(role: randomRole, word: word ?? ""));
   }
 
   void hideRole() => emit(JasosHideRoleState());
 
-  void getRoleList(int playerCount) {
+  void getRoleListAndWord(int playerCount) {
+    // تولید کلمه تصادفی
+    final wordIndex = Random().nextInt(words.length);
+    word = words[wordIndex];
+
     switch (playerCount) {
       case 6:
         roleList = jasos6PlayerRoleList;
