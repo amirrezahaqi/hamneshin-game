@@ -34,6 +34,7 @@ class StringConst {
   static const yourRoleBtn = "نقش من رو بگو!";
   static const hideYourRoleBtn = "نقش رو بپوشون!";
   static const yourRole = "نقش شما:";
+  static const jasosWord = "کلمه :";
   static const endRole = "تمام نقش ها انتخاب شدن، بازی رو شروع کنین :)";
   static const goToHome = "رفتن به صفحه اصلی";
   static const forYourRole = "برای دیدن نقشت ضربه بزن!";
