@@ -1,16 +1,13 @@
-# hamneshin.games.apps
+😍😈🕵🏻‍♂️🎭بازی همنشین (مافیا،جاسوس،پانتومیم و ...
+همنشین یک بازی ایرانی مناسب دورهمی های دوستانه میان جوان های ایرانی است که به گونه ای طراحی شده است که کاربران به راحت ترین شیوه بازی های مختلف را اجرا نمایند ، این بازی در حال حاضر شامل شش بازی مهیج و جذاب به نام های پانتومیم، شاه دزد جلاد، مافیا، جاسوس ، جرعت حقیقت، چشمک مرگ، است و ما قصد داریم در آینده و در آپدیت های بعدی بازی های بیشتری به این مجموعه اضافه کنیم.
+توسعه دهندگان:
+👨🏻‍💻 امیررضا جلوس حقی
+👨🏻‍💻 محمد دهقانی فرد
+⚙️نکته مهم تر اینه که این پروژه اوپن سورس هست و توسعه دهندگان دیگه هم میتونن به جمع کانتریبیوتر های پروژه بپیوندن 😁
+😉😌😎همین حالا این بازی رو نصب کن و لذتشو ببر
 
-A new Flutter project.
+😎📲Download Now From Bazaar and Myket
+https://myket.ir/app/hamneshin.games.apps
+https://cafebazaar.ir/app/hamneshin.games.apps
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image](https://github.com/user-attachments/assets/99065b39-ff33-42d6-a5c4-ec5433cd03f8)
