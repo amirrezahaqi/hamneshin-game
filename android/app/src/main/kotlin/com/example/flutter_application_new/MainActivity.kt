@@ -1,4 +1,4 @@
-package com.example.flutter_application_new
+package hamneshin.games.apps
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_new/global/utils/constants/app_distances.dart';
-import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
+import 'package:hamneshin.games.apps/global/utils/constants/app_distances.dart';
+import 'package:hamneshin.games.apps/global/utils/constants/ui_colors.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class BottomSheetBodyWidget extends StatelessWidget {
-  const BottomSheetBodyWidget({super.key, required this.children, this.padding = 25.0});
+  const BottomSheetBodyWidget(
+      {super.key, required this.children, this.padding = 25.0});
   final List<Widget> children;
   final double padding;
   @override

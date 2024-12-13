@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_new/global/utils/constants/app_distances.dart';
-import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
+import 'package:hamneshin.games.apps/global/utils/constants/app_distances.dart';
+import 'package:hamneshin.games.apps/global/utils/constants/ui_colors.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class DialogBodyWidget extends StatelessWidget {

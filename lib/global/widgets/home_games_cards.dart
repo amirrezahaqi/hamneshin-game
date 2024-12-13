@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_new/gen/fonts.gen.dart';
+import 'package:hamneshin.games.apps/gen/fonts.gen.dart';
 
 import '../utils/constants/app_distances.dart';
 import '../utils/constants/ui_colors.dart';

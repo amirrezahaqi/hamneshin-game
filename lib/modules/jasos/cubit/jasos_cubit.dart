@@ -1,9 +1,9 @@
 import 'dart:math';
 
 import 'package:bloc/bloc.dart';
-import 'package:flutter_application_new/gen/assets.gen.dart';
-import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
-import 'package:flutter_application_new/modules/jasos/models/jasos_role_model.dart';
+import 'package:hamneshin.games.apps/gen/assets.gen.dart';
+import 'package:hamneshin.games.apps/global/utils/constants/StringConst.dart';
+import 'package:hamneshin.games.apps/modules/jasos/models/jasos_role_model.dart';
 import 'package:meta/meta.dart';
 
 part 'jasos_state.dart';
@@ -430,8 +430,17 @@ class JasosCubit extends Cubit<JasosState> {
 
   List<JasosRoleModel> roleList = [];
   final List<String> words = [
-    "ماشین","باشگاه","افریقا","گل","پارکینگ","هواپیما","کافه","سوپرمارکت","مدرسه",
-    "معتاد","دادگاه"
+    "ماشین",
+    "باشگاه",
+    "افریقا",
+    "گل",
+    "پارکینگ",
+    "هواپیما",
+    "کافه",
+    "سوپرمارکت",
+    "مدرسه",
+    "معتاد",
+    "دادگاه"
   ];
   String? word;
 
@@ -445,8 +454,6 @@ class JasosCubit extends Cubit<JasosState> {
     // انتخاب یک نقش تصادفی
     final randomIndex = Random().nextInt(roleList.length);
     final randomRole = roleList[randomIndex];
-
-
 
     // حذف نقش انتخاب‌شده از لیست اصلی
     roleList.removeAt(randomIndex);

@@ -1,13 +1,11 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_application_new/gen/assets.gen.dart';
-import 'package:flutter_application_new/gen/fonts.gen.dart';
-import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
-import 'package:flutter_application_new/global/utils/constants/app_distances.dart';
-import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
-import 'package:flutter_application_new/global/widgets/bottom_sheet_body_widget.dart';
-import 'package:flutter_application_new/modules/cheshmak-marg/view/cheshmak_marg_screen.dart';
+import 'package:hamneshin.games.apps/gen/assets.gen.dart';
+import 'package:hamneshin.games.apps/gen/fonts.gen.dart';
+import 'package:hamneshin.games.apps/global/utils/constants/StringConst.dart';
+import 'package:hamneshin.games.apps/global/utils/constants/app_distances.dart';
+import 'package:hamneshin.games.apps/global/utils/constants/ui_colors.dart';
+import 'package:hamneshin.games.apps/global/widgets/bottom_sheet_body_widget.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class HelpView extends StatelessWidget {

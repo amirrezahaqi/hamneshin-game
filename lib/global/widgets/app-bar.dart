@@ -1,8 +1,8 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_new/gen/fonts.gen.dart';
-import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
-import 'package:flutter_application_new/global/widgets/bottom_sheet_body_widget.dart';
+import 'package:hamneshin.games.apps/gen/fonts.gen.dart';
+import 'package:hamneshin.games.apps/global/utils/constants/StringConst.dart';
+import 'package:hamneshin.games.apps/global/widgets/bottom_sheet_body_widget.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -189,9 +189,27 @@ class AppBarWidget extends StatelessWidget {
                       color: UiColors.darkBlueColor3,
                       borderRadius:
                           BorderRadius.circular(AppDistances.large * 2)),
-                  child: Image.asset(
-                    "assets/images/png/star.png",
-                    scale: 1,
+                  child: GestureDetector(
+                    onTap: () {
+                      // myLaunchUrl(String url) async {
+                      //   var uri = Uri.parse(url);
+                      //   if (await canLaunchUrl(uri)) {
+                      //     await launchUrl(uri,
+                      //         mode: LaunchMode
+                      //             .externalApplication); // استفاده از LaunchMode مناسب
+                      //   } else {
+                      //     print("Could not launch $url");
+                      //   }
+                      // }
+
+                      // myLaunchUrl(
+                      //     "https://bazaar://details?id=hamneshin.games.apps&showReview=true");
+                  
+                    },
+                    child: Image.asset(
+                      "assets/images/png/star.png",
+                      scale: 1,
+                    ),
                   )),
             )
           ],

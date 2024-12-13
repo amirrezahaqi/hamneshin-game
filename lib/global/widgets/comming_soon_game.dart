@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_new/gen/fonts.gen.dart';
-import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
-import 'package:flutter_application_new/global/widgets/main_btn.dart';
+import 'package:hamneshin.games.apps/gen/fonts.gen.dart';
+import 'package:hamneshin.games.apps/global/utils/constants/StringConst.dart';
+import 'package:hamneshin.games.apps/global/widgets/main_btn.dart';
 
 import '../utils/constants/app_distances.dart';
 import '../utils/constants/ui_colors.dart';

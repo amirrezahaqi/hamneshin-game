@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_new/global/cubits/navigation_cubit.dart';
-import 'package:flutter_application_new/global/widgets/app_view.dart';
-import 'package:flutter_application_new/modules/cheshmak-marg/cubit/cheshmakmarg_cubit.dart';
-import 'package:flutter_application_new/modules/home/cubit/home_cubit.dart';
-import 'package:flutter_application_new/modules/jorat-haghighat/cubit/jorathaghighat_cubit.dart';
-import 'package:flutter_application_new/modules/pantomim/cubit/pantomim_cubit.dart';
-import 'package:flutter_application_new/modules/shah-dozd/cubit/shah_dozd_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hamneshin.games.apps/global/cubits/navigation_cubit.dart';
+import 'package:hamneshin.games.apps/global/widgets/app_view.dart';
+import 'package:hamneshin.games.apps/modules/cheshmak-marg/cubit/cheshmakmarg_cubit.dart';
+import 'package:hamneshin.games.apps/modules/home/cubit/home_cubit.dart';
+import 'package:hamneshin.games.apps/modules/jorat-haghighat/cubit/jorathaghighat_cubit.dart';
+import 'package:hamneshin.games.apps/modules/pantomim/cubit/pantomim_cubit.dart';
+import 'package:hamneshin.games.apps/modules/shah-dozd/cubit/shah_dozd_cubit.dart';
 
 void main() {
   runApp(

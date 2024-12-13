@@ -2,15 +2,15 @@ import 'dart:math';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_new/gen/assets.gen.dart';
-import 'package:flutter_application_new/gen/fonts.gen.dart';
-import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
-import 'package:flutter_application_new/global/utils/constants/app_distances.dart';
-import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
-import 'package:flutter_application_new/global/widgets/dialog_body_widget.dart';
-import 'package:flutter_application_new/global/widgets/main_btn.dart';
-import 'package:flutter_application_new/global/widgets/main_wrapper.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hamneshin.games.apps/gen/assets.gen.dart';
+import 'package:hamneshin.games.apps/gen/fonts.gen.dart';
+import 'package:hamneshin.games.apps/global/utils/constants/StringConst.dart';
+import 'package:hamneshin.games.apps/global/utils/constants/app_distances.dart';
+import 'package:hamneshin.games.apps/global/utils/constants/ui_colors.dart';
+import 'package:hamneshin.games.apps/global/widgets/dialog_body_widget.dart';
+import 'package:hamneshin.games.apps/global/widgets/main_btn.dart';
+import 'package:hamneshin.games.apps/global/widgets/main_wrapper.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 part 'shah_dozd_state.dart';

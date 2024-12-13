@@ -1,22 +1,22 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_application_new/gen/assets.gen.dart';
-import 'package:flutter_application_new/gen/fonts.gen.dart';
-import 'package:flutter_application_new/global/cubits/navigation_cubit.dart';
-import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
-import 'package:flutter_application_new/global/utils/constants/app_distances.dart';
-import 'package:flutter_application_new/global/utils/constants/ui_colors.dart';
-import 'package:flutter_application_new/global/widgets/app-bar.dart';
-import 'package:flutter_application_new/global/widgets/bottom-navigation.dart';
-import 'package:flutter_application_new/global/widgets/bottom_sheet_body_widget.dart';
-import 'package:flutter_application_new/global/widgets/dialog_body_widget.dart';
-import 'package:flutter_application_new/global/widgets/main_btn.dart';
-import 'package:flutter_application_new/global/widgets/main_btn2.dart';
-import 'package:flutter_application_new/global/widgets/main_wrapper.dart';
-import 'package:flutter_application_new/modules/jasos/cubit/jasos_cubit.dart';
-import 'package:flutter_application_new/modules/jasos/widgets/jasos_show_role_widget.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hamneshin.games.apps/gen/assets.gen.dart';
+import 'package:hamneshin.games.apps/gen/fonts.gen.dart';
+import 'package:hamneshin.games.apps/global/cubits/navigation_cubit.dart';
+import 'package:hamneshin.games.apps/global/utils/constants/StringConst.dart';
+import 'package:hamneshin.games.apps/global/utils/constants/app_distances.dart';
+import 'package:hamneshin.games.apps/global/utils/constants/ui_colors.dart';
+import 'package:hamneshin.games.apps/global/widgets/app-bar.dart';
+import 'package:hamneshin.games.apps/global/widgets/bottom-navigation.dart';
+import 'package:hamneshin.games.apps/global/widgets/bottom_sheet_body_widget.dart';
+import 'package:hamneshin.games.apps/global/widgets/dialog_body_widget.dart';
+import 'package:hamneshin.games.apps/global/widgets/main_btn.dart';
+import 'package:hamneshin.games.apps/global/widgets/main_btn2.dart';
+import 'package:hamneshin.games.apps/global/widgets/main_wrapper.dart';
+import 'package:hamneshin.games.apps/modules/jasos/cubit/jasos_cubit.dart';
+import 'package:hamneshin.games.apps/modules/jasos/widgets/jasos_show_role_widget.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class JasosView extends StatelessWidget {
@@ -201,7 +201,8 @@ class JasosView extends StatelessWidget {
                           Padding(
                             padding:
                                 EdgeInsets.only(bottom: AppDistances.small8.w),
-                            child: JasosShowRoleWidget(role: state.role,word: state.word),
+                            child: JasosShowRoleWidget(
+                                role: state.role, word: state.word),
                           ),
 
                         if (state is JasosHideRoleState) ...[

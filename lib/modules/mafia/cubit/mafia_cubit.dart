@@ -1,9 +1,9 @@
 import 'dart:math';
 
 import 'package:bloc/bloc.dart';
-import 'package:flutter_application_new/gen/assets.gen.dart';
-import 'package:flutter_application_new/global/utils/constants/StringConst.dart';
-import 'package:flutter_application_new/modules/mafia/models/mafia_role_model.dart';
+import 'package:hamneshin.games.apps/gen/assets.gen.dart';
+import 'package:hamneshin.games.apps/global/utils/constants/StringConst.dart';
+import 'package:hamneshin.games.apps/modules/mafia/models/mafia_role_model.dart';
 import "package:meta/meta.dart";
 
 part 'mafia_state.dart';
